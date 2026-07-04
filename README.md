@@ -98,37 +98,11 @@ After:
 - [AI 문체 패턴](skills/k-humanizer/references/patterns.md)
 - [평가 루브릭](skills/k-humanizer/references/evaluation.md)
 
-## 검증
-
-v0 검증셋은 개인정보가 없는 합성 예시 80개로 구성했습니다.
-
-- 이력서 20개
-- 문서 20개
-- 메신저 20개
-- 메일 20개
-
-검증:
-
-```bash
-python3 scripts/validate_golden_set.py
-python3 scripts/check_public_hygiene.py
-```
-
-검증셋: [evals/fixtures/golden_set.v0.jsonl](evals/fixtures/golden_set.v0.jsonl)
-
-평가 계획: [docs/validation-plan.md](docs/validation-plan.md)
-
-## 데이터셋 원칙
-
-이 저장소는 외부 데이터셋을 포함하지 않습니다. Hugging Face나 공개 코퍼스는 조사 참고용으로만 기록하고, 라이선스와 출처가 명확한 경우에만 평가에 사용합니다.
-
-조사 노트: [docs/dataset-research.md](docs/dataset-research.md)
-
 ## 기여
 
 익명화된 한국어 예시, 더 나은 패턴 설명, 평가 리포트, 문서 개선을 환영합니다.
 
-다만 실제 이력서, 개인 메일, 실사용 채팅 로그, 고객 데이터, 내부 프로젝트 문구는 올리지 말아 주세요. 실제 사례를 바탕으로 하더라도 반드시 합성 예시로 바꿔야 합니다.
+다만 실제 이력서, 개인 메일, 고객 데이터, 내부 프로젝트 등의 문구는 올리지 말아 주세요. 실제 사례를 바탕으로 하더라도 반드시 합성 예시로 바꿔야 합니다.
 
 기여 안내: [CONTRIBUTING.md](CONTRIBUTING.md)
 
