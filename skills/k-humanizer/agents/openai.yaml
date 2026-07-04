@@ -1,0 +1,7 @@
+interface:
+  display_name: "K-Humanizer"
+  short_description: "한국어 문장을 자연스럽게 다듬습니다"
+  default_prompt: "Use $k-humanizer to make this Korean text sound natural while preserving meaning."
+
+policy:
+  allow_implicit_invocation: true

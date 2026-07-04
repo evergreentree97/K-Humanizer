@@ -1,0 +1,28 @@
+name: Validate
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Validate golden set
+        run: python3 scripts/validate_golden_set.py
+
+      - name: Check public hygiene
+        run: python3 scripts/check_public_hygiene.py
+
+      - name: Validate openai.yaml
+        run: ruby -ryaml -e 'YAML.load_file("skills/k-humanizer/agents/openai.yaml"); puts "openai.yaml OK"'
