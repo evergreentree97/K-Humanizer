@@ -12,7 +12,7 @@ URL: https://huggingface.co/datasets/coastral/korean-writing-style-instruct
 
 Use for:
 - Korean style categories
-- Prompt patterns for tone transfer
+- Prompt patterns for style and register transfer
 - Synthetic examples for non-private validation
 
 Notes:
@@ -24,7 +24,7 @@ Notes:
 URL: https://huggingface.co/datasets/jojo0217/korean_safe_conversation
 
 Use for:
-- Casual conversation and messenger-like tone reference
+- Casual conversation and messenger-like wording reference
 - Natural daily dialogue examples
 
 Notes:
