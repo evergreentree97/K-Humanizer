@@ -1,6 +1,6 @@
 ---
 name: k-humanizer
-description: Use when editing Korean text to sound natural, human-written, and context-appropriate while preserving meaning. Trigger for Korean AI-tell removal, translationese cleanup, resume bullets, business documents, emails, messenger-style casual copy, reports, product copy, review comments, and dialogue text when the user asks to make Korean wording more natural, less stiff, less AI-like, or better matched to a tone.
+description: Use when editing Korean text to sound natural, human-written, and context-appropriate while preserving meaning. Trigger for Korean AI-tell removal, translationese cleanup, resume bullets, business documents, emails, messenger-style casual copy, reports, product copy, review comments, and dialogue text when the user asks to make Korean wording more natural, less stiff, less AI-like, or better matched to its reader, channel, and level of formality.
 ---
 
 # K-Humanizer
@@ -9,7 +9,7 @@ description: Use when editing Korean text to sound natural, human-written, and c
 
 Make Korean text sound naturally written by a fluent Korean speaker without changing facts, intent, constraints, names, numbers, or quoted text.
 
-Do not optimize for "AI detector bypass." Optimize for reader trust: clear meaning, believable rhythm, genre-appropriate tone, and no over-polishing.
+Do not optimize for "AI detector bypass." Optimize for reader trust: clear meaning, believable rhythm, context-appropriate wording, and no over-polishing.
 
 ## Workflow
 
@@ -26,7 +26,7 @@ Do not optimize for "AI detector bypass." Optimize for reader trust: clear meani
    - Generic AI closers: `결론적으로`, `시사하는 바가 크다`, `중요한 역할을 한다`.
    - Mechanical structure: repeated `첫째/둘째/셋째`, mirrored sentence lengths, excessive bullets.
    - Punctuation tells: English-like comma rhythm, needless quotes, decorative emphasis.
-   - Tone mismatch: too formal for chat, too casual for email, too polished for personal writing.
+   - Register mismatch: too formal for chat, too casual for email, too polished for personal writing.
 3. Rewrite surgically.
    - Prefer verbs over abstract nouns.
    - Cut filler before adding new words.
@@ -34,7 +34,7 @@ Do not optimize for "AI detector bypass." Optimize for reader trust: clear meani
    - Keep the user's level of confidence; do not make claims stronger.
 4. Self-check.
    - Meaning preserved?
-   - Tone appropriate for the target reader?
+   - Register and formality appropriate for the target reader?
    - Any phrase that sounds like a generic LLM answer?
    - Any over-humanized slang, forced imperfection, or personality not present in the source?
 

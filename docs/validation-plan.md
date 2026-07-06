@@ -5,10 +5,10 @@ K-Humanizer should be validated as a writing assistant, not as an AI detector by
 ## Evaluation Questions
 
 1. Does the output preserve the original meaning?
-2. Does it sound natural in Korean?
-3. Does the tone fit the channel?
+2. Does it sound like Korean someone would actually write in that context?
+3. Does the wording fit the reader, relationship, channel, and purpose?
 4. Did the skill avoid unnecessary rewriting?
-5. Did it remove obvious AI-like Korean patterns?
+5. Is the output ready to send, paste, or publish?
 
 ## Domains
 
@@ -48,17 +48,41 @@ Risks:
 - Adding emojis or slang without permission.
 - Changing relationship dynamics.
 
+### Everyday Requests
+
+Representative tasks:
+- Rewrite ordinary coordination messages.
+- Shorten translated task-like phrasing.
+- Make daily plans or requests sound like normal conversation.
+
+Risks:
+- Adding fake warmth.
+- Making the message too casual for the relationship.
+- Removing practical details such as time, place, or responsibility.
+
 ### Email
 
 Representative tasks:
 - Make a request clearer.
 - Reduce excessive ceremony.
-- Keep polite business tone.
+- Keep business-appropriate politeness.
 
 Risks:
 - Becoming too blunt.
 - Removing needed courtesy.
 - Changing the ask.
+
+### Code Review Comments
+
+Representative tasks:
+- Turn vague review wording into a concrete suggestion.
+- Keep review comments respectful without hiding the point.
+- Remove filler such as `개선의 여지` when the requested action is known.
+
+Risks:
+- Making the request too soft to act on.
+- Sounding accusatory toward the author.
+- Losing the technical reason for the suggestion.
 
 ## Golden Set Format
 
@@ -81,14 +105,16 @@ python3 scripts/validate_golden_set.py
 Each output receives 1-5:
 
 - Meaning fidelity
-- Naturalness
-- Tone fit
+- Korean naturalness
+- Context fit
 - Edit discipline
+- Practical usefulness
 
 Release criteria for v1.0:
 
 - Average score >= 4.2 across all domains.
 - Meaning fidelity >= 4.7.
+- Practical usefulness >= 4.2.
 - No critical factual drift in the golden set.
 
 ## Public Dataset Candidates
@@ -96,7 +122,7 @@ Release criteria for v1.0:
 Use these only after checking license and provenance:
 
 - Hugging Face `coastral/korean-writing-style-instruct`: useful for style categories.
-- Hugging Face `jojo0217/korean_safe_conversation`: useful for casual conversation tone.
+- Hugging Face `jojo0217/korean_safe_conversation`: useful for casual conversation wording.
 - KatFish/KatFishNet project: useful for Korean AI-tell linguistic features.
 - Public Korean corpus surveys such as Open Korean Corpora: useful for finding domain corpora.
 

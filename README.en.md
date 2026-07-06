@@ -8,7 +8,7 @@
 
 [한국어](README.md)
 
-K-Humanizer is an agent skill for polishing Korean writing. It helps AI-generated Korean sound natural in real contexts: resumes, documents, messenger replies, emails, product copy, review comments, and dialogue.
+K-Humanizer is an agent skill for making stiff Korean sound closer to writing people actually use. It edits Korean by context: resumes, documents, messenger replies, emails, product copy, review comments, and dialogue.
 
 It is not an AI detector bypass tool. The goal is straightforward: preserve meaning and facts while removing translationese, stiff formality, and generic AI-style phrasing.
 
@@ -20,9 +20,9 @@ AI-written Korean has its own tells:
 - Abstract filler such as `중요성`, `방향성`, `측면`, `효과적`
 - Generic closers such as `결론적으로`, `시사하는 바가 크다`
 - English-like comma rhythm
-- Tone that fails to distinguish documents, emails, and chat messages
+- Sentences that look the same in documents, emails, and chat messages
 
-K-Humanizer edits with the reader and channel in mind.
+K-Humanizer edits only as much as the reader and context require.
 
 ## Install
 
@@ -88,6 +88,50 @@ Before:
 
 After:
 미팅 일정 때문에 메일드립니다.
+```
+
+### Everyday
+
+```text
+Before:
+제가 오늘 저녁 식사에 필요한 재료들을 구매하는 역할을 수행할 수 있도록 하겠습니다.
+
+After:
+저녁 재료는 내가 사갈게.
+
+Before:
+당신이 괜찮다면 저는 내일 오전 시간대에 병원을 방문하는 일정을 진행하고자 합니다.
+
+After:
+괜찮으면 나 내일 오전에 병원 다녀올게.
+
+Before:
+현재 비가 오고 있는 상황이므로 우산을 챙기는 것이 좋을 것으로 보입니다.
+
+After:
+비 와서 우산 챙기는 게 좋겠어.
+```
+
+### Code Review
+
+```text
+Before:
+해당 로직은 가독성 측면에서 개선의 여지가 있을 것으로 판단됩니다. 별도 함수로 분리하는 방향을 고려해볼 수 있을 것 같습니다.
+
+After:
+이 로직은 함수로 빼면 읽기 쉬울 것 같아요.
+
+Before:
+현재 구현은 예외 상황에 대한 처리가 충분하지 않은 상태로 보입니다. 실패 케이스를 고려한 방어 로직을 추가하는 것이 적절할 것 같습니다.
+
+After:
+실패 케이스 처리가 빠져 있어서 방어 로직을 추가해야 할 것 같아요.
+
+Before:
+이 변수명은 실제로 담고 있는 데이터의 의미를 명확하게 전달하지 못하고 있는 것으로 판단됩니다.
+
+After:
+이 변수명만 보면 어떤 값인지 바로 알기 어려워요.
 ```
 
 ## Skill Files

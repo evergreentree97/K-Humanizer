@@ -13,7 +13,7 @@ Primary promise:
 In scope:
 - Korean AI-tell cleanup
 - Translationese reduction
-- Genre-aware tone adjustment
+- Genre-aware wording and formality adjustment
 - Meaning-preserving rewrites
 - Evaluation examples and release reports
 
@@ -68,7 +68,7 @@ Use three layers:
 
 1. Golden-set checks: stable, hand-authored, anonymized examples.
 2. Public-dataset probes: optional local sampling from licensed datasets.
-3. Human review: score meaning fidelity, naturalness, tone fit, and edit discipline.
+3. Human review: score meaning fidelity, naturalness, register fit, and edit discipline.
 
 ## Differentiation From Existing Projects
 
