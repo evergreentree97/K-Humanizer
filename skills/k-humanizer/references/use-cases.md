@@ -12,17 +12,9 @@ Rules:
 - Keep individual, led, shared, and supporting work distinct.
 - If the source has no evidence for an effect, keep the concrete action or flag the gap instead of inventing a result.
 
-Example:
-
-Before: 저는 캐시 전략 고도화를 통해 자체 부하 테스트 500건에서 API 응답 중앙값을 1.8초에서 1.1초로 크게 개선했습니다.
-
-After: 캐시 정책을 조정해 자체 부하 테스트 500건의 API 응답 중앙값을 1.8초에서 1.1초로 줄였다.
-
-Evidence-missing example:
-
-Before: 다양한 프로젝트를 통해 탁월한 문제 해결 능력을 발휘해 의미 있는 성과를 만들었습니다.
-
-Action: Ask for or flag the missing problem, action, ownership, and result. Do not turn it into a stronger achievement sentence.
+See `resume.md` for the minimal examples that define evidence and contribution
+boundaries. Keep broader coverage in the golden set instead of duplicating it
+in the runtime prompt.
 
 ## Documents and Reports
 
