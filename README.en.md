@@ -71,10 +71,10 @@ The `Before` text intentionally uses English-to-Korean translationese that sound
 
 ```text
 Before:
-저는 캐시 전략 고도화를 통해 자체 부하 테스트 500건에서 API 응답 중앙값을 1.8초에서 1.1초로 크게 개선했습니다.
+저는 캐시 전략 고도화를 통해 자체 부하 테스트 500건에서 API 응답 평균을 1.8초에서 1.1초로 크게 개선했습니다.
 
 After:
-캐시 정책을 조정해 자체 부하 테스트 500건의 API 응답 중앙값을 1.8초에서 1.1초로 줄였습니다.
+캐시 정책을 조정해 자체 부하 테스트 500건의 API 응답 평균을 1.8초에서 1.1초로 개선했습니다.
 ```
 
 If the source only says that it produced a "meaningful result," the skill does
@@ -168,9 +168,9 @@ References:
 
 ## Validation
 
-The v0 fixture contains 90 synthetic, anonymized examples:
+The v0 fixture contains 110 synthetic, anonymized examples:
 
-- 30 resume examples
+- 50 resume examples
 - 20 document examples
 - 20 messenger examples
 - 20 email examples

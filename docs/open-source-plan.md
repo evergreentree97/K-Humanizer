@@ -32,7 +32,7 @@ Out of scope:
 - MIT license
 - Portable `skills/k-humanizer/SKILL.md`
 - Use-case references
-- 90-item v0 golden set, with additional resume integrity cases
+- 110-item v0 golden set, with additional resume integrity and preservation cases
 - JSONL validation script
 
 ### v0.2: Validation Baseline

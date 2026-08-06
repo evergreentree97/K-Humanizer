@@ -105,7 +105,7 @@ even when the Korean sounds natural.
 
 Keep a small test set across real use cases:
 
-- Resume/profile: 30 examples
+- Resume/profile: 50 examples
 - Documents/reports: 20 examples
 - Messenger/casual: 20 examples
 - Email: 20 examples

@@ -64,27 +64,14 @@ because the decision and its conditions matter.
 
 Before:
 
-> 저는 캐시 전략 고도화를 통해 자체 부하 테스트 500건에서 API 응답 중앙값을 1.8초에서 1.1초로 크게 개선했습니다.
+> 저는 캐시 전략 고도화를 통해 자체 부하 테스트 500건에서 API 응답 평균을 1.8초에서 1.1초로 크게 개선했습니다.
 
 After:
 
-> 캐시 정책을 조정해 자체 부하 테스트 500건의 API 응답 중앙값을 1.8초에서 1.1초로 줄였다.
+> 캐시 정책을 조정해 자체 부하 테스트 500건의 API 응답 평균을 1.8초에서 1.1초로 개선했습니다.
 
 The rewrite keeps the sample, metric, and comparison while removing first
 person, abstract wording, and unsupported praise.
-
-### Unmeasured effect
-
-Before:
-
-> 장애 유형별 로그를 추가해 서비스 안정성을 강화했습니다.
-
-After:
-
-> 장애 유형별 로그를 추가했다.
-
-Without before-and-after evidence, keep the implemented change and remove the
-unmeasured effect.
 
 ### Contribution boundary
 
@@ -98,19 +85,6 @@ Before:
 After:
 
 > 채팅 구조와 SDK 연동을 주도하고 화면 구현은 팀원과 나눠 맡았다.
-
-### Internal wording
-
-Before:
-
-> 모델 승격 게이트와 롤백 파이프라인을 구축했습니다.
-
-After:
-
-> 운영 모델의 채택 기준과 이전 버전 복구 절차를 만들었다.
-
-If the source specifies the actual checks and automation, use those details
-instead of the general nouns in either sentence.
 
 ### Missing evidence
 

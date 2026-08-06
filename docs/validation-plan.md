@@ -91,7 +91,10 @@ Risks:
 ## Golden Set Format
 
 Use JSONL. The current v0 fixture is `evals/fixtures/golden_set.v0.jsonl`.
-It contains 30 resume cases and 20 cases in each of the other three domains.
+It contains 50 resume cases and 20 cases in each of the other three domains.
+The resume set includes both rewrite triggers and preservation cases where a
+literal path, permission, contrast, technical identifier, or exact job keyword
+must remain.
 
 ```json
 {"id":"email_001","domain":"email","input":"...","expected_traits":["polite","direct"],"must_preserve":["meeting date"],"avoid":["다름이 아니오라"]}
