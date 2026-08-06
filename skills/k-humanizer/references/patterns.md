@@ -1,38 +1,75 @@
 # Korean AI-Tell Patterns
 
-Use this as a checklist, not a rigid replacement table.
+Use these tables as routing rules, not a global find-and-replace list. First
+decide what a phrase means in its sentence, then choose the matching rewrite.
+Keep the source wording when an exception applies.
 
-## Translationese
+## Translationese and English-shaped grammar
 
-- `~를 통해`: often replace with `~로`, `~에서`, or a direct verb.
-- `~에 대해`: often replace with direct object marking.
-- `~에 있어서`: often delete or replace with `~에서`.
-- `가지고 있다`: often replace with `있다`, `갖췄다`, or direct possession.
-- `~에 의해`: often rewrite active voice.
+| If the source uses | Use this when the condition fits | Keep or handle differently when |
+|---|---|---|
+| `~를 통해` for a tool, place, or action | Use `~로`, `~에서`, or make the action the verb: `분석을 통해 확인했다` becomes `분석해 확인했다` | The path, intermediary, or mediation itself is important |
+| `~에 대해`, `~에 대한` before a direct object | Attach `을/를` to the object or combine the nouns: `오류에 대해 분석했다` becomes `오류를 분석했다` | The sentence genuinely introduces a topic rather than an action target |
+| `~에 있어서` for a setting | Use `~에서` or delete it | The contrast between settings is the point |
+| `가지고 있다`, `보유하고 있다` for simple possession | Use `있다`, `갖췄다`, or name the capability directly | Legal ownership or asset possession is the exact claim |
+| `~에 의해` with a known actor | Make the actor the subject and use active voice | The actor is unknown, irrelevant, or intentionally withheld |
+| `~하게 되었다`, `~지게 되었다` for a completed action | State the action directly | A real transition, external cause, or loss of control matters |
+| Repeated `~할 수 있다`, `~할 것으로 보인다` | State the verified capability or result directly | Permission, possibility, or uncertainty is part of the meaning |
+| `단순히 X가 아니라 Y`, `X를 넘어 Y` used for emphasis | State Y directly or name the real relationship between X and Y | The sentence corrects a genuine misunderstanding or the contrast changes the meaning |
+| `~에 대해서는`, `~와 관련하여` | Use `~은/는`, `~의`, or a direct object | The phrase marks a real scope boundary or legal relation |
 
-## Abstract Noun Chains
+## Abstract nouns, filler, and empty weight
 
-- `전략적`, `효과적`, `체계적`, `지속가능한`, `혁신적`
-- `가능성`, `중요성`, `필요성`, `방향성`
-- `측면`, `관점`, `과정`, `부분`, `요소`
+| If the source uses | Use this when the condition fits | Keep or handle differently when |
+|---|---|---|
+| Clusters such as `전략적`, `효과적`, `체계적`, `혁신적` | Name the action, rule, or observed property that makes it so | The adjective is a defined term or is supported by evidence in the source |
+| `가능성`, `중요성`, `필요성`, `방향성`, `측면`, `관점`, `부분`, `요소` without a concrete referent | Replace the noun with the decision, action, or property it hides | The abstraction is the actual subject of analysis |
+| `결론적으로`, `종합하면` before a repeated summary | Delete the transition and state the last finding | The text is a formal conclusion that adds a new decision or consequence |
+| `시사하는 바가 크다`, `중요한 역할을 한다`, `긍정적인 영향을 미칠 것으로 기대된다` | State the source-backed consequence or next action | If no consequence exists in the source, delete the empty claim instead of inventing one |
+| `다양한`, `의미 있는`, `성공적인`, `완성도 높은` without a standard | Name the items or the verified result | The source defines the range or evaluation standard |
+| `전문가들은`, `업계에서는`, `사용자들은` without a source | Name the supplied source or narrow the statement | Do not invent a source; flag the missing basis when it affects the claim |
+| `~라는 점입니다` only adds an ending | End with the actual judgment or difference | The construction identifies one item among several explicit points |
 
-Fix by asking what concrete action, property, or result the sentence actually means.
+## English and internal developer wording
 
-## Generic LLM Closers
+Use this table for resumes, official documents, or non-specialist readers. Keep
+official product names, code identifiers, established technical terms, and
+exact job-posting keywords when replacing them would reduce precision.
 
-- `결론적으로`
-- `시사하는 바가 크다`
-- `중요한 역할을 한다`
-- `긍정적인 영향을 미칠 것으로 기대된다`
-- `다양한 분야에서 활용될 수 있다`
+| If the reader does not need the internal term | Prefer |
+|---|---|
+| 컨텍스트 | 맥락, 조건, 배경, 앞선 내용 |
+| 케이스 | 경우, 사례 |
+| 이슈 | 문제, 쟁점 |
+| 플로우 | 흐름, 절차 |
+| 포인트 | 요점, 지점, 핵심 |
+| 리스크 | 위험, 우려, 실패 가능성 |
+| 체인 | 순서, 연결 관계 |
+| 게이트 | 품질 기준, 통과 조건, 먼저 확인하는 단계 |
+| 경합 | 두 로직이 같은 상태를 동시에 바꾸는 문제 |
+| 승격 | 채택, 운영 모델로 전환 |
+| 에이전트 | AI가 맡은 작업이나 자동화 범위 |
+| 스킬 | 프로젝트 지침, 작업별 규칙 |
+| 메모리 | 이전 대화 기록, 저장된 상태 정보 |
+| 워크플로우 | 작업 절차, 반복 실행 절차 |
+| 파이프라인 | 자동화 절차, 처리 단계 |
+| 회귀 | 기존 기능의 동작 변경, 수정 전후 동작 차이, 품질 하락 |
 
-Usually delete or replace with a specific consequence.
+Do not replace a term with another vague noun. Replacing
+`품질 게이트를 고도화했다` with `품질 기준을 고도화했다` leaves the
+abstraction unchanged. State the actual rule or check.
 
-## Rhythm and Punctuation
+## Rhythm and punctuation
 
-- Too many commas after connective endings.
-- Every sentence has similar length.
-- Paragraphs repeatedly use `또한`, `따라서`, `특히`, `이를 통해`.
-- Bullets mirror each other too perfectly.
+U+2014 (em dash) and U+00B7 (middle dot) are hard bans in rewritten prose.
+Restructure with a comma, period, colon, slash, parentheses, or conjunction.
+Do not alter the character inside verbatim quoted text, code, identifiers, or
+URLs; separate that material from the rewrite when necessary.
 
-Fix by varying sentence length, combining or splitting only where meaning improves.
+| If the source does this | Use |
+|---|---|
+| Places a comma immediately after `-고`, `-며`, `-지만`, `-면서`, `-아서`, `-어서`, or `-는데` | Remove the comma. If the sentence remains long, split it at a complete thought |
+| Starts several sentences with `또한`, `그리고`, `따라서`, `특히`, or `이를 통해` | Delete the connector or state the actual relation such as cause, contrast, or sequence |
+| Gives every sentence or bullet the same length and ending | Combine related points or split overloaded ones; do not add content only to vary rhythm |
+| Forces three parallel items | Keep the number of items supported by the source |
+| Ends several lines with noun phrases such as `~구축`, `~개선`, `~강화` | Turn some into complete predicates when the genre allows it |

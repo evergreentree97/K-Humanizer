@@ -22,6 +22,10 @@ Representative tasks:
 Risks:
 - Inventing metrics.
 - Making claims stronger than the source.
+- Turning team results into individual results.
+- Turning plans, proposals, or unshipped work into completed achievements.
+- Removing the comparison, sample, condition, or evaluator from a metric.
+- Replacing internal English terms without preserving exact technical meaning.
 - Flattening personal voice.
 
 ### Documents/Reports
@@ -87,6 +91,7 @@ Risks:
 ## Golden Set Format
 
 Use JSONL. The current v0 fixture is `evals/fixtures/golden_set.v0.jsonl`.
+It contains 30 resume cases and 20 cases in each of the other three domains.
 
 ```json
 {"id":"email_001","domain":"email","input":"...","expected_traits":["polite","direct"],"must_preserve":["meeting date"],"avoid":["다름이 아니오라"]}
@@ -116,6 +121,7 @@ Release criteria for v1.0:
 - Meaning fidelity >= 4.7.
 - Practical usefulness >= 4.2.
 - No critical factual drift in the golden set.
+- No fabricated resume metric, causal effect, completion state, or ownership claim.
 
 ## Public Dataset Candidates
 
