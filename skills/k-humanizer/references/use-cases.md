@@ -5,15 +5,24 @@
 Goal: make achievements concrete, credible, and easy to scan.
 
 Rules:
-- Prefer "무엇을 해서 어떤 결과를 냈는지" over broad self-description.
+- Read `resume.md` before editing a resume or career document.
+- Prefer problem or scope, judgment and action, then confirmed result over broad self-description.
 - Remove inflated adjectives such as `탁월한`, `혁신적인`, `압도적인` unless proven by evidence.
-- Keep numbers, scope, company names, and role boundaries unchanged.
+- Keep numbers with their comparison and measurement conditions.
+- Keep individual, led, shared, and supporting work distinct.
+- If the source has no evidence for an effect, keep the concrete action or flag the gap instead of inventing a result.
 
 Example:
 
-Before: 저는 여러 프로젝트들을 통해 문제 해결 스킬들을 강화했고 의미 있는 결과들을 만들어냈습니다.
+Before: 저는 캐시 전략 고도화를 통해 자체 부하 테스트 500건에서 API 응답 중앙값을 1.8초에서 1.1초로 크게 개선했습니다.
 
-After: 여러 프로젝트를 진행하며 문제 해결 경험을 쌓고 의미 있는 결과를 냈습니다.
+After: 캐시 정책을 조정해 자체 부하 테스트 500건의 API 응답 중앙값을 1.8초에서 1.1초로 줄였다.
+
+Evidence-missing example:
+
+Before: 다양한 프로젝트를 통해 탁월한 문제 해결 능력을 발휘해 의미 있는 성과를 만들었습니다.
+
+Action: Ask for or flag the missing problem, action, ownership, and result. Do not turn it into a stronger achievement sentence.
 
 ## Documents and Reports
 

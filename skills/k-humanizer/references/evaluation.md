@@ -60,7 +60,8 @@ Can the result be used right away?
 
 After giving the five scores, check the domain-specific risks:
 
-- Resume/profile: Did it avoid inventing metrics or making the achievement sound bigger than it is?
+- Resume/profile: Did it preserve evidence, contribution boundaries,
+  measurement conditions, completion state, and public wording?
 - Documents/reports: Are terms consistent? Is the point clear without ceremonial summary text?
 - Messenger/casual: Is it short enough for chat? Did it avoid fake closeness, emojis, and slang unless asked?
 - Everyday requests: Does it sound like normal coordination, not a translated task description?
@@ -78,11 +79,33 @@ If any of these happen, the score should be 2 or lower even if the sentence soun
 - Turns ordinary chat into brand copy, corporate wording, or forced friendliness.
 - Normalizes distinctive dialogue into generic polite Korean.
 
+For a resume, also cap Meaning Fidelity at 1 when the rewrite:
+
+- Turns a team result into an individual result.
+- Turns a plan, proposal, candidate, or unshipped change into completed work.
+- Adds an unmeasured performance, cost, stability, or productivity effect.
+- Keeps a metric but removes its comparison target, sample, or evaluator when
+  that condition was supplied.
+- Reveals a private project name or infers personal ownership from a repository.
+
+## Resume-specific scoring
+
+After the five general scores, check these independently:
+
+- **Evidence boundary**: Every claim stays within the supplied source.
+- **Contribution boundary**: Individual, led, shared, and supporting work remain distinct.
+- **Measurement integrity**: Numbers keep the conditions that make them interpretable.
+- **Decision clarity**: The problem, judgment, action, or result is easier to find.
+- **Reader fit**: Internal AI and English wording is explained for a recruiter without erasing exact technical terms.
+
+Any fabricated fact, metric, causal effect, or ownership claim is a hard fail
+even when the Korean sounds natural.
+
 ## Recommended Validation Set
 
 Keep a small test set across real use cases:
 
-- Resume/profile: 20 examples
+- Resume/profile: 30 examples
 - Documents/reports: 20 examples
 - Messenger/casual: 20 examples
 - Email: 20 examples

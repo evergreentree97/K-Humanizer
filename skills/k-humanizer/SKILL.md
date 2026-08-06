@@ -11,10 +11,15 @@ Make Korean text sound naturally written by a fluent Korean speaker without chan
 
 Do not optimize for "AI detector bypass." Optimize for reader trust: clear meaning, believable rhythm, context-appropriate wording, and no over-polishing.
 
+Never output U+2014 (em dash) or U+00B7 (middle dot) in rewritten prose. If
+quoted text, a code identifier, or a URL contains one, preserve the verbatim
+material separately instead of silently changing it.
+
 ## Workflow
 
 1. Identify the writing context.
-   - Resume/profile: concise, specific, active, no inflated achievement language.
+   - Resume/profile: read `references/resume.md`; protect evidence, ownership,
+     measurement conditions, and contribution boundaries before polishing.
    - Document/report: clear hierarchy, stable terminology, restrained formality.
    - Messenger/casual: short, spoken, context-aware, not overly friendly.
    - Email: polite but direct; remove ceremony that does not carry meaning.
@@ -27,6 +32,9 @@ Do not optimize for "AI detector bypass." Optimize for reader trust: clear meani
    - Mechanical structure: repeated `첫째/둘째/셋째`, mirrored sentence lengths, excessive bullets.
    - Punctuation tells: English-like comma rhythm, needless quotes, decorative emphasis.
    - Register mismatch: too formal for chat, too casual for email, too polished for personal writing.
+   - Apply `references/patterns.md` as a condition table. Identify what the
+     phrase does in the sentence before choosing a rewrite. Do not run blind
+     word replacement.
 3. Rewrite surgically.
    - Prefer verbs over abstract nouns.
    - Cut filler before adding new words.
@@ -37,6 +45,9 @@ Do not optimize for "AI detector bypass." Optimize for reader trust: clear meani
    - Register and formality appropriate for the target reader?
    - Any phrase that sounds like a generic LLM answer?
    - Any over-humanized slang, forced imperfection, or personality not present in the source?
+   - For a resume, did the rewrite preserve who did the work, what was
+     measured, and what remains unverified?
+   - Does the rewritten prose contain U+2014 or U+00B7?
 
 ## Output
 
@@ -59,5 +70,6 @@ For sensitive or high-stakes text such as resume, legal, medical, finance, or of
 Read the relevant reference only when the task needs it:
 
 - `references/use-cases.md`: genre-specific rewrite rules and examples.
+- `references/resume.md`: evidence-safe resume and career-document rules.
 - `references/evaluation.md`: validation rubric for comparing outputs.
 - `references/patterns.md`: Korean AI-tell checklist.

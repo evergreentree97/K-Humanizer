@@ -24,6 +24,23 @@ AI-written Korean has its own tells:
 
 K-Humanizer edits only as much as the reader and context require.
 
+## Core Method
+
+"Make it natural" is too vague to remove English-shaped Korean and AI-style
+phrasing consistently. K-Humanizer first identifies the condition inside the
+sentence, then applies the matching rewrite.
+
+| When X is true | Use Y |
+|---|---|
+| `~를 통해` only marks a means | `~로`, `~에서`, or a direct verb |
+| `기여했다` or `고도화했다` hides the actual change | State the verified action; do not invent a result |
+| A team result appears in an individual resume | Match the wording to led, shared, or supporting work |
+| `성능 개선` or `안정성 향상` was not measured | State only the confirmed change or observation |
+| A non-specialist reader sees `게이트` or `파이프라인` | Prefer plain Korean such as `품질 기준` or `자동화 절차` |
+
+This is not blind replacement. A phrase stays when its literal function matters,
+and every rule includes its condition and exception.
+
 ## Install
 
 Install from GitHub:
@@ -54,11 +71,15 @@ The `Before` text intentionally uses English-to-Korean translationese that sound
 
 ```text
 Before:
-저는 여러 프로젝트들을 통해 문제 해결 스킬들을 강화했고 의미 있는 결과들을 만들어냈습니다.
+저는 캐시 전략 고도화를 통해 자체 부하 테스트 500건에서 API 응답 중앙값을 1.8초에서 1.1초로 크게 개선했습니다.
 
 After:
-여러 프로젝트를 진행하며 문제 해결 경험을 쌓고 의미 있는 결과를 냈습니다.
+캐시 정책을 조정해 자체 부하 테스트 500건의 API 응답 중앙값을 1.8초에서 1.1초로 줄였습니다.
 ```
+
+If the source only says that it produced a "meaningful result," the skill does
+not manufacture a polished achievement. It asks for or flags the missing
+problem, action, ownership, and result, and omits unsupported claims.
 
 ### Document
 
@@ -141,14 +162,15 @@ The portable skill lives in [skills/k-humanizer/SKILL.md](skills/k-humanizer/SKI
 References:
 
 - [Use cases](skills/k-humanizer/references/use-cases.md)
+- [Resume and career-document rules](skills/k-humanizer/references/resume.md)
 - [Pattern checklist](skills/k-humanizer/references/patterns.md)
 - [Evaluation rubric](skills/k-humanizer/references/evaluation.md)
 
 ## Validation
 
-The v0 fixture contains 80 synthetic, anonymized examples:
+The v0 fixture contains 90 synthetic, anonymized examples:
 
-- 20 resume examples
+- 30 resume examples
 - 20 document examples
 - 20 messenger examples
 - 20 email examples
