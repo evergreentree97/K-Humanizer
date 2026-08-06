@@ -75,16 +75,16 @@ person, abstract wording, and unsupported praise.
 
 ### Contribution boundary
 
-Evidence says the person led the architecture and SDK integration while the
-team shared screen implementation.
+Evidence says the person led the dashboard information architecture and chart
+data mapping while the team shared screen implementation.
 
 Before:
 
-> 채팅 기능 전체를 단독으로 구현했습니다.
+> 대시보드 전체를 단독으로 구현했습니다.
 
 After:
 
-> 채팅 구조와 SDK 연동을 주도하고 화면 구현은 팀원과 나눠 맡았다.
+> 대시보드 정보 구조와 차트 데이터 연결을 주도하고 화면 구현은 팀원과 나눠 맡았습니다.
 
 ### Missing evidence
 
