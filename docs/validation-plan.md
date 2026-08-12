@@ -38,7 +38,20 @@ Representative tasks:
 Risks:
 - Losing precision.
 - Replacing domain terms inconsistently.
+- Claiming that a mismatch was found when the source only describes a check.
 - Becoming too casual.
+
+### Product/UI Copy
+
+Representative tasks:
+- Remove redundant subtitles and interface self-descriptions.
+- Replace abstract process nouns with visible actions and states.
+- Keep labels compact without turning them into marketing copy.
+
+Risks:
+- Removing a subtitle that adds real scope or a constraint.
+- Inventing a screen behavior that the source does not state.
+- Making a short label too explanatory.
 
 ### Messenger/Casual
 
@@ -48,21 +61,9 @@ Representative tasks:
 - Shorten awkward formal Korean.
 
 Risks:
-- Adding fake intimacy.
+- Adding fake warmth.
 - Adding emojis or slang without permission.
 - Changing relationship dynamics.
-
-### Everyday Requests
-
-Representative tasks:
-- Rewrite ordinary coordination messages.
-- Shorten translated task-like phrasing.
-- Make daily plans or requests sound like normal conversation.
-
-Risks:
-- Adding fake warmth.
-- Making the message too casual for the relationship.
-- Removing practical details such as time, place, or responsibility.
 
 ### Email
 
@@ -88,13 +89,24 @@ Risks:
 - Sounding accusatory toward the author.
 - Losing the technical reason for the suggestion.
 
+### Dialogue
+
+Representative tasks:
+- Remove translated phrasing while preserving the speaker's voice.
+- Keep relationship tension, emotional pace, and scene urgency.
+
+Risks:
+- Flattening a distinct voice into generic polite Korean.
+- Adding slang or intimacy that the source does not support.
+- Changing the emotional strength of the line.
+
 ## Golden Set Format
 
 Use JSONL. The current v0 fixture is `evals/fixtures/golden_set.v0.jsonl`.
-It contains 50 resume cases and 20 cases in each of the other three domains.
-The resume set includes both rewrite triggers and preservation cases where a
-literal path, permission, contrast, technical identifier, or exact job keyword
-must remain.
+It contains 150 synthetic cases: 50 resume, 20 document, 20 messenger, 20
+email, 10 product/UI copy, 20 code review, and 10 dialogue cases. The resume
+set includes both rewrite triggers and preservation cases where a literal path,
+permission, contrast, technical identifier, or exact job keyword must remain.
 
 ```json
 {"id":"email_001","domain":"email","input":"...","expected_traits":["polite","direct"],"must_preserve":["meeting date"],"avoid":["다름이 아니오라"]}

@@ -37,6 +37,8 @@ sentence, then applies the matching rewrite.
 | A team result appears in an individual resume | Match the wording to led, shared, or supporting work |
 | `성능 개선` or `안정성 향상` was not measured | State only the confirmed change or observation |
 | A non-specialist reader sees `게이트` or `파이프라인` | Prefer plain Korean such as `품질 기준` or `자동화 절차` |
+| A screen introduction repeats the title and visible content | State only the items and states the reader can inspect |
+| An exact implementation name appears during polishing | Keep `synchronized`, API names, and technical names unchanged |
 
 This is not blind replacement. A phrase stays when its literal function matters,
 and every rule includes its condition and exception.
@@ -111,26 +113,14 @@ After:
 미팅 일정 때문에 메일드립니다.
 ```
 
-### Everyday
+### Product Copy
 
 ```text
 Before:
-제가 오늘 저녁 식사에 필요한 재료들을 구매하는 역할을 수행할 수 있도록 하겠습니다.
+이 화면은 업로드한 문서와 처리 상태를 한눈에 확인할 수 있도록 구성된 대시보드입니다.
 
 After:
-저녁 재료는 내가 사갈게.
-
-Before:
-당신이 괜찮다면 저는 내일 오전 시간대에 병원을 방문하는 일정을 진행하고자 합니다.
-
-After:
-괜찮으면 나 내일 오전에 병원 다녀올게.
-
-Before:
-현재 비가 오고 있는 상황이므로 우산을 챙기는 것이 좋을 것으로 보입니다.
-
-After:
-비 와서 우산 챙기는 게 좋겠어.
+업로드한 문서와 처리 상태를 보여줍니다.
 ```
 
 ### Code Review
@@ -168,12 +158,15 @@ References:
 
 ## Validation
 
-The v0 fixture contains 110 synthetic, anonymized examples:
+The v0 fixture contains 150 synthetic, anonymized examples:
 
 - 50 resume examples
 - 20 document examples
+- 10 product/UI copy examples
 - 20 messenger examples
 - 20 email examples
+- 20 code review comment examples
+- 10 dialogue examples
 
 Run:
 

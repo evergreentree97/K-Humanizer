@@ -38,13 +38,18 @@ gap with a plausible achievement.
 | Long background before the action | Move the problem and action forward; split after a complete thought if needed | Force problem, action, and result into one overloaded sentence |
 | `전 과정`, `전반`, `모든 영역` | List only the stages or scope the source verifies | Use total-ownership wording as a shortcut |
 | Internal AI or English terms for a general recruiter | Use plain Korean from `patterns.md` and explain what was checked or decided | Replace an exact job-posting keyword or technical name that matters for search and precision |
+| An exact implementation primitive or API name | Keep the verified name and explain its behavior when needed | Replace `synchronized` with `Mutex`, rename an API, or modernize the implementation in prose |
 | A target job description is supplied | Use it to rank and phrase verified evidence by relevance | Copy a requirement into the resume as if it were the applicant's experience |
+| A required job keyword sounds less natural than the surrounding Korean | Use it once beside the verified action or mechanism | Repeat the keyword as self-evaluation or let it replace the actual evidence |
 | The introduction opens with years and a tool list | Lead with the closest verified problem, design decision, or operating responsibility; keep duration and tools as support | Turn the introduction into a keyword inventory |
 | Several unrelated project areas compete for space | Choose one primary axis and one supporting axis for the target role | Give every project equal weight or hide a real experience gap |
 | The same sentence appears in the introduction, skills, and experience | Give each section a job: introduction for positioning, skills for tools, experience for evidence | Repeat one polished sentence across sections |
 | A private or unverified project name | Use a public product name or a functional description while preserving scope | Reveal an internal code name or infer that a repository proves personal ownership |
 | A future-looking `~하고자 합니다` in an achievement bullet | Use an existing action or result. Move genuine motivation to the application essay | Present intention as experience |
 | Every bullet follows the same three-part mold | Keep only supported parts and vary length by meaning | Manufacture symmetry, a third item, or a result for visual consistency |
+| The source only says that a system was tested or compared | State what was tested, against what, and by which method when supplied | Claim that a mismatch or defect was found unless the source confirms it |
+| A technical result uses a spatial metaphor such as `뒤로 숨겼다` or `비껴갔다` | Name the boundary, path, build type, or stop condition | Keep a metaphor that makes the implementation harder to verify |
+| AI use is described only as `직접 검토했다` | Name the delegated work and the files, behavior, test, screenshot, or document used to verify it | Turn tool usage itself into an achievement or invent a productivity result |
 
 ## Sentence order
 
@@ -57,6 +62,12 @@ Prefer this reading order when the source supports it:
 This is a reading order, not a sentence template. One bullet may contain only
 an action because the result was not measured. Another may need two sentences
 because the decision and its conditions matter.
+
+Section roles matter too. Use the introduction for positioning, skills for
+technology names, and experience for evidence. If one achievement appears in
+all three sections, keep a different piece of information in each or remove the
+duplicate. Short noun phrases can work in a skills list; introductions and
+application essays should keep complete predicates and natural sentence rhythm.
 
 ## Examples
 
@@ -105,5 +116,7 @@ action, ownership, and result. If no evidence is available, omit the claim.
 - Unmeasured effects are not presented as facts.
 - A non-specialist can explain each sentence without internal vocabulary.
 - Exact job-posting terms and established technical names remain where useful.
+- Exact implementation primitives remain unchanged.
+- Testing is not presented as a discovered defect when no defect was confirmed.
 - No private name or unsupported service classification was added.
-- No U+2014 em dash or U+00B7 middle dot appears.
+- No U+2013 en dash, U+2014 em dash, or U+00B7 middle dot appears.

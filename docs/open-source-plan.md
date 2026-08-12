@@ -6,7 +6,7 @@ K-Humanizer should be positioned as a Korean-native writing polish skill, not as
 
 Primary promise:
 
-> Make Korean text sound natural for its real channel: resume, document, messenger, email, or dialogue.
+> Make Korean text sound natural for its real channel: resume, document, product UI, messenger, email, code review, or dialogue.
 
 ## Scope
 
@@ -32,7 +32,7 @@ Out of scope:
 - MIT license
 - Portable `skills/k-humanizer/SKILL.md`
 - Use-case references
-- 110-item v0 golden set, with additional resume integrity and preservation cases
+- 150-item v0 golden set with resume integrity, product/UI, code review, and dialogue cases
 - JSONL validation script
 
 ### v0.2: Validation Baseline
@@ -47,13 +47,14 @@ Out of scope:
 - Change-rate guardrail
 - Simple report generator
 
-### v0.4: More Domains
+### v0.4: Deeper Domain Coverage
 
 - Additional resume integrity and profile examples
 - Email examples by relationship
 - Messenger examples by closeness
-- Document/report examples
-- Dialogue examples, if kept general enough for public use
+- Document/report and product/UI examples by setting
+- Code review examples by severity
+- Dialogue examples by relationship and scene pressure
 
 ### v1.0: Stable Release
 
@@ -74,9 +75,10 @@ Use three layers:
 
 Existing Korean humanizer projects already cover AI-tell removal. K-Humanizer should differentiate through:
 
-- Practical channel modes: resume, docs, messenger, email, dialogue.
+- Practical channel modes: resume, docs, product UI, messenger, email, code review, dialogue.
 - Strict meaning preservation.
 - Clear anti-overpolishing policy.
+- A change budget that distinguishes polishing from rewriting.
 - Small portable skill structure.
 - Before/after examples from real editing patterns.
 
@@ -86,4 +88,4 @@ Existing Korean humanizer projects already cover AI-tell removal. K-Humanizer sh
 2. Score outputs with `docs/validation-plan.md`.
 3. Add a first report under `evals/reports/`.
 4. Add a small pattern-count script if the manual report exposes repeatable failures.
-5. Publish the GitHub repo as `K-Humanizer`.
+5. Publish the first scored validation report.

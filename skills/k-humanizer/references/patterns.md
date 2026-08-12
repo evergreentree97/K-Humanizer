@@ -30,6 +30,26 @@ Keep the source wording when an exception applies.
 | `전문가들은`, `업계에서는`, `사용자들은` without a source | Name the supplied source or narrow the statement | Do not invent a source; flag the missing basis when it affects the claim |
 | `~라는 점입니다` only adds an ending | End with the actual judgment or difference | The construction identifies one item among several explicit points |
 
+## Reader-facing specificity
+
+Do not replace one abstract noun with another. Ask what the reader can see,
+find, decide, or verify. If the source does not answer that question, keep the
+claim narrow instead of filling the gap.
+
+| If the source uses | Prefer when the reader needs the concrete behavior | Keep or handle differently when |
+|---|---|---|
+| `책임 경계`, `코드 진입점`, `상태 변형`, `처리 기준`, `공통 계약`, `별도 결정` in an introduction | Name the screen, action, file, state, or failure behavior the reader can inspect | The audience is reviewing architecture and the term is precisely defined |
+| `어긋남`, `맞지 않음`, `정합성 문제` without both sides of the comparison | Name the request field, response field, state, time, or failure condition that differed | If only a test was run, say what was tested; do not imply that a mismatch was found |
+| `뒤로 숨기다`, `비껴가다`, `다음 단계로 넘어가지 않게`, `도구를 붙이다` | State the code boundary, missed path, stop condition, or build scope | A deliberate metaphor is part of non-technical prose |
+| `네트워크 단절` as a generic failure label | Use `네트워크 오류` | The source specifically confirms that the connection was interrupted |
+| `직접 검토했다`, `결과를 확인했다` without an object or method | Name what was reviewed and how the result was checked | The method is already clear from the immediately preceding sentence |
+
+For product pages, dashboards, and documentation, remove self-introductions
+such as `이 화면은 ... 하는 화면입니다` when the title or UI already says the
+same thing. Replace `한눈에`, decorative subtitles, bold labels, and balanced
+taglines with the actual items or states shown. Keep a subtitle when it adds a
+real scope, constraint, or audience that the title does not contain.
+
 ## English and internal developer wording
 
 Use this table for resumes, official documents, or non-specialist readers. Keep
@@ -59,16 +79,23 @@ Do not replace a term with another vague noun. Replacing
 `품질 게이트를 고도화했다` with `품질 기준을 고도화했다` leaves the
 abstraction unchanged. State the actual rule or check.
 
+Keep exact product names, job-posting keywords, code identifiers, and
+implementation primitives when precision matters. Naturalization must not turn
+`synchronized` into `Mutex`, rename an API, or replace a documented mechanism
+with a more fashionable one. When an awkward job keyword is required, use it
+once near a concrete explanation instead of repeating it as a slogan.
+
 ## Rhythm and punctuation
 
-U+2014 (em dash) and U+00B7 (middle dot) are hard bans in rewritten prose.
-Restructure with a comma, period, colon, slash, parentheses, or conjunction.
-Do not alter the character inside verbatim quoted text, code, identifiers, or
-URLs; separate that material from the rewrite when necessary.
+U+2013 (en dash), U+2014 (em dash), and U+00B7 (middle dot) are hard bans in
+rewritten prose. Restructure with a comma, period, colon, slash, parentheses, or
+conjunction. Do not alter the character inside verbatim quoted text, code,
+identifiers, or URLs; separate that material from the rewrite when necessary.
 
 | If the source does this | Use |
 |---|---|
-| Places a comma immediately after `-고`, `-며`, `-지만`, `-면서`, `-아서`, `-어서`, or `-는데` | Remove the comma. If the sentence remains long, split it at a complete thought |
+| Places a comma immediately after `-고`, `-며`, `-지만`, `-면서`, `-아서`, `-어서`, `-는데`, or `-자` | Remove the comma. If the sentence remains long, split it at a complete thought |
+| Uses a comma in more than half of the sentences | Split some sentences or absorb the pause into a connective ending; do not preserve English-like comma rhythm |
 | Starts several sentences with `또한`, `그리고`, `따라서`, `특히`, or `이를 통해` | Delete the connector or state the actual relation such as cause, contrast, or sequence |
 | Gives every sentence or bullet the same length and ending | Combine related points or split overloaded ones; do not add content only to vary rhythm |
 | Forces three parallel items | Keep the number of items supported by the source |

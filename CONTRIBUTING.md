@@ -34,8 +34,11 @@ Accepted domains for now:
 
 - `resume`
 - `document`
+- `product_copy`
 - `messenger`
 - `email`
+- `code_review`
+- `dialogue`
 
 Validate before opening a pull request:
 
