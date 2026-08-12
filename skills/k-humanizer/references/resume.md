@@ -78,10 +78,10 @@ all three sections, keep a different piece of information in each or remove the
 duplicate. Short noun phrases can work in a skills list; introductions and
 application essays should keep complete predicates and natural sentence rhythm.
 
-Do not evaluate every role through engineering output. Operations can show a
+Do not require the same kind of evidence from every role. Operations can show a
 repeatable response or exception rule, planning can show a scope or policy
-decision, QA can show a release judgment, design can show an information or
-interaction decision, and research can show a well-bounded finding. A metric is
+decision, QA can show a release decision, design can show an information or
+interaction choice, and research can show a well-bounded finding. A metric is
 useful when it exists with interpretable conditions, not as a requirement for
 every bullet.
 

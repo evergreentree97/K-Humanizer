@@ -118,7 +118,8 @@ different resumes combined.
 | A job-posting keyword is repeated as a trait | Use it once beside an experience that proves it. |
 | `협업`, `소통`, or `문제 해결` stands alone | Name the handoff, disagreement, customer request, decision, or follow-up already in the source. |
 | One achievement appears in the summary, skills, and experience | Keep positioning in the summary, names in skills, and evidence in experience. |
-| Technical detail dominates a non-technical role | Explain the operating, planning, QA, design, customer, or research decision first. Keep only technical detail that proves it. |
+| Technical detail takes over the bullet | Put the work, decision, or user-facing change first. Keep only technical detail that helps explain the experience. |
+| A role is explained by comparing it with another role | State what the target role needs to see instead of using another field as the baseline. |
 | All bullets are noun phrases | Use complete predicates for experience and judgment. Reserve noun phrases for compact lists. |
 | The candidate is changing fields | Show transferable responsibilities without relabeling past experience. |
 
@@ -168,7 +169,7 @@ ahead of the review notes.
 - Numbers retain their comparison and measurement conditions.
 - Each section adds new information.
 - The document does not depend on personality claims or job-posting keywords.
-- Non-technical roles are not forced into engineering language or a metric-only
-  achievement formula.
+- The document uses evidence that matters for the target role instead of forcing
+  every bullet into a metric-only formula.
 - The result is concise enough to scan and specific enough to discuss in an
   interview.
