@@ -18,21 +18,24 @@ preserve the verbatim material separately instead of silently changing it.
 ## Workflow
 
 1. Identify the writing context.
-   - Resume/profile: read `references/resume.md`; protect evidence, ownership,
-     measurement conditions, and contribution boundaries before polishing.
-   - Document/report: clear hierarchy, stable terminology, restrained formality.
-   - Product/UI copy: name what the reader can see or do; remove subtitles and
-     self-descriptions that only repeat the title or component.
+   - Personal/everyday: preserve the writer's relationship, emotion, humor, and
+     level of familiarity; remove stiffness without adding a new personality.
    - Messenger/casual: short, spoken, context-aware, not overly friendly.
    - Email: polite but direct; remove ceremony that does not carry meaning.
-   - Code review: specific, respectful, and clear about the requested action.
+   - Document/report/essay: clear hierarchy, stable terminology, restrained formality.
+   - Resume/profile: read `references/resume.md`; protect evidence, ownership,
+     measurement conditions, and contribution boundaries before polishing.
+   - Product/UI copy: name what the reader can see or do; remove subtitles and
+     self-descriptions that only repeat the title or component.
    - Dialogue: preserve speaker voice, relationship tension, and emotional beat.
+   - Code review, when applicable: specific, respectful, and clear about the
+     requested action.
    - Unknown: preserve the original register and only remove obvious stiffness.
 2. Triage Korean AI-tell patterns before rewriting.
    - S1: factual drift, changed ownership or completion state, invented evidence,
      a hard-banned character, or wording that falsely claims a defect. Always fix.
-   - S2: repeated translationese, abstract filler, register mismatch, decorative
-     structure, or vague technical metaphors. Fix unless the genre needs it.
+   - S2: repeated translationese, abstract filler, register mismatch,
+     decorative structure, or vague claims. Fix unless the genre needs it.
    - S3: an isolated stylistic preference. Leave it alone unless it repeats.
    - With no S1 issue and at most two S2 issues, edit only those spans or return
      the source unchanged. Do not run a full rewrite to justify the skill.
@@ -42,8 +45,8 @@ preserve the verbatim material separately instead of silently changing it.
    - Generic AI closers: `결론적으로`, `시사하는 바가 크다`, `중요한 역할을 한다`.
    - Mechanical structure: repeated `첫째/둘째/셋째`, mirrored sentence lengths, excessive bullets.
    - Punctuation tells: English-like comma rhythm, needless quotes, decorative emphasis.
-   - Vague technical wording: unnamed `정합성 문제`, spatial metaphors such as
-     `뒤로 숨기다`, or process nouns that do not say what changed.
+   - Vague wording: `좋은 경험`, unnamed `문제 상황`, empty self-evaluation,
+     or metaphors and process nouns that do not say what happened.
    - Register mismatch: too formal for chat, too casual for email, too polished for personal writing.
    - Apply `references/patterns.md` as a condition table. Identify what the
      phrase does in the sentence before choosing a rewrite. Do not run blind
@@ -63,8 +66,7 @@ preserve the verbatim material separately instead of silently changing it.
    - Any over-humanized slang, forced imperfection, or personality not present in the source?
    - For a resume, did the rewrite preserve who did the work, what was
      measured, and what remains unverified?
-   - Did an exact implementation name, error cause, or verification result get
-     replaced with a more fashionable but unsupported term?
+   - Did a proper name, domain term, verified cause, or confirmed result change?
    - Does the rewritten prose contain U+2013, U+2014, or U+00B7?
 
 ## Output

@@ -68,6 +68,7 @@ After giving the five scores, check the domain-specific risks:
   measurement conditions, completion state, and public wording?
 - Documents/reports: Are terms consistent? Is the point clear without ceremonial summary text?
 - Product/UI copy: Does it name visible content or actions without repeating the title or component type?
+- Personal/everyday: Did it preserve the writer's relationship, emotion, humor, and level of familiarity?
 - Messenger/casual: Is it short enough for chat? Did it avoid fake closeness, emojis, and slang unless asked?
 - Email: Is the ask easy to find? Is it polite enough without hiding the point?
 - Code review: Does it point to the code and give a concrete suggestion?
@@ -79,7 +80,7 @@ If any of these happen, the score should be 2 or lower even if the sentence soun
 
 - Adds a new fact, promise, metric, apology, or emotional stance.
 - Removes a constraint, deadline, recipient, blocker, or uncertainty.
-- Replaces an exact implementation name, API, or confirmed error cause with an unsupported alternative.
+- Replaces an exact name, domain term, or confirmed cause with an unsupported alternative.
 - Claims that a mismatch or defect was found when the source only says a check was run.
 - Makes a review comment so soft that the action item becomes unclear.
 - Turns ordinary chat into brand copy, corporate wording, or forced friendliness.
@@ -93,7 +94,7 @@ For a resume, also cap Meaning Fidelity at 1 when the rewrite:
 - Keeps a metric but removes its comparison target, sample, or evaluator when
   that condition was supplied.
 - Reveals a private project name or infers personal ownership from a repository.
-- Replaces a verified implementation primitive with a different mechanism.
+- Replaces a verified method or domain term with a different one.
 
 ## Resume-specific scoring
 
@@ -103,7 +104,7 @@ After the five general scores, check these independently:
 - **Contribution boundary**: Individual, led, shared, and supporting work remain distinct.
 - **Measurement integrity**: Numbers keep the conditions that make them interpretable.
 - **Decision clarity**: The problem, judgment, action, or result is easier to find.
-- **Reader fit**: Internal AI and English wording is explained for a recruiter without erasing exact technical terms.
+- **Reader fit**: Specialized or insider wording is explained for a recruiter without erasing exact domain terms.
 
 Any fabricated fact, metric, causal effect, or ownership claim is a hard fail
 even when the Korean sounds natural.
@@ -115,9 +116,10 @@ Keep a small test set across real use cases:
 - Resume/profile: 50 examples
 - Documents/reports: 20 examples
 - Product/UI copy: 10 examples
+- Personal/everyday: 20 examples
 - Messenger/casual: 20 examples
 - Email: 20 examples
-- Code review comments: 20 examples
+- Code review comments: 10 examples
 - Dialogue: 10 examples
 
 Each item should say what must stay the same and what should disappear:
