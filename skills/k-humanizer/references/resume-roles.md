@@ -1,23 +1,28 @@
-# Role-Aware Resume Writing
+# Field-Aware Resume Writing
 
 Read this reference after `resume.md` when the source includes a target role,
-job description, or clear professional context. Role targeting changes which
-verified evidence comes first and how it is explained. It never changes the
-facts, contribution boundary, measurement conditions, or completion state.
+job description, or clear professional context. Its first job is to keep the
+field's real language and work intact while removing AI-like wording. Change
+the order of verified experience only when the user asks for tailoring. Never
+change the facts, contribution boundary, measurement conditions, or completion
+state.
 
-## Choose the role from evidence
+## Use field context safely
 
-- Use the job responsibilities and evaluation criteria, not the title alone.
-- If the posting combines roles, choose one primary role and at most one
-  supporting role. Do not make every bullet serve every role.
-- If no target role is supplied, use the general evidence order in `resume.md`.
+- Use the field context to understand established terms and what the work means.
+- For a humanization-only request, keep the original experience selection and
+  order.
+- If the user asks for job targeting and the posting combines roles, choose one
+  primary role and at most one supporting role.
+- If no target role is supplied, do not infer one. Apply the general rules in
+  `resume.md`.
 - Do not copy the posting's responsibilities into the resume as experience.
 - Keep a real gap visible when the posting asks for work the source does not
   support.
 
-## Role routing table
+## Field context table
 
-| Role | Lead with | Evidence that helps | Avoid |
+| Role | Experience details to preserve | Evidence that helps | Avoid |
 |---|---|---|---|
 | Operations | Repeated work, exceptions, deadlines, handoffs, and operating decisions | Volume, frequency, time range, error type, turnaround time, escalation rule, before/after observation | `운영 전반`, `원활한 운영`, `효율성 향상` without the changed routine or result |
 | Service or product planning | User or business problem, option considered, priority, scope decision, and validation | Inquiry or behavior pattern, requirement, tradeoff, policy, launch state, experiment or feedback result | `기획에 참여`, `니즈를 반영`, `방향성을 수립` without the actual decision |
@@ -88,7 +93,7 @@ After, when the source supports the details:
 
 ## Shared safeguards
 
-- A role keyword chooses evidence; it does not prove the experience.
+- A role keyword provides context; it does not prove the experience.
 - Counts need meaning. `테스트 127건`, `콘텐츠 40건`, or `문의 800건` is
   activity until the source connects it to scope, judgment, or result.
 - Keep proposal, approval, pilot, launch, and organization-wide adoption
@@ -101,7 +106,10 @@ After, when the source supports the details:
 
 ## Final role check
 
-- The first two bullets answer the target role's main hiring questions.
+- The wording still describes the field's actual work instead of replacing it
+  with generic achievement language.
+- When tailoring was requested, the first two bullets answer the target role's
+  main hiring questions.
 - Each section contributes different information instead of repeating one claim.
 - The wording shows judgment and responsibility, not only task lists.
 - Weak or missing experience remains visible instead of being covered by the

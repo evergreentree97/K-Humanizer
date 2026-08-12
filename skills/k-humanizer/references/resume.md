@@ -47,8 +47,8 @@ achievement instead of fabricating a result to finish a template.
 | `전 과정`, `전반`, `모든 영역` | List only the stages or scope the source verifies | Use total-ownership wording as a shortcut |
 | Internal or English terms for a general recruiter | Use plain Korean from `patterns.md` and explain what was checked or decided | Replace an exact job-posting keyword or domain name that matters for search and precision |
 | An exact proper name, method, or domain term | Keep the verified term and explain it when needed | Replace it with a more fashionable or approximate alternative |
-| A target job description is supplied | Use it to rank and phrase verified evidence by relevance | Copy a requirement into the resume as if it were the applicant's experience |
-| The same experience is reused for a different role | Change the evidence order and explanation to answer that role's hiring questions | Change the facts, contribution boundary, result, or completion state |
+| A target job description is supplied and tailoring is requested | Use it to rank and phrase verified evidence by relevance | Copy a requirement into the resume as if it were the applicant's experience |
+| The same experience is reused for a different role in a tailoring request | Change the evidence order and explanation to answer that role's hiring questions | Change the facts, contribution boundary, result, or completion state |
 | A required job keyword sounds less natural than the surrounding Korean | Use it once beside the verified action or mechanism | Repeat the keyword as self-evaluation or let it replace the actual evidence |
 | The introduction opens with years and a tool list | Lead with the closest verified problem, decision, or operating responsibility; keep duration and tools as support | Turn the introduction into a keyword inventory |
 | Several unrelated project areas compete for space | Choose one primary axis and one supporting axis for the target role | Give every project equal weight or hide a real experience gap |

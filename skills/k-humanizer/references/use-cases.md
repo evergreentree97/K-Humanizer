@@ -14,9 +14,11 @@ Rules:
 - Keep numbers with their comparison and measurement conditions.
 - Keep individual, led, shared, and supporting work distinct.
 - If the source has no evidence for an effect, keep the concrete action or flag the gap instead of inventing a result.
-- Change the evidence order for operations, planning, QA, design, marketing,
-  customer service, research, or education instead of forcing one universal
-  achievement template across every role.
+- Preserve the established language and actual work of operations, planning,
+  QA, design, marketing, customer service, research, or education. Do not turn
+  every field into one generic achievement template.
+- Select, remove, or reorder experience only when the user asks for composition,
+  tailoring, or a structural review.
 - Return paste-ready wording before diagnosis. Add questions only when a missing
   fact would materially change ownership, completion state, or claim strength.
 

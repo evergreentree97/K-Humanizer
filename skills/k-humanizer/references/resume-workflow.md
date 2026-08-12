@@ -1,19 +1,18 @@
 # Resume Workflow
 
 Use this reference with `resume.md` for every resume, career description,
-portfolio summary, LinkedIn profile, or application-writing task. It converts
-source material into a usable document without filling evidence gaps with
-plausible claims.
+portfolio summary, LinkedIn profile, or application-writing task. Its default
+job is to remove AI-like Korean while preserving the supplied content, field,
+and voice. It composes or restructures only when the user asks.
 
 ## Choose the task before editing
 
 | Input | Task | Default response |
 |---|---|---|
-| One or more finished bullets | Polish wording while preserving scope and strength | Return paste-ready bullets. Explain only a material claim issue. |
-| Raw notes, meeting notes, or a task list | Extract evidence and compose bullets | Return the safest usable wording, then list only evidence gaps that affect it. |
-| A job posting and existing experience | Tailor verified evidence to the role | Choose one primary role and at most one supporting role, then reorder and rewrite the relevant sections. |
-| A complete resume or career document | Review structure and rewrite weak sections | Organize the result by document section. Separate ready wording, evidence gaps, and content to remove or move. |
-| A request to make text sound natural | Humanize only | Follow the normal change budget. Do not reorganize the document unless requested. |
+| One or more finished bullets | Humanize while preserving scope, order, and strength | Return paste-ready bullets. Explain only a material claim issue. |
+| A complete resume or career document | Humanize the document without changing its career story | Keep sections and experience order unless a structural review is requested. |
+| Raw notes, meeting notes, or a task list | Compose only when requested | Extract confirmed facts and list only evidence gaps that affect the draft. |
+| A job posting and existing experience | Tailor only when requested | Reorder verified experience without copying the posting or inventing a match. |
 
 If the user requests composition, restructuring, or a role-targeted rewrite, a
 change over 50% can be appropriate. The evidence boundary still applies even
@@ -37,7 +36,10 @@ For each experience, extract only what the source supports:
 Do not show this table automatically. It is an internal writing aid unless the
 user asks to inspect the evidence.
 
-## Give each section one job
+## Give each section one job when structure is in scope
+
+Use this section for composition, structural review, or a full-document rewrite.
+For a humanization-only request, preserve the original sections and order.
 
 ### Summary
 
@@ -53,8 +55,8 @@ does not support.
 ### Experience
 
 - Give each bullet one main point.
-- Lead with a responsibility, decision, action, or confirmed result that matters
-  to the target role.
+- For a structural rewrite, lead with a responsibility, decision, action, or
+  confirmed result that matters to the intended reader.
 - Keep background only when the action is hard to understand without it.
 - Use a second sentence when ownership, conditions, or follow-up would make one
   sentence overloaded.
@@ -89,9 +91,11 @@ experience to the organization's stated work and the contribution the applicant
 can credibly make. Do not turn admiration for the company or a job-posting
 phrase into personal evidence.
 
-## Prioritize for the target role
+## Prioritize only when tailoring is requested
 
-Read `resume-roles.md` when a target role or job description is available.
+Read `resume-roles.md` when a target role or job description is available. Use
+it to understand field-specific wording. Follow the steps below only when the
+user also asks to tailor, reorder, or restructure the resume.
 
 1. Extract the posting's actual responsibilities, expected decisions, and
    evidence requirements.

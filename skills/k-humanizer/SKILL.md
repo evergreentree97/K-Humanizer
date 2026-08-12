@@ -1,6 +1,6 @@
 ---
 name: k-humanizer
-description: Use when drafting, restructuring, reviewing, or polishing Korean resumes, career descriptions, portfolio summaries, and application writing without inventing evidence. Specialize the wording for operations, planning, QA, design, marketing, customer service, research, or education roles by changing the order and explanation of verified experience. Also use for Korean AI-tell removal, translationese cleanup, business documents, emails, messages, reports, product copy, review comments, and dialogue when the user asks for natural, context-appropriate Korean.
+description: Use when polishing Korean resumes, career descriptions, portfolio summaries, and application writing so they sound natural rather than AI-written across operations, planning, QA, design, marketing, customer service, research, education, and other fields. Preserve facts, meaning, ownership, results, field-specific terms, and the writer's voice while removing translationese, stiff abstraction, generic achievement claims, and mechanical structure. Compose from notes, restructure, or tailor to a job posting only when the user explicitly asks. Also use for natural Korean in documents, emails, messages, reports, product copy, review comments, and dialogue.
 ---
 
 # K-Humanizer
@@ -17,26 +17,27 @@ preserve the verbatim material separately instead of silently changing it.
 
 ## Resume First
 
-Treat resumes and career documents as a primary workflow, not as generic prose
-with stronger verbs. For every resume, career description, portfolio summary,
-or application-writing task:
+Treat resumes and career documents as a high-stakes humanization task. The
+default is to improve the supplied wording, regardless of field, without
+choosing a different career story for the user. For every resume, career
+description, portfolio summary, or application-writing task:
 
 1. Read `references/resume.md` and `references/resume-workflow.md`.
 2. If a target role or job description is supplied, also read
    `references/resume-roles.md`.
-3. Separate verified evidence from desired positioning before writing.
-4. Keep role targeting inside the evidence. Change what comes first and what is
-   explained, but never change who did the work, the completion state, or what
-   was measured.
+3. Preserve the field's established terms and the writer's actual experience.
+4. Unless the user asks for composition or tailoring, do not select, remove, or
+   reorder experience. Remove only the AI-like wording and awkward Korean.
 
-Resume writing can be a light edit or a structural rewrite. The user's request
-sets the scope:
+Resume writing can be a light edit or a structural rewrite. Humanization is the
+default, and the user's request sets any broader scope:
 
 - Polish or humanize: edit only the supplied wording and follow the change budget.
 - Turn notes into bullets: organize only facts present in the notes and expose
   any missing evidence that affects the claim.
-- Tailor to a posting: rank verified experience for one primary role and at
-  most one supporting role. Do not copy requirements into the resume.
+- Tailor to a posting: only when requested, rank verified experience for one
+  primary role and at most one supporting role. Do not copy requirements into
+  the resume.
 - Review a full resume: check section roles, repetition, evidence gaps, reader
   fit, and contribution boundaries before rewriting affected sections.
 
@@ -54,9 +55,9 @@ percentage.
    - Email: polite but direct; remove ceremony that does not carry meaning.
    - Document/report/essay: clear hierarchy, stable terminology, restrained formality.
    - Resume/profile: follow the Resume First instructions and
-     `references/resume-workflow.md`; protect evidence, ownership, measurement
-     conditions, and contribution boundaries before choosing the role-specific
-     emphasis.
+     `references/resume-workflow.md`; preserve the field's normal language while
+     removing AI-like phrasing, and protect evidence, ownership, measurement
+     conditions, and contribution boundaries.
    - Product/UI copy: name what the reader can see or do; remove subtitles and
      self-descriptions that only repeat the title or component.
    - Dialogue: preserve speaker voice, relationship tension, and emotional beat.
@@ -114,8 +115,9 @@ When handling career material, use this order:
    proves it, skills list relevant tools or domain knowledge, and a portfolio
    explains judgment and contribution. Do not repeat the same sentence across
    sections.
-4. Choose the target role from responsibilities and evaluation criteria, not
-   title matching. Use one primary role and at most one supporting role.
+4. Use the supplied role to understand the reader and established terminology.
+   Choose a primary and supporting role only when the user explicitly asks for
+   job-targeted restructuring.
 5. Draft the smallest usable version first. Lead with the evidence that answers
    the target reader's hiring question and keep tools as supporting detail.
 6. Check that every bullet can be traced to the source and that a recruiter can
@@ -158,7 +160,8 @@ Read the relevant reference only when the task needs it:
 - `references/resume.md`: evidence-safe resume and career-document rules.
 - `references/resume-workflow.md`: input classification, evidence extraction,
   section structure, and paste-ready resume output rules.
-- `references/resume-roles.md`: role-specific evidence order for operations,
-  planning, QA, design, marketing, customer service, research, and education.
+- `references/resume-roles.md`: field-specific language and optional evidence
+  order for operations, planning, QA, design, marketing, customer service,
+  research, and education.
 - `references/evaluation.md`: validation rubric for comparing outputs.
 - `references/patterns.md`: Korean AI-tell checklist.
