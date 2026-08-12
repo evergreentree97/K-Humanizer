@@ -18,6 +18,8 @@ Representative tasks:
 - Rewrite resume bullets.
 - Polish LinkedIn or portfolio summaries.
 - Remove inflated claims while preserving achievements.
+- Reorder verified evidence for operations, planning, QA, design, marketing,
+  customer service, research, or education roles.
 
 Risks:
 - Inventing metrics.
@@ -26,6 +28,7 @@ Risks:
 - Turning plans, proposals, or unshipped work into completed achievements.
 - Removing the comparison, sample, condition, or evaluator from a metric.
 - Replacing exact domain terms with approximate wording.
+- Applying one engineering-style achievement template to every role.
 - Flattening personal voice.
 
 ### Documents/Reports
@@ -115,11 +118,12 @@ Risks:
 ## Golden Set Format
 
 Use JSONL. The current v0 fixture is `evals/fixtures/golden_set.v0.jsonl`.
-It contains 160 synthetic cases: 50 resume, 20 document, 20 personal/everyday,
+It contains 200 synthetic cases: 90 resume, 20 document, 20 personal/everyday,
 20 messenger, 20 email, 10 product/UI copy, 10 code review, and 10 dialogue
 cases. The resume set includes both rewrite triggers and preservation cases
 where a required intermediary, permission, contrast, domain identifier, or
-exact job keyword must remain.
+exact job keyword must remain. Forty resume cases carry a `resume_role` field,
+with five cases for each supported role group.
 
 ```json
 {"id":"email_001","domain":"email","input":"...","expected_traits":["polite","direct"],"must_preserve":["meeting date"],"avoid":["다름이 아니오라"]}

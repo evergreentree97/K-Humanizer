@@ -8,6 +8,7 @@
 - Add evidence-safe resume rules for contribution boundaries, measurement conditions, completion state, and recruiter-facing terminology.
 - Add severity-based triage and a change budget so small problems receive small edits.
 - Add reader-facing rules for personal writing, product/UI copy, vague claims, and exact terminology when the genre needs it.
-- Add 160-item synthetic v0 golden set, including personal/everyday, resume, product/UI copy, code review, dialogue, and preserve-when-valid counterexamples.
+- Add role-aware resume guidance for operations, planning, QA, design, marketing, customer service, research, and education.
+- Add 200-item synthetic v0 golden set, including 40 role-specific resume cases and preserve-when-valid counterexamples.
 - Add validation and public hygiene scripts.
 - Add GitHub Actions validation workflow.

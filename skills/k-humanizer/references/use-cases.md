@@ -6,11 +6,15 @@ Goal: make achievements concrete, credible, and easy to scan.
 
 Rules:
 - Read `resume.md` before editing a resume or career document.
+- Read `resume-roles.md` when a target role or job description is supplied.
 - Prefer problem or scope, judgment and action, then confirmed result over broad self-description.
 - Remove inflated adjectives such as `탁월한`, `혁신적인`, `압도적인` unless proven by evidence.
 - Keep numbers with their comparison and measurement conditions.
 - Keep individual, led, shared, and supporting work distinct.
 - If the source has no evidence for an effect, keep the concrete action or flag the gap instead of inventing a result.
+- Change the evidence order for operations, planning, QA, design, marketing,
+  customer service, research, or education instead of forcing one universal
+  achievement template across every role.
 
 See `resume.md` for the minimal examples that define evidence and contribution
 boundaries. Keep broader coverage in the golden set instead of duplicating it
