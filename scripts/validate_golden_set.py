@@ -18,7 +18,25 @@ REQUIRED_FIELDS = {
     "avoid",
 }
 
-EXPECTED_DOMAINS = {"resume", "document", "messenger", "email"}
+EXPECTED_DOMAINS = {
+    "resume",
+    "document",
+    "product_copy",
+    "messenger",
+    "email",
+    "code_review",
+    "dialogue",
+}
+
+V0_EXPECTED_COUNTS = {
+    "resume": 50,
+    "document": 20,
+    "product_copy": 10,
+    "messenger": 20,
+    "email": 20,
+    "code_review": 20,
+    "dialogue": 10,
+}
 
 
 def validate_file(path: Path) -> int:
@@ -62,6 +80,14 @@ def validate_file(path: Path) -> int:
         text = item.get("input")
         if not isinstance(text, str) or len(text.strip()) < 10:
             errors.append(f"{path}:{line_number}: input is too short or missing")
+
+    if path.name == "golden_set.v0.jsonl":
+        for domain, expected_count in V0_EXPECTED_COUNTS.items():
+            actual_count = domains[domain]
+            if actual_count != expected_count:
+                errors.append(
+                    f"{path}: expected {expected_count} {domain} items, found {actual_count}"
+                )
 
     if errors:
         for error in errors:

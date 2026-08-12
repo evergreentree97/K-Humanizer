@@ -24,12 +24,31 @@ Rules:
 - Keep consistent terms for the same concept.
 - Replace `~에 있어서`, `~측면에서`, `~을 통해` with direct phrasing.
 - Avoid summary paragraphs that only repeat the section title.
+- If a comparison or mismatch matters, name both sides. If the source only says
+  that a check was run, do not write as though a defect was found.
 
 Example:
 
 Before: 이 기능은 사용자 경험을 더 나은 방향으로 가져가는 데 있어서 중요한 역할을 수행할 것으로 기대됩니다.
 
 After: 이 기능은 사용자가 더 편하게 작업하는 데 도움이 됩니다.
+
+## Product and UI Copy
+
+Goal: tell the reader what they can see or do without making the interface
+introduce itself.
+
+Rules:
+- Remove `한눈에`, decorative subtitles, and `이 화면은 ... 하는 화면입니다`
+  when the title or component already carries the same information.
+- Replace process nouns with visible items, actions, states, or failure behavior.
+- Keep short labels short. Do not turn a UI label into explanatory marketing copy.
+
+Example:
+
+Before: 이 화면은 업로드한 문서와 처리 상태를 한눈에 확인할 수 있도록 구성된 대시보드입니다.
+
+After: 업로드한 문서와 처리 상태를 보여줍니다.
 
 ## Messenger and Casual Korean
 
@@ -45,29 +64,6 @@ Example:
 Before: 제가 그 일정에 대해 체크한 이후에 당신에게 공유할 수 있도록 하겠습니다.
 
 After: 일정 확인해보고 공유드릴게요.
-
-## Everyday Requests
-
-Goal: make daily coordination short and natural without over-polishing it.
-
-Rules:
-- Prefer short, direct phrasing.
-- Keep the relationship and formality implied by the original.
-- Do not add warmth, jokes, or intimacy that is not already there.
-
-Example:
-
-Before: 제가 오늘 저녁 식사에 필요한 재료들을 구매하는 역할을 수행할 수 있도록 하겠습니다.
-
-After: 저녁 재료는 내가 사갈게.
-
-Before: 당신이 괜찮다면 저는 내일 오전 시간대에 병원을 방문하는 일정을 진행하고자 합니다.
-
-After: 괜찮으면 나 내일 오전에 병원 다녀올게.
-
-Before: 현재 비가 오고 있는 상황이므로 우산을 챙기는 것이 좋을 것으로 보입니다.
-
-After: 비 와서 우산 챙기는 게 좋겠어.
 
 ## Email
 

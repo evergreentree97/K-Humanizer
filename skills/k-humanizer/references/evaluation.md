@@ -46,6 +46,10 @@ Did it change only what needed changing?
 
 1: It rewrites the writer's voice, structure, or details without a good reason.
 
+For a humanization request, estimate the changed character share. A result over
+roughly 30% needs a reason. A result over roughly 50% should be treated as a
+rewrite and returned only when the user requested that larger scope.
+
 ## Practical Usefulness
 
 Can the result be used right away?
@@ -63,8 +67,8 @@ After giving the five scores, check the domain-specific risks:
 - Resume/profile: Did it preserve evidence, contribution boundaries,
   measurement conditions, completion state, and public wording?
 - Documents/reports: Are terms consistent? Is the point clear without ceremonial summary text?
+- Product/UI copy: Does it name visible content or actions without repeating the title or component type?
 - Messenger/casual: Is it short enough for chat? Did it avoid fake closeness, emojis, and slang unless asked?
-- Everyday requests: Does it sound like normal coordination, not a translated task description?
 - Email: Is the ask easy to find? Is it polite enough without hiding the point?
 - Code review: Does it point to the code and give a concrete suggestion?
 - Dialogue: Did it keep the speaker's voice, relationship, and scene tension?
@@ -75,6 +79,8 @@ If any of these happen, the score should be 2 or lower even if the sentence soun
 
 - Adds a new fact, promise, metric, apology, or emotional stance.
 - Removes a constraint, deadline, recipient, blocker, or uncertainty.
+- Replaces an exact implementation name, API, or confirmed error cause with an unsupported alternative.
+- Claims that a mismatch or defect was found when the source only says a check was run.
 - Makes a review comment so soft that the action item becomes unclear.
 - Turns ordinary chat into brand copy, corporate wording, or forced friendliness.
 - Normalizes distinctive dialogue into generic polite Korean.
@@ -87,6 +93,7 @@ For a resume, also cap Meaning Fidelity at 1 when the rewrite:
 - Keeps a metric but removes its comparison target, sample, or evaluator when
   that condition was supplied.
 - Reveals a private project name or infers personal ownership from a repository.
+- Replaces a verified implementation primitive with a different mechanism.
 
 ## Resume-specific scoring
 
@@ -107,9 +114,9 @@ Keep a small test set across real use cases:
 
 - Resume/profile: 50 examples
 - Documents/reports: 20 examples
+- Product/UI copy: 10 examples
 - Messenger/casual: 20 examples
 - Email: 20 examples
-- Everyday requests: 20 examples
 - Code review comments: 20 examples
 - Dialogue: 10 examples
 
