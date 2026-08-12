@@ -6,6 +6,8 @@ Goal: make achievements concrete, credible, and easy to scan.
 
 Rules:
 - Read `resume.md` before editing a resume or career document.
+- Read `resume-workflow.md` to classify finished bullets, raw notes,
+  job-targeted rewrites, and full-document reviews.
 - Read `resume-roles.md` when a target role or job description is supplied.
 - Prefer problem or scope, judgment and action, then confirmed result over broad self-description.
 - Remove inflated adjectives such as `탁월한`, `혁신적인`, `압도적인` unless proven by evidence.
@@ -15,6 +17,8 @@ Rules:
 - Change the evidence order for operations, planning, QA, design, marketing,
   customer service, research, or education instead of forcing one universal
   achievement template across every role.
+- Return paste-ready wording before diagnosis. Add questions only when a missing
+  fact would materially change ownership, completion state, or claim strength.
 
 See `resume.md` for the minimal examples that define evidence and contribution
 boundaries. Keep broader coverage in the golden set instead of duplicating it

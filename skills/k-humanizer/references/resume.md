@@ -3,7 +3,9 @@
 Use this reference for resumes, career descriptions, portfolio summaries,
 LinkedIn profiles, and application essays. The goal is a credible document a
 recruiter and hiring manager can scan quickly. When a target role or job
-description is supplied, read `resume-roles.md` after this file.
+description is supplied, read `resume-roles.md` after this file. For input
+classification, section structure, and response format, also read
+`resume-workflow.md`.
 
 Natural wording cannot repair missing evidence. Protect the claim before
 polishing the sentence. Never turn a plan into completed work, a team result
@@ -22,6 +24,11 @@ Before rewriting, identify:
 If any boundary is missing and the rewrite would change the strength of the
 claim, keep the source strength or flag the missing evidence. Do not fill the
 gap with a plausible achievement.
+
+The source may be polished prose, raw notes, a task list, or an entire resume.
+Raw material authorizes organization, not invention. When the notes support a
+clear action but no measured outcome, write the action as a complete
+achievement instead of fabricating a result to finish a template.
 
 ## Conditional rewrite table
 
@@ -70,6 +77,13 @@ tools, credentials, and domain knowledge, and experience for evidence. If one ac
 all three sections, keep a different piece of information in each or remove the
 duplicate. Short noun phrases can work in a skills list; introductions and
 application essays should keep complete predicates and natural sentence rhythm.
+
+Do not evaluate every role through engineering output. Operations can show a
+repeatable response or exception rule, planning can show a scope or policy
+decision, QA can show a release judgment, design can show an information or
+interaction decision, and research can show a well-bounded finding. A metric is
+useful when it exists with interpretable conditions, not as a requirement for
+every bullet.
 
 ## Examples
 

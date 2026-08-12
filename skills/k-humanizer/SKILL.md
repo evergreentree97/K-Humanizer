@@ -1,6 +1,6 @@
 ---
 name: k-humanizer
-description: Use when editing Korean text to sound natural, human-written, and context-appropriate while preserving meaning. Trigger for Korean AI-tell removal, translationese cleanup, role-aware resume bullets for operations, planning, QA, design, marketing, customer service, research, or education, business documents, emails, messenger-style casual copy, reports, product copy, review comments, and dialogue text when the user asks to make Korean wording more natural, less stiff, less AI-like, or better matched to its reader, channel, and level of formality.
+description: Use when drafting, restructuring, reviewing, or polishing Korean resumes, career descriptions, portfolio summaries, and application writing without inventing evidence. Specialize the wording for operations, planning, QA, design, marketing, customer service, research, or education roles by changing the order and explanation of verified experience. Also use for Korean AI-tell removal, translationese cleanup, business documents, emails, messages, reports, product copy, review comments, and dialogue when the user asks for natural, context-appropriate Korean.
 ---
 
 # K-Humanizer
@@ -15,6 +15,36 @@ Never output U+2013 (en dash), U+2014 (em dash), or U+00B7 (middle dot) in
 rewritten prose. If quoted text, a code identifier, or a URL contains one,
 preserve the verbatim material separately instead of silently changing it.
 
+## Resume First
+
+Treat resumes and career documents as a primary workflow, not as generic prose
+with stronger verbs. For every resume, career description, portfolio summary,
+or application-writing task:
+
+1. Read `references/resume.md` and `references/resume-workflow.md`.
+2. If a target role or job description is supplied, also read
+   `references/resume-roles.md`.
+3. Separate verified evidence from desired positioning before writing.
+4. Keep role targeting inside the evidence. Change what comes first and what is
+   explained, but never change who did the work, the completion state, or what
+   was measured.
+
+Resume writing can be a light edit or a structural rewrite. The user's request
+sets the scope:
+
+- Polish or humanize: edit only the supplied wording and follow the change budget.
+- Turn notes into bullets: organize only facts present in the notes and expose
+  any missing evidence that affects the claim.
+- Tailor to a posting: rank verified experience for one primary role and at
+  most one supporting role. Do not copy requirements into the resume.
+- Review a full resume: check section roles, repetition, evidence gaps, reader
+  fit, and contribution boundaries before rewriting affected sections.
+
+Do not force every career into an engineering-style problem-action-metric
+formula. A policy decision, exception rule, research method, design judgment,
+release decision, customer follow-up, or program operation can be strong
+evidence without a percentage.
+
 ## Workflow
 
 1. Identify the writing context.
@@ -23,10 +53,10 @@ preserve the verbatim material separately instead of silently changing it.
    - Messenger/casual: short, spoken, context-aware, not overly friendly.
    - Email: polite but direct; remove ceremony that does not carry meaning.
    - Document/report/essay: clear hierarchy, stable terminology, restrained formality.
-   - Resume/profile: read `references/resume.md` and, when a target role or job
-     description is supplied, `references/resume-roles.md`; protect evidence,
-     ownership, measurement conditions, and contribution boundaries before
-     choosing the role-specific emphasis.
+   - Resume/profile: follow the Resume First instructions and
+     `references/resume-workflow.md`; protect evidence, ownership, measurement
+     conditions, and contribution boundaries before choosing the role-specific
+     emphasis.
    - Product/UI copy: name what the reader can see or do; remove subtitles and
      self-descriptions that only repeat the title or component.
    - Dialogue: preserve speaker voice, relationship tension, and emotional beat.
@@ -71,6 +101,26 @@ preserve the verbatim material separately instead of silently changing it.
    - Did a proper name, domain term, verified cause, or confirmed result change?
    - Does the rewritten prose contain U+2013, U+2014, or U+00B7?
 
+## Resume Workflow
+
+When handling career material, use this order:
+
+1. Classify the input as a finished bullet, raw notes, a job posting plus
+   experience, or a full document.
+2. Build an evidence boundary for each experience: problem or scope, judgment,
+   action, ownership, status, result, measurement condition, and disclosure
+   limit. Missing fields may stay missing.
+3. Identify the document section. A summary positions the candidate, experience
+   proves it, skills list relevant tools or domain knowledge, and a portfolio
+   explains judgment and contribution. Do not repeat the same sentence across
+   sections.
+4. Choose the target role from responsibilities and evaluation criteria, not
+   title matching. Use one primary role and at most one supporting role.
+5. Draft the smallest usable version first. Lead with the evidence that answers
+   the target reader's hiring question and keep tools as supporting detail.
+6. Check that every bullet can be traced to the source and that a recruiter can
+   explain what the person actually did.
+
 ## Output
 
 For short requests, return only the polished Korean text unless the user asks for explanation.
@@ -87,12 +137,27 @@ For review-style requests, use:
 
 For sensitive or high-stakes text such as resume, legal, medical, finance, or official documents, preserve claims exactly and flag uncertain wording instead of inventing details.
 
+For resume requests, return paste-ready wording first. Add `확인 필요` only when
+missing information prevents a reliable claim, and ask no more than three
+questions at once. Do not bury a usable edit under a long diagnosis.
+
+For a full resume review, organize feedback by the actual document sections and
+separate these three states:
+
+- Ready to use: supported wording that can be pasted now.
+- Needs evidence: a useful experience with a missing ownership, state, result,
+  or measurement condition.
+- Remove or move: repetition, unsupported self-evaluation, irrelevant detail,
+  or content placed in the wrong section.
+
 ## Reference Files
 
 Read the relevant reference only when the task needs it:
 
 - `references/use-cases.md`: genre-specific rewrite rules and examples.
 - `references/resume.md`: evidence-safe resume and career-document rules.
+- `references/resume-workflow.md`: input classification, evidence extraction,
+  section structure, and paste-ready resume output rules.
 - `references/resume-roles.md`: role-specific evidence order for operations,
   planning, QA, design, marketing, customer service, research, and education.
 - `references/evaluation.md`: validation rubric for comparing outputs.

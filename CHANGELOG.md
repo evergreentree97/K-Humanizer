@@ -9,6 +9,8 @@
 - Add severity-based triage and a change budget so small problems receive small edits.
 - Add reader-facing rules for personal writing, product/UI copy, vague claims, and exact terminology when the genre needs it.
 - Add role-aware resume guidance for operations, planning, QA, design, marketing, customer service, research, and education.
+- Add a resume-first workflow for finished bullets, raw notes, job-targeted
+  rewrites, and full-document reviews, with section-specific output rules.
 - Add 200-item synthetic v0 golden set, including 40 role-specific resume cases and preserve-when-valid counterexamples.
 - Add validation and public hygiene scripts.
 - Add GitHub Actions validation workflow.
