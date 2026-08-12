@@ -38,7 +38,7 @@ gap with a plausible achievement.
 | Long background before the action | Move the problem and action forward; split after a complete thought if needed | Force problem, action, and result into one overloaded sentence |
 | `전 과정`, `전반`, `모든 영역` | List only the stages or scope the source verifies | Use total-ownership wording as a shortcut |
 | Internal AI or English terms for a general recruiter | Use plain Korean from `patterns.md` and explain what was checked or decided | Replace an exact job-posting keyword or technical name that matters for search and precision |
-| An exact implementation primitive or API name | Keep the verified name and explain its behavior when needed | Replace `synchronized` with `Mutex`, rename an API, or modernize the implementation in prose |
+| An exact proper name, method, or domain term | Keep the verified term and explain it when needed | Replace it with a more fashionable or approximate alternative |
 | A target job description is supplied | Use it to rank and phrase verified evidence by relevance | Copy a requirement into the resume as if it were the applicant's experience |
 | A required job keyword sounds less natural than the surrounding Korean | Use it once beside the verified action or mechanism | Repeat the keyword as self-evaluation or let it replace the actual evidence |
 | The introduction opens with years and a tool list | Lead with the closest verified problem, design decision, or operating responsibility; keep duration and tools as support | Turn the introduction into a keyword inventory |
@@ -48,7 +48,7 @@ gap with a plausible achievement.
 | A future-looking `~하고자 합니다` in an achievement bullet | Use an existing action or result. Move genuine motivation to the application essay | Present intention as experience |
 | Every bullet follows the same three-part mold | Keep only supported parts and vary length by meaning | Manufacture symmetry, a third item, or a result for visual consistency |
 | The source only says that a system was tested or compared | State what was tested, against what, and by which method when supplied | Claim that a mismatch or defect was found unless the source confirms it |
-| A technical result uses a spatial metaphor such as `뒤로 숨겼다` or `비껴갔다` | Name the boundary, path, build type, or stop condition | Keep a metaphor that makes the implementation harder to verify |
+| A result uses a metaphor that hides the actual action | Name the relationship, condition, method, or scope already present in the source | Keep a metaphor that makes the contribution harder to verify |
 | AI use is described only as `직접 검토했다` | Name the delegated work and the files, behavior, test, screenshot, or document used to verify it | Turn tool usage itself into an achievement or invent a productivity result |
 
 ## Sentence order
@@ -75,14 +75,14 @@ application essays should keep complete predicates and natural sentence rhythm.
 
 Before:
 
-> 저는 캐시 전략 고도화를 통해 자체 부하 테스트 500건에서 API 응답 평균을 1.8초에서 1.1초로 크게 개선했습니다.
+> 저는 고객 문의 분류 체계 고도화를 통해 주간 평균 처리 시간을 18시간에서 11시간으로 크게 개선했습니다.
 
 After:
 
-> 캐시 정책을 조정해 자체 부하 테스트 500건의 API 응답 평균을 1.8초에서 1.1초로 개선했습니다.
+> 고객 문의 분류 기준을 정리해 주간 평균 처리 시간을 18시간에서 11시간으로 줄였습니다.
 
-The rewrite keeps the sample, metric, and comparison while removing first
-person, abstract wording, and unsupported praise.
+The rewrite keeps the metric and comparison while removing first person,
+abstract wording, and unsupported praise.
 
 ### Contribution boundary
 
@@ -116,7 +116,7 @@ action, ownership, and result. If no evidence is available, omit the claim.
 - Unmeasured effects are not presented as facts.
 - A non-specialist can explain each sentence without internal vocabulary.
 - Exact job-posting terms and established technical names remain where useful.
-- Exact implementation primitives remain unchanged.
+- Exact proper names, methods, and domain terms remain unchanged.
 - Testing is not presented as a discovered defect when no defect was confirmed.
 - No private name or unsupported service classification was added.
 - No U+2013 en dash, U+2014 em dash, or U+00B7 middle dot appears.

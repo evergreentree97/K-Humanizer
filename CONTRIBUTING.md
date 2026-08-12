@@ -35,6 +35,7 @@ Accepted domains for now:
 - `resume`
 - `document`
 - `product_copy`
+- `everyday`
 - `messenger`
 - `email`
 - `code_review`

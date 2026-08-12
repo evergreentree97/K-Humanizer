@@ -22,6 +22,7 @@ EXPECTED_DOMAINS = {
     "resume",
     "document",
     "product_copy",
+    "everyday",
     "messenger",
     "email",
     "code_review",
@@ -32,9 +33,10 @@ V0_EXPECTED_COUNTS = {
     "resume": 50,
     "document": 20,
     "product_copy": 10,
+    "everyday": 20,
     "messenger": 20,
     "email": 20,
-    "code_review": 20,
+    "code_review": 10,
     "dialogue": 10,
 }
 

@@ -50,6 +50,23 @@ Before: 이 화면은 업로드한 문서와 처리 상태를 한눈에 확인�
 
 After: 업로드한 문서와 처리 상태를 보여줍니다.
 
+## Personal and Everyday Korean
+
+Goal: make ordinary plans, requests, reactions, and personal writing sound
+natural without flattening the writer's personality.
+
+Rules:
+- Keep the relationship, emotion, humor, and level of familiarity in the source.
+- Prefer the words a person would actually use in that situation.
+- Do not add warmth, jokes, slang, intimacy, or a stronger feeling than the
+  source contains.
+
+Example:
+
+Before: 제가 오늘 저녁 식사에 필요한 재료들을 구매하는 역할을 수행할 수 있도록 하겠습니다.
+
+After: 저녁 재료는 내가 사갈게.
+
 ## Messenger and Casual Korean
 
 Goal: make the text sound like a real person wrote it in chat.

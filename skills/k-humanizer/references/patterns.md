@@ -38,11 +38,10 @@ claim narrow instead of filling the gap.
 
 | If the source uses | Prefer when the reader needs the concrete behavior | Keep or handle differently when |
 |---|---|---|
-| `책임 경계`, `코드 진입점`, `상태 변형`, `처리 기준`, `공통 계약`, `별도 결정` in an introduction | Name the screen, action, file, state, or failure behavior the reader can inspect | The audience is reviewing architecture and the term is precisely defined |
-| `어긋남`, `맞지 않음`, `정합성 문제` without both sides of the comparison | Name the request field, response field, state, time, or failure condition that differed | If only a test was run, say what was tested; do not imply that a mismatch was found |
-| `뒤로 숨기다`, `비껴가다`, `다음 단계로 넘어가지 않게`, `도구를 붙이다` | State the code boundary, missed path, stop condition, or build scope | A deliberate metaphor is part of non-technical prose |
-| `네트워크 단절` as a generic failure label | Use `네트워크 오류` | The source specifically confirms that the connection was interrupted |
-| `직접 검토했다`, `결과를 확인했다` without an object or method | Name what was reviewed and how the result was checked | The method is already clear from the immediately preceding sentence |
+| `좋은 경험`, `의미 있는 변화`, `문제 상황` without a concrete referent | Name the event, change, or difficulty already present in the source | The writer is deliberately leaving a detail implicit in personal prose |
+| `어긋남`, `맞지 않음`, `문제가 있다` without both sides of the comparison | Name what differed, when it happened, or what the reader needs to do | If only a check was performed, say what was checked; do not imply that a problem was found |
+| A spatial metaphor such as `뒤로 숨기다`, `비껴가다`, or `다음 단계로 넘어가지 않게` | State the actual relationship, missed condition, or stop rule | The metaphor is intentional and natural in personal or creative writing |
+| `꼼꼼히 살폈다`, `직접 검토했다`, `결과를 확인했다` without an object or method | Name what was reviewed and how it was checked when the source supplies it | The object and method are already clear from the surrounding sentences |
 
 For product pages, dashboards, and documentation, remove self-introductions
 such as `이 화면은 ... 하는 화면입니다` when the title or UI already says the
@@ -50,11 +49,13 @@ same thing. Replace `한눈에`, decorative subtitles, bold labels, and balanced
 taglines with the actual items or states shown. Keep a subtitle when it adds a
 real scope, constraint, or audience that the title does not contain.
 
-## English and internal developer wording
+## English and insider wording
 
-Use this table for resumes, official documents, or non-specialist readers. Keep
-official product names, code identifiers, established technical terms, and
-exact job-posting keywords when replacing them would reduce precision.
+Use plain Korean when insider vocabulary keeps a general reader from
+understanding the sentence. The table below is for software or internal process
+writing only; skip it for unrelated genres. Keep official product names,
+identifiers, established domain terms, and exact job-posting keywords when
+replacing them would reduce precision.
 
 | If the reader does not need the internal term | Prefer |
 |---|---|
@@ -79,11 +80,11 @@ Do not replace a term with another vague noun. Replacing
 `품질 게이트를 고도화했다` with `품질 기준을 고도화했다` leaves the
 abstraction unchanged. State the actual rule or check.
 
-Keep exact product names, job-posting keywords, code identifiers, and
-implementation primitives when precision matters. Naturalization must not turn
-`synchronized` into `Mutex`, rename an API, or replace a documented mechanism
-with a more fashionable one. When an awkward job keyword is required, use it
-once near a concrete explanation instead of repeating it as a slogan.
+Keep exact names and established terms when precision matters, including legal,
+medical, academic, culinary, product, and technical vocabulary. Naturalization
+must not replace a documented method or category with a more fashionable but
+unsupported alternative. When an awkward required term must remain, use it near
+a concrete explanation instead of repeating it as a slogan.
 
 ## Rhythm and punctuation
 

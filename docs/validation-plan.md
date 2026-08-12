@@ -25,7 +25,7 @@ Risks:
 - Turning team results into individual results.
 - Turning plans, proposals, or unshipped work into completed achievements.
 - Removing the comparison, sample, condition, or evaluator from a metric.
-- Replacing internal English terms without preserving exact technical meaning.
+- Replacing exact domain terms with approximate wording.
 - Flattening personal voice.
 
 ### Documents/Reports
@@ -52,6 +52,18 @@ Risks:
 - Removing a subtitle that adds real scope or a constraint.
 - Inventing a screen behavior that the source does not state.
 - Making a short label too explanatory.
+
+### Personal/Everyday
+
+Representative tasks:
+- Rewrite ordinary plans, requests, reactions, and personal notes.
+- Remove translated or assistant-like wording from daily conversation.
+- Keep the writer's humor, emotion, and level of familiarity.
+
+Risks:
+- Adding fake warmth, jokes, slang, or intimacy.
+- Making the message too casual for the relationship.
+- Removing practical details such as time, place, responsibility, or emotion.
 
 ### Messenger/Casual
 
@@ -103,10 +115,11 @@ Risks:
 ## Golden Set Format
 
 Use JSONL. The current v0 fixture is `evals/fixtures/golden_set.v0.jsonl`.
-It contains 150 synthetic cases: 50 resume, 20 document, 20 messenger, 20
-email, 10 product/UI copy, 20 code review, and 10 dialogue cases. The resume
-set includes both rewrite triggers and preservation cases where a literal path,
-permission, contrast, technical identifier, or exact job keyword must remain.
+It contains 160 synthetic cases: 50 resume, 20 document, 20 personal/everyday,
+20 messenger, 20 email, 10 product/UI copy, 10 code review, and 10 dialogue
+cases. The resume set includes both rewrite triggers and preservation cases
+where a required intermediary, permission, contrast, domain identifier, or
+exact job keyword must remain.
 
 ```json
 {"id":"email_001","domain":"email","input":"...","expected_traits":["polite","direct"],"must_preserve":["meeting date"],"avoid":["다름이 아니오라"]}
