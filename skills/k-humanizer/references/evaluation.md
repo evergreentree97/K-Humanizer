@@ -109,6 +109,23 @@ After the five general scores, check these independently:
 Any fabricated fact, metric, causal effect, or ownership claim is a hard fail
 even when the Korean sounds natural.
 
+For a full resume or career document, also check:
+
+- **Target clarity**: The top section communicates one primary direction rather
+  than combining every possible role.
+- **Section discipline**: The summary positions, experience proves, skills name
+  relevant knowledge, and the portfolio explains contribution and judgment.
+- **Evidence distribution**: The strongest direct evidence appears before
+  transferable or weakly related experience.
+- **Repetition control**: The same achievement is not copied across the summary,
+  experience, and skills sections.
+- **Output usability**: Paste-ready wording comes before diagnosis, and missing
+  information is raised only when it changes a material claim.
+
+Do not penalize structural rewriting when the user explicitly asks to compose
+from notes, tailor to a posting, or review a full document. Score edit discipline
+against the requested task, while holding every factual boundary constant.
+
 ## Role-specific resume checks
 
 When `resume_role` is supplied, also check whether the rewrite answers the

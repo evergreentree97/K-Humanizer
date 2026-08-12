@@ -8,7 +8,12 @@
 
 [한국어](README.md)
 
-K-Humanizer is an agent skill for making stiff Korean sound closer to writing people actually use. It adapts to everyday conversation, personal writing, resumes, documents, messages, emails, product copy, and dialogue.
+K-Humanizer is an agent skill for structuring Korean resumes and career
+documents around the target role, then making stiff Korean sound closer to
+writing people actually use. It gives special attention to experience in
+operations, planning, QA, and design that does not fit an engineering-style
+achievement formula. It also adapts to everyday conversation, personal
+writing, documents, messages, emails, product copy, and dialogue.
 
 It is not an AI detector bypass tool. The goal is straightforward: preserve meaning and facts while removing translationese, stiff formality, and generic AI-style phrasing.
 
@@ -61,9 +66,44 @@ npx skills add . --skill k-humanizer --full-depth
 Example prompt:
 
 ```text
-Use $k-humanizer to make this Korean email more natural while preserving meaning:
+Use $k-humanizer to turn these notes into Korean resume bullets for an operations role.
+Do not invent results or metrics. List only the missing facts that affect claim strength:
 
-[paste Korean text]
+[paste experience notes]
+```
+
+### Resume workflow
+
+For resume work, the skill first classifies the input as finished bullets, raw
+notes, a job-targeted rewrite, or a full-document review.
+
+| Material supplied | What the skill does |
+|---|---|
+| Finished career bullets | Polishes readability without changing facts or claim strength |
+| Notes or task lists | Extracts the problem, judgment, action, ownership, and confirmed result |
+| A job posting and an existing resume | Selects one primary and at most one supporting role, then reprioritizes relevant evidence |
+| A full resume | Reviews repetition and evidence gaps across the summary, experience, project, and skills sections |
+
+The response puts paste-ready wording first. It adds a `Needs confirmation`
+section only when a missing ownership or completion detail would materially
+change the claim.
+
+Role-targeted prompt:
+
+```text
+Use $k-humanizer to restructure these Korean career bullets for a QA role.
+Lead with test scope, reproduction conditions, release decisions, and fix verification rather than raw test counts.
+
+[paste career bullets]
+```
+
+Full-resume prompt:
+
+```text
+Use $k-humanizer to review this Korean resume for a planning role.
+Separate paste-ready revisions, claims that need more evidence, and content to remove or relocate.
+
+[paste resume]
 ```
 
 ## Examples
@@ -83,6 +123,22 @@ After:
 If the source only says that it produced a "meaningful result," the skill does
 not manufacture a polished achievement. It asks for or flags the missing
 problem, action, ownership, and result, and omits unsupported claims.
+
+It can also turn work notes into paste-ready career bullets.
+
+```text
+Notes:
+- Roughly 300 training applicants each week
+- Cancellation requests arrived through personal messages and were sometimes missed
+- I organized a cancellation form and the order of staff confirmation
+- Average monthly misses fell from 14 to 3, checked from April through June
+
+Revision:
+주 300명 규모의 교육 신청을 운영하며 개인 메신저로 흩어지던 취소 요청을 접수 폼으로 통합하고 확인 담당 순서를 정리했습니다. 4월부터 6월까지 월평균 처리 누락을 14건에서 3건으로 줄였습니다.
+```
+
+The skill does not add unverified cost savings or satisfaction gains to this
+example.
 
 #### Role-aware resumes
 
@@ -173,6 +229,7 @@ References:
 
 - [Use cases](skills/k-humanizer/references/use-cases.md)
 - [Resume and career-document rules](skills/k-humanizer/references/resume.md)
+- [Resume workflow](skills/k-humanizer/references/resume-workflow.md)
 - [Role-aware resume rules](skills/k-humanizer/references/resume-roles.md)
 - [Pattern checklist](skills/k-humanizer/references/patterns.md)
 - [Evaluation rubric](skills/k-humanizer/references/evaluation.md)

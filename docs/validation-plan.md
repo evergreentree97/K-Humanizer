@@ -16,6 +16,8 @@ K-Humanizer should be validated as a writing assistant, not as an AI detector by
 
 Representative tasks:
 - Rewrite resume bullets.
+- Turn raw work notes into evidence-safe career bullets.
+- Review a full resume by summary, experience, projects, and skills.
 - Polish LinkedIn or portfolio summaries.
 - Remove inflated claims while preserving achievements.
 - Reorder verified evidence for operations, planning, QA, design, marketing,
@@ -29,6 +31,9 @@ Risks:
 - Removing the comparison, sample, condition, or evaluator from a metric.
 - Replacing exact domain terms with approximate wording.
 - Applying one engineering-style achievement template to every role.
+- Returning a long diagnosis before paste-ready wording.
+- Repeating the same achievement in the summary, experience, and skills.
+- Presenting a field change as past experience in the target role.
 - Flattening personal voice.
 
 ### Documents/Reports
