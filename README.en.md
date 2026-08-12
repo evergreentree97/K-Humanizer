@@ -8,12 +8,11 @@
 
 [한국어](README.md)
 
-K-Humanizer is an agent skill for structuring Korean resumes and career
-documents around the target role, then making stiff Korean sound closer to
-writing people actually use. For operations, planning, QA, design, and other
-target roles, it selects and reorders verified experience so responsibilities
-and results are easy to find. It also adapts to everyday conversation, personal
-writing, documents, messages, emails, product copy, and dialogue.
+K-Humanizer makes Korean resumes and career documents sound natural across
+operations, planning, QA, design, and other fields. It keeps the candidate's
+actual experience and results intact while removing stiff, generic, and
+AI-sounding phrasing. It also adapts to everyday conversation, personal writing,
+documents, messages, emails, product copy, and dialogue.
 
 It is not an AI detector bypass tool. The goal is straightforward: preserve meaning and facts while removing translationese, stiff formality, and generic AI-style phrasing.
 
@@ -66,23 +65,24 @@ npx skills add . --skill k-humanizer --full-depth
 Example prompt:
 
 ```text
-Use $k-humanizer to turn these notes into Korean resume bullets for an operations role.
-Do not invent results or metrics. List only the missing facts that affect claim strength:
+Use $k-humanizer to make this Korean resume sound natural across its current field.
+Keep all facts and remove only stiff or AI-sounding phrasing:
 
-[paste experience notes]
+[paste resume]
 ```
 
 ### Resume workflow
 
-For resume work, the skill first classifies the input as finished bullets, raw
-notes, a job-targeted rewrite, or a full-document review.
+By default, the skill preserves the resume's facts and field-specific language
+while removing translationese, abstract filler, and generic achievement claims.
+It composes from notes or reorders content for a job posting only when asked.
 
 | Material supplied | What the skill does |
 |---|---|
-| Finished career bullets | Polishes readability without changing facts or claim strength |
-| Notes or task lists | Extracts the problem, judgment, action, ownership, and confirmed result |
-| A job posting and an existing resume | Selects one primary and at most one supporting role, then reprioritizes relevant evidence |
-| A full resume | Reviews repetition and evidence gaps across the summary, experience, project, and skills sections |
+| Finished career bullets | Removes AI-sounding and awkward phrasing without changing facts or claim strength |
+| A full resume | Cleans up AI-sounding patterns while preserving field-specific terms and personal voice |
+| Notes or task lists | Composes bullets from confirmed details only when requested |
+| A job posting and an existing resume | Reorders existing experience for the posting only when requested |
 
 The response puts paste-ready wording first. It adds a `Needs confirmation`
 section only when a missing ownership or completion detail would materially
@@ -140,13 +140,13 @@ Revision:
 The skill does not add unverified cost savings or satisfaction gains to this
 example.
 
-#### Role-aware resumes
+#### Across job fields
 
-The same experience should lead with different evidence depending on what the
-target role evaluates. K-Humanizer changes the order and explanation of verified
-evidence without copying the posting or changing the facts.
+Operations, planning, QA, design, and other fields use different terms and
+describe different kinds of work. K-Humanizer keeps those differences while
+removing the abstract and AI-sounding phrases that recur across resumes.
 
-| Role | Lead with |
+| Role | Details to keep concrete |
 |---|---|
 | Operations | Repeated work, exceptions, handoffs, deadlines, and volume |
 | Service/product planning | User or business problem, priority, scope decision, and validation state |
@@ -157,7 +157,7 @@ evidence without copying the posting or changing the facts.
 | Research/data | Question, method, sample, limitation, finding, and supported decision |
 | People operations/education | Learner or team need, program decision, delivery scope, and follow-up |
 
-See [role-aware resume rules](skills/k-humanizer/references/resume-roles.md) for the detailed routing guide.
+See [field-aware resume rules](skills/k-humanizer/references/resume-roles.md) for details that should remain specific in each field.
 
 ### Document
 

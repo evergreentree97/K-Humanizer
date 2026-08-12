@@ -1,7 +1,7 @@
 interface:
   display_name: "K-Humanizer"
-  short_description: "직무에 맞는 이력서와 자연스러운 한국어를 만듭니다"
-  default_prompt: "Use $k-humanizer to turn my Korean resume material into role-appropriate, evidence-safe wording without inventing facts."
+  short_description: "어떤 직군의 이력서든 AI가 쓴 티를 줄여 자연스럽게 다듬습니다"
+  default_prompt: "Use $k-humanizer to make this Korean resume sound natural while preserving its facts, field-specific terms, and the writer's actual experience."
 
 policy:
   allow_implicit_invocation: true
