@@ -32,7 +32,7 @@ Out of scope:
 - MIT license
 - Portable `skills/k-humanizer/SKILL.md`
 - Use-case references
-- 160-item v0 golden set with everyday, resume integrity, product/UI, code review, and dialogue cases
+- 200-item v0 golden set with everyday, resume integrity, eight role-specific resume groups, product/UI, code review, and dialogue cases
 - JSONL validation script
 
 ### v0.2: Validation Baseline
@@ -76,6 +76,7 @@ Use three layers:
 Existing Korean humanizer projects already cover AI-tell removal. K-Humanizer should differentiate through:
 
 - Practical channel modes: personal writing, everyday conversation, resume, docs, product UI, messenger, email, code review, dialogue.
+- Role-aware resume evidence ordering for operations, planning, QA, design, marketing, customer service, research, and education.
 - Strict meaning preservation.
 - Clear anti-overpolishing policy.
 - A change budget that distinguishes polishing from rewriting.

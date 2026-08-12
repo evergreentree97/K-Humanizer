@@ -41,6 +41,17 @@ Accepted domains for now:
 - `code_review`
 - `dialogue`
 
+Role-specific resume cases may add `resume_role` with one of these values:
+
+- `operations`
+- `planning`
+- `qa`
+- `design`
+- `marketing_content`
+- `customer_service`
+- `research_data`
+- `people_education`
+
 Validate before opening a pull request:
 
 ```bash

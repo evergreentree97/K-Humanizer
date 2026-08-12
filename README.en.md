@@ -84,6 +84,25 @@ If the source only says that it produced a "meaningful result," the skill does
 not manufacture a polished achievement. It asks for or flags the missing
 problem, action, ownership, and result, and omits unsupported claims.
 
+#### Role-aware resumes
+
+The same experience should lead with different evidence depending on what the
+target role evaluates. K-Humanizer changes the order and explanation of verified
+evidence without copying the posting or changing the facts.
+
+| Role | Lead with |
+|---|---|
+| Operations | Repeated work, exceptions, handoffs, deadlines, and volume |
+| Service/product planning | User or business problem, priority, scope decision, and validation state |
+| QA | Test scope, reproduction condition, severity, release decision, and fix verification |
+| Design | User task, information hierarchy, constraint, design decision, and usability evidence |
+| Marketing/content | Audience, channel, hypothesis, message, and measurement conditions |
+| Customer service/sales | Customer problem, policy, response, follow-up, and confirmed outcome |
+| Research/data | Question, method, sample, limitation, finding, and supported decision |
+| People operations/education | Learner or team need, program decision, delivery scope, and follow-up |
+
+See [role-aware resume rules](skills/k-humanizer/references/resume-roles.md) for the detailed routing guide.
+
 ### Document
 
 ```text
@@ -154,18 +173,19 @@ References:
 
 - [Use cases](skills/k-humanizer/references/use-cases.md)
 - [Resume and career-document rules](skills/k-humanizer/references/resume.md)
+- [Role-aware resume rules](skills/k-humanizer/references/resume-roles.md)
 - [Pattern checklist](skills/k-humanizer/references/patterns.md)
 - [Evaluation rubric](skills/k-humanizer/references/evaluation.md)
 
 ## Validation
 
-The v0 fixture contains 160 synthetic, anonymized examples:
+The v0 fixture contains 200 synthetic, anonymized examples:
 
 - 20 personal/everyday examples
 - 20 messenger examples
 - 20 email examples
 - 20 document examples
-- 50 resume examples
+- 90 resume examples, including 40 role-specific cases
 - 10 product/UI copy examples
 - 10 dialogue examples
 - 10 code review comment examples

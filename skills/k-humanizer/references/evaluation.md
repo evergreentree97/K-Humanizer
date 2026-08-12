@@ -109,11 +109,29 @@ After the five general scores, check these independently:
 Any fabricated fact, metric, causal effect, or ownership claim is a hard fail
 even when the Korean sounds natural.
 
+## Role-specific resume checks
+
+When `resume_role` is supplied, also check whether the rewrite answers the
+role's actual hiring questions:
+
+- Operations: repeated work, exceptions, handoffs, deadlines, and operating results.
+- Planning: problem, requirement, priority, scope decision, and validation state.
+- QA: scope, environment, reproduction condition, severity, release decision, and follow-up.
+- Design: user task, constraint, design decision, handoff, and usability evidence.
+- Marketing/content: audience, channel, hypothesis, message, attribution, and measured response.
+- Customer service: customer problem, policy, response, escalation, follow-up, and confirmed outcome.
+- Research/data: question, method, sample, limitation, finding, and decision supported.
+- People/education: learner or team need, program decision, delivery, participation, and later adoption state.
+
+Do not penalize a role for lacking a percentage when the source has strong
+qualitative evidence. Do penalize wording that imports a role keyword without
+the action, condition, or decision that would support it.
+
 ## Recommended Validation Set
 
 Keep a small test set across real use cases:
 
-- Resume/profile: 50 examples
+- Resume/profile: 90 examples, including 5 cases for each of 8 role groups
 - Documents/reports: 20 examples
 - Product/UI copy: 10 examples
 - Personal/everyday: 20 examples

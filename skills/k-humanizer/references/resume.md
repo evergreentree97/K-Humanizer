@@ -2,7 +2,8 @@
 
 Use this reference for resumes, career descriptions, portfolio summaries,
 LinkedIn profiles, and application essays. The goal is a credible document a
-recruiter and a technical interviewer can scan quickly.
+recruiter and hiring manager can scan quickly. When a target role or job
+description is supplied, read `resume-roles.md` after this file.
 
 Natural wording cannot repair missing evidence. Protect the claim before
 polishing the sentence. Never turn a plan into completed work, a team result
@@ -34,14 +35,15 @@ gap with a plausible achievement.
 | A number or score | Keep the comparison target, sample size, evaluation condition, time range, and evaluator when supplied | Detach a number from the conditions that make it interpretable |
 | A team or company result | Match the verb to the person's contribution: led, shared, supported, proposed, implemented, or verified | Make the whole result sound individually owned |
 | A plan, proposal, experiment candidate, or unshipped change | Use `제안했다`, `검증했다`, `후보로 확인했다`, or the exact known state | Write `구축했다`, `출시했다`, `도입했다`, or `개선했다` before completion is verified |
-| Tool names or implementation units listed as the main point | Lead with the problem, judgment, or responsibility, then name the relevant technology | Use a technology inventory as proof of impact |
+| Tool names or task units listed as the main point | Lead with the problem, judgment, or responsibility, then name the relevant tool or method | Use an inventory as proof of impact |
 | Long background before the action | Move the problem and action forward; split after a complete thought if needed | Force problem, action, and result into one overloaded sentence |
 | `전 과정`, `전반`, `모든 영역` | List only the stages or scope the source verifies | Use total-ownership wording as a shortcut |
-| Internal AI or English terms for a general recruiter | Use plain Korean from `patterns.md` and explain what was checked or decided | Replace an exact job-posting keyword or technical name that matters for search and precision |
+| Internal or English terms for a general recruiter | Use plain Korean from `patterns.md` and explain what was checked or decided | Replace an exact job-posting keyword or domain name that matters for search and precision |
 | An exact proper name, method, or domain term | Keep the verified term and explain it when needed | Replace it with a more fashionable or approximate alternative |
 | A target job description is supplied | Use it to rank and phrase verified evidence by relevance | Copy a requirement into the resume as if it were the applicant's experience |
+| The same experience is reused for a different role | Change the evidence order and explanation to answer that role's hiring questions | Change the facts, contribution boundary, result, or completion state |
 | A required job keyword sounds less natural than the surrounding Korean | Use it once beside the verified action or mechanism | Repeat the keyword as self-evaluation or let it replace the actual evidence |
-| The introduction opens with years and a tool list | Lead with the closest verified problem, design decision, or operating responsibility; keep duration and tools as support | Turn the introduction into a keyword inventory |
+| The introduction opens with years and a tool list | Lead with the closest verified problem, decision, or operating responsibility; keep duration and tools as support | Turn the introduction into a keyword inventory |
 | Several unrelated project areas compete for space | Choose one primary axis and one supporting axis for the target role | Give every project equal weight or hide a real experience gap |
 | The same sentence appears in the introduction, skills, and experience | Give each section a job: introduction for positioning, skills for tools, experience for evidence | Repeat one polished sentence across sections |
 | A private or unverified project name | Use a public product name or a functional description while preserving scope | Reveal an internal code name or infer that a repository proves personal ownership |
@@ -64,7 +66,7 @@ an action because the result was not measured. Another may need two sentences
 because the decision and its conditions matter.
 
 Section roles matter too. Use the introduction for positioning, skills for
-technology names, and experience for evidence. If one achievement appears in
+tools, credentials, and domain knowledge, and experience for evidence. If one achievement appears in
 all three sections, keep a different piece of information in each or remove the
 duplicate. Short noun phrases can work in a skills list; introductions and
 application essays should keep complete predicates and natural sentence rhythm.
@@ -86,16 +88,16 @@ abstract wording, and unsupported praise.
 
 ### Contribution boundary
 
-Evidence says the person led the dashboard information architecture and chart
-data mapping while the team shared screen implementation.
+Evidence says the person led the exhibition information structure and artwork
+descriptions while the team shared the on-site installation.
 
 Before:
 
-> 대시보드 전체를 단독으로 구현했습니다.
+> 전시 전체를 단독으로 기획하고 설치했습니다.
 
 After:
 
-> 대시보드 정보 구조와 차트 데이터 연결을 주도하고 화면 구현은 팀원과 나눠 맡았습니다.
+> 전시 정보 구조와 작품 설명 체계를 주도하고 현장 설치는 팀원과 나눠 맡았습니다.
 
 ### Missing evidence
 
@@ -115,8 +117,9 @@ action, ownership, and result. If no evidence is available, omit the claim.
 - Metrics keep their comparison and measurement conditions.
 - Unmeasured effects are not presented as facts.
 - A non-specialist can explain each sentence without internal vocabulary.
-- Exact job-posting terms and established technical names remain where useful.
+- Exact job-posting terms and established domain names remain where useful.
 - Exact proper names, methods, and domain terms remain unchanged.
+- Role-specific emphasis comes from the target responsibilities, not title matching alone.
 - Testing is not presented as a discovered defect when no defect was confirmed.
 - No private name or unsupported service classification was added.
 - No U+2013 en dash, U+2014 em dash, or U+00B7 middle dot appears.

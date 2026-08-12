@@ -1,6 +1,6 @@
 ---
 name: k-humanizer
-description: Use when editing Korean text to sound natural, human-written, and context-appropriate while preserving meaning. Trigger for Korean AI-tell removal, translationese cleanup, resume bullets, business documents, emails, messenger-style casual copy, reports, product copy, review comments, and dialogue text when the user asks to make Korean wording more natural, less stiff, less AI-like, or better matched to its reader, channel, and level of formality.
+description: Use when editing Korean text to sound natural, human-written, and context-appropriate while preserving meaning. Trigger for Korean AI-tell removal, translationese cleanup, role-aware resume bullets for operations, planning, QA, design, marketing, customer service, research, or education, business documents, emails, messenger-style casual copy, reports, product copy, review comments, and dialogue text when the user asks to make Korean wording more natural, less stiff, less AI-like, or better matched to its reader, channel, and level of formality.
 ---
 
 # K-Humanizer
@@ -23,8 +23,10 @@ preserve the verbatim material separately instead of silently changing it.
    - Messenger/casual: short, spoken, context-aware, not overly friendly.
    - Email: polite but direct; remove ceremony that does not carry meaning.
    - Document/report/essay: clear hierarchy, stable terminology, restrained formality.
-   - Resume/profile: read `references/resume.md`; protect evidence, ownership,
-     measurement conditions, and contribution boundaries before polishing.
+   - Resume/profile: read `references/resume.md` and, when a target role or job
+     description is supplied, `references/resume-roles.md`; protect evidence,
+     ownership, measurement conditions, and contribution boundaries before
+     choosing the role-specific emphasis.
    - Product/UI copy: name what the reader can see or do; remove subtitles and
      self-descriptions that only repeat the title or component.
    - Dialogue: preserve speaker voice, relationship tension, and emotional beat.
@@ -91,5 +93,7 @@ Read the relevant reference only when the task needs it:
 
 - `references/use-cases.md`: genre-specific rewrite rules and examples.
 - `references/resume.md`: evidence-safe resume and career-document rules.
+- `references/resume-roles.md`: role-specific evidence order for operations,
+  planning, QA, design, marketing, customer service, research, and education.
 - `references/evaluation.md`: validation rubric for comparing outputs.
 - `references/patterns.md`: Korean AI-tell checklist.

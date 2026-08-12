@@ -30,7 +30,7 @@ EXPECTED_DOMAINS = {
 }
 
 V0_EXPECTED_COUNTS = {
-    "resume": 50,
+    "resume": 90,
     "document": 20,
     "product_copy": 10,
     "everyday": 20,
@@ -40,11 +40,23 @@ V0_EXPECTED_COUNTS = {
     "dialogue": 10,
 }
 
+V0_EXPECTED_RESUME_ROLES = {
+    "operations": 5,
+    "planning": 5,
+    "qa": 5,
+    "design": 5,
+    "marketing_content": 5,
+    "customer_service": 5,
+    "research_data": 5,
+    "people_education": 5,
+}
+
 
 def validate_file(path: Path) -> int:
     errors: list[str] = []
     ids: set[str] = set()
     domains: Counter[str] = Counter()
+    resume_roles: Counter[str] = Counter()
 
     for line_number, raw_line in enumerate(path.read_text(encoding="utf-8").splitlines(), 1):
         if not raw_line.strip():
@@ -74,6 +86,19 @@ def validate_file(path: Path) -> int:
         else:
             domains[domain] += 1
 
+        resume_role = item.get("resume_role")
+        if resume_role is not None:
+            if domain != "resume":
+                errors.append(
+                    f"{path}:{line_number}: resume_role is only valid for resume items"
+                )
+            elif resume_role not in V0_EXPECTED_RESUME_ROLES:
+                errors.append(
+                    f"{path}:{line_number}: unknown resume_role: {resume_role!r}"
+                )
+            else:
+                resume_roles[resume_role] += 1
+
         for field in ("expected_traits", "must_preserve", "avoid"):
             value = item.get(field)
             if not isinstance(value, list) or not value or not all(isinstance(v, str) and v for v in value):
@@ -90,6 +115,13 @@ def validate_file(path: Path) -> int:
                 errors.append(
                     f"{path}: expected {expected_count} {domain} items, found {actual_count}"
                 )
+        for role, expected_count in V0_EXPECTED_RESUME_ROLES.items():
+            actual_count = resume_roles[role]
+            if actual_count != expected_count:
+                errors.append(
+                    f"{path}: expected {expected_count} {role} resume items, "
+                    f"found {actual_count}"
+                )
 
     if errors:
         for error in errors:
@@ -100,6 +132,10 @@ def validate_file(path: Path) -> int:
     print(f"OK: {path} ({total} items)")
     for domain in sorted(EXPECTED_DOMAINS):
         print(f"  {domain}: {domains[domain]}")
+    if resume_roles:
+        print("  resume roles:")
+        for role in sorted(resume_roles):
+            print(f"    {role}: {resume_roles[role]}")
     return 0
 
 
