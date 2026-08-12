@@ -30,7 +30,7 @@ Risks:
 - Turning plans, proposals, or unshipped work into completed achievements.
 - Removing the comparison, sample, condition, or evaluator from a metric.
 - Replacing exact domain terms with approximate wording.
-- Applying one engineering-style achievement template to every role.
+- Applying one achievement template to every role.
 - Returning a long diagnosis before paste-ready wording.
 - Repeating the same achievement in the summary, experience, and skills.
 - Presenting a field change as past experience in the target role.

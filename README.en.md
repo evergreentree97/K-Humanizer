@@ -10,9 +10,9 @@
 
 K-Humanizer is an agent skill for structuring Korean resumes and career
 documents around the target role, then making stiff Korean sound closer to
-writing people actually use. It gives special attention to experience in
-operations, planning, QA, and design that does not fit an engineering-style
-achievement formula. It also adapts to everyday conversation, personal
+writing people actually use. For operations, planning, QA, design, and other
+target roles, it selects and reorders verified experience so responsibilities
+and results are easy to find. It also adapts to everyday conversation, personal
 writing, documents, messages, emails, product copy, and dialogue.
 
 It is not an AI detector bypass tool. The goal is straightforward: preserve meaning and facts while removing translationese, stiff formality, and generic AI-style phrasing.

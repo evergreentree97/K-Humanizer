@@ -40,10 +40,10 @@ sets the scope:
 - Review a full resume: check section roles, repetition, evidence gaps, reader
   fit, and contribution boundaries before rewriting affected sections.
 
-Do not force every career into an engineering-style problem-action-metric
-formula. A policy decision, exception rule, research method, design judgment,
-release decision, customer follow-up, or program operation can be strong
-evidence without a percentage.
+Do not force every career into one problem-action-metric formula. A policy
+decision, exception rule, research method, design choice, release decision,
+customer follow-up, or program operation can be useful experience without a
+percentage.
 
 ## Workflow
 
