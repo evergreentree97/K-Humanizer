@@ -5,6 +5,7 @@
 [![Agent Skill](https://img.shields.io/badge/Agent%20Skill-Codex%20%7C%20Claude%20%7C%20Cursor-blue)](skills/k-humanizer/SKILL.md)
 [![Language: Korean](https://img.shields.io/badge/Language-Korean-red)](skills/k-humanizer/SKILL.md)
 [![Status](https://img.shields.io/badge/Status-v0.1%20pre--release-yellow)](CHANGELOG.md)
+[![skills.sh](https://skills.sh/b/evergreentree97/K-Humanizer)](https://skills.sh/evergreentree97/K-Humanizer)
 
 [English](README.en.md)
 
@@ -14,6 +15,28 @@ AI가 쓴 티가 나지 않도록 자연스럽게 다듬는 Agent Skill입니다
 
 이력서 외에도 일상 대화, 개인 글, 문서, 메신저, 메일, 제품 문구와 창작 대사에
 사용할 수 있습니다.
+
+AI 탐지기 우회를 보장하거나 이력서 성과를 지어내는 도구가 아닙니다. 목표는
+사실과 작성자의 목소리를 지키면서, 읽는 사람이 믿을 수 있는 한국어로 다듬는
+것입니다.
+
+## 30초 만에 시작하기
+
+```bash
+npx skills add evergreentree97/K-Humanizer --skill k-humanizer --full-depth
+```
+
+```text
+$k-humanizer로 아래 이력서의 사실, 수치, 직무 용어는 그대로 두고
+번역투와 AI식 표현만 자연스럽게 다듬어줘:
+
+[이력서]
+```
+
+```text
+Before: 고객 문의 분류 체계 고도화를 통해 주간 평균 처리 시간을 18시간에서 11시간으로 크게 개선했습니다.
+After:  고객 문의 분류 기준을 정리해 주간 평균 처리 시간을 18시간에서 11시간으로 줄였습니다.
+```
 
 ## 왜 만들었나
 
@@ -248,6 +271,13 @@ v0 골든셋은 합성하고 익명화한 예시 200개로 구성했습니다.
 python3 scripts/validate_golden_set.py
 python3 scripts/check_public_hygiene.py
 ```
+
+- [v0 데이터셋 무결성 리포트](evals/reports/2026-08-17-fixture-baseline.md)
+- [평가 계획과 v1.0 통과 기준](docs/validation-plan.md)
+
+현재 공개 리포트는 데이터 구조, 도메인 분포, 중복 ID, 필수 필드와 공개 저장소
+위생을 검증합니다. 실제 출력의 자연스러움과 의미 보존 점수는 별도의 수동 평가
+리포트로 공개할 예정입니다.
 
 ## 기여
 

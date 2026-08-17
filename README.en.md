@@ -5,6 +5,7 @@
 [![Agent Skill](https://img.shields.io/badge/Agent%20Skill-Codex%20%7C%20Claude%20%7C%20Cursor-blue)](skills/k-humanizer/SKILL.md)
 [![Language: Korean](https://img.shields.io/badge/Language-Korean-red)](skills/k-humanizer/SKILL.md)
 [![Status](https://img.shields.io/badge/Status-v0.1%20pre--release-yellow)](CHANGELOG.md)
+[![skills.sh](https://skills.sh/b/evergreentree97/K-Humanizer)](https://skills.sh/evergreentree97/K-Humanizer)
 
 [한국어](README.md)
 
@@ -15,6 +16,25 @@ AI-sounding phrasing. It also adapts to everyday conversation, personal writing,
 documents, messages, emails, product copy, and dialogue.
 
 It is not an AI detector bypass tool. The goal is straightforward: preserve meaning and facts while removing translationese, stiff formality, and generic AI-style phrasing.
+
+## Start in 30 Seconds
+
+```bash
+npx skills add evergreentree97/K-Humanizer --skill k-humanizer --full-depth
+```
+
+```text
+Use $k-humanizer to polish the Korean resume below.
+Keep its facts, numbers, and field-specific terms, and remove only translationese
+and generic AI-sounding phrasing:
+
+[paste resume]
+```
+
+```text
+Before: 고객 문의 분류 체계 고도화를 통해 주간 평균 처리 시간을 18시간에서 11시간으로 크게 개선했습니다.
+After:  고객 문의 분류 기준을 정리해 주간 평균 처리 시간을 18시간에서 11시간으로 줄였습니다.
+```
 
 ## Why It Exists
 
@@ -257,6 +277,13 @@ python3 scripts/check_public_hygiene.py
 Fixture: [evals/fixtures/golden_set.v0.jsonl](evals/fixtures/golden_set.v0.jsonl)
 
 Evaluation plan: [docs/validation-plan.md](docs/validation-plan.md)
+
+Fixture integrity baseline: [evals/reports/2026-08-17-fixture-baseline.md](evals/reports/2026-08-17-fixture-baseline.md)
+
+The current public baseline verifies fixture structure, domain distribution,
+unique IDs, required fields, and repository hygiene. Naturalness and meaning
+fidelity scores for generated outputs will be published in a separate manual
+evaluation report.
 
 ## Dataset Policy
 
