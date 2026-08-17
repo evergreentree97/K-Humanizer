@@ -18,6 +18,4 @@
 - Add a public v0 fixture integrity baseline that separates structural checks
   from future model-output scoring.
 - Scan public evaluation reports for private-data patterns.
-- Add a Korean launch kit with repository metadata, role-specific Before/After
-  examples, social posts, tester outreach, and launch metrics.
 - Add a 30-second quick start and skills.sh badge to both READMEs.
