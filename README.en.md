@@ -68,27 +68,12 @@ sentence, then applies the matching rewrite.
 This is not blind replacement. A phrase stays when its literal function matters,
 and every rule includes its condition and exception.
 
-## Install
+## Local Test
 
-Install from GitHub:
-
-```bash
-npx skills add evergreentree97/K-Humanizer --skill k-humanizer --full-depth
-```
-
-Test locally:
+To test the current skill files from a local checkout:
 
 ```bash
 npx skills add . --skill k-humanizer --full-depth
-```
-
-Example prompt:
-
-```text
-Use $k-humanizer to make this Korean resume sound natural across its current field.
-Keep all facts and remove only stiff or AI-sounding phrasing:
-
-[paste resume]
 ```
 
 ### Resume workflow

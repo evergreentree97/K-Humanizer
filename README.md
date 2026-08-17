@@ -70,27 +70,12 @@ K-Humanizer는 문장이 놓인 자리와 읽는 사람을 보고 필요한 만�
 표는 무조건 치환하는 사전이 아닙니다. `~를 통해`가 실제 중개 과정이나 경로를
 뜻하면 유지할 수 있습니다. 각 규칙에는 적용 조건과 예외가 함께 있습니다.
 
-## 설치
+## 로컬 테스트
 
-GitHub에서 설치:
-
-```bash
-npx skills add evergreentree97/K-Humanizer --skill k-humanizer --full-depth
-```
-
-로컬에서 테스트:
+저장소를 내려받아 현재 스킬 구성을 확인하려면:
 
 ```bash
 npx skills add . --skill k-humanizer --full-depth
-```
-
-사용 예:
-
-```text
-$k-humanizer로 아래 이력서의 내용과 직무 용어는 그대로 두고,
-AI 티가 나는 문장만 자연스럽게 다듬어줘:
-
-[이력서]
 ```
 
 ### 이력서 작업 방식
