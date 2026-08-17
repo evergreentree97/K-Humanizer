@@ -26,7 +26,7 @@ REGEX_CHECKS = {
     "phone_kr": re.compile(r"\b01[016789]-?\d{3,4}-?\d{4}\b"),
 }
 
-SKIP_DIRS = {".git", "__pycache__", "evals/datasets", "evals/reports"}
+SKIP_DIRS = {".git", "__pycache__", "evals/datasets"}
 CHECK_SUFFIXES = {".md", ".jsonl", ".py", ".yaml", ".yml", ".gitignore", ""}
 
 
