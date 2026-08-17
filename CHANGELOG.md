@@ -15,3 +15,7 @@
 - Add 200-item synthetic v0 golden set, including 40 role-specific resume cases and preserve-when-valid counterexamples.
 - Add validation and public hygiene scripts.
 - Add GitHub Actions validation workflow.
+- Add a public v0 fixture integrity baseline that separates structural checks
+  from future model-output scoring.
+- Scan public evaluation reports for private-data patterns.
+- Add a 30-second quick start and skills.sh badge to both READMEs.

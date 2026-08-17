@@ -1,6 +1,7 @@
 .DS_Store
 evals/reports/*
 !evals/reports/.gitkeep
+!evals/reports/*.md
 evals/datasets/*
 !evals/datasets/.gitkeep
 __pycache__/
