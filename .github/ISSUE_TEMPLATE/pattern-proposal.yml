@@ -1,0 +1,70 @@
+name: Korean writing pattern proposal
+description: Propose a recurring Korean AI-writing pattern, its rewrite condition, and its exceptions.
+title: "[Pattern]: "
+labels: ["pattern"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Propose a rule only when the wording recurs across multiple cases. K-Humanizer uses conditional rules, not global word replacement.
+
+        All examples must be invented. You may write in Korean or English.
+
+  - type: input
+    id: pattern
+    attributes:
+      label: Pattern
+      description: Name the phrase, sentence structure, or writing habit you keep seeing.
+      placeholder: "Example: ~를 통해 used where a direct verb is clearer"
+    validations:
+      required: true
+
+  - type: textarea
+    id: examples
+    attributes:
+      label: Synthetic examples
+      description: Give two or more invented examples if possible.
+      placeholder: |
+        1. Before: 분석을 통해 오류를 확인했습니다.
+           After: 분석해 오류를 확인했습니다.
+
+        2. Before: ...
+           After: ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: condition
+    attributes:
+      label: When should it change?
+      description: Explain the condition that makes the rewrite more natural or precise.
+    validations:
+      required: true
+
+  - type: textarea
+    id: exceptions
+    attributes:
+      label: When should it stay?
+      description: Give a counterexample or exception. A useful rule must not erase facts, nuance, or required terminology.
+    validations:
+      required: true
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Why is this a recurring pattern?
+      description: Describe where you noticed it and how a Korean reader would interpret it. Do not include private source material.
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Safety check
+      options:
+        - label: This proposal contains no private, personal, customer, or proprietary text. Every example is entirely synthetic.
+          required: true
+        - label: I have included a condition and an exception instead of proposing a global replacement.
+          required: true
+        - label: I agree to follow the [Code of Conduct](https://github.com/evergreentree97/K-Humanizer/blob/main/CODE_OF_CONDUCT.md).
+          required: true
