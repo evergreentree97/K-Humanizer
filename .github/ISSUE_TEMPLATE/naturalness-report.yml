@@ -1,0 +1,84 @@
+name: Korean naturalness report
+description: Report Korean output that still sounds translated, stiff, or unlike the intended writer.
+title: "[Naturalness]: "
+labels: ["naturalness"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping improve K-Humanizer. You may write this report in Korean or English.
+
+        **Use a synthetic example.** Do not paste a real resume, email, chat log, customer message, company document, name, phone number, address, internal URL, or other identifying detail. Recreate the problem with invented details instead.
+
+  - type: dropdown
+    id: context
+    attributes:
+      label: Writing context
+      description: Where would this text be used?
+      options:
+        - Resume or career document
+        - Product or UI copy
+        - Email
+        - Messenger or chat
+        - Document or report
+        - Code review
+        - Dialogue or creative writing
+        - Everyday writing
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: current-text
+    attributes:
+      label: Synthetic example
+      description: Paste only invented Korean text that shows the problem.
+      placeholder: "Example: 고객 문의 분류 체계 고도화를 통해 처리 시간을 개선했습니다."
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What sounds unnatural?
+      description: Point to the exact phrase and explain what a Korean reader would notice.
+      placeholder: "`분류 체계 고도화를 통해` is abstract and hides the action."
+    validations:
+      required: true
+
+  - type: textarea
+    id: suggested-rewrite
+    attributes:
+      label: Suggested rewrite
+      description: Optional. Show how you would write it and why.
+      placeholder: "고객 문의 분류 기준을 정리해 처리 시간을 줄였습니다."
+
+  - type: textarea
+    id: preserve
+    attributes:
+      label: What must stay unchanged?
+      description: List any facts, numbers, names, level of certainty, relationship, or domain terms that the rewrite must preserve.
+      placeholder: "The action was classification-rule cleanup; do not add a metric or claim individual ownership."
+
+  - type: dropdown
+    id: agent
+    attributes:
+      label: Agent used
+      options:
+        - Codex
+        - Claude
+        - Cursor
+        - Another agent
+        - Not applicable
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Safety check
+      options:
+        - label: This report contains no private, personal, customer, or proprietary text. The example is entirely synthetic.
+          required: true
+        - label: I agree to follow the [Code of Conduct](https://github.com/evergreentree97/K-Humanizer/blob/main/CODE_OF_CONDUCT.md).
+          required: true

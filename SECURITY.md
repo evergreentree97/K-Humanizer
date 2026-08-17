@@ -2,9 +2,12 @@
 
 ## Reporting A Problem
 
-If you find leaked private data, credentials, or a security issue in this repository, please open a private security advisory on GitHub if available.
+If you find leaked private data, credentials, or a security issue in this
+repository, use GitHub's
+[private vulnerability reporting](https://github.com/evergreentree97/K-Humanizer/security/advisories/new).
 
-If private advisories are unavailable, open an issue with minimal detail and do not paste secrets or private text into the issue body.
+Do not open a public issue or paste secrets, private text, identifying details,
+or internal URLs into an issue body.
 
 ## Data Policy
 

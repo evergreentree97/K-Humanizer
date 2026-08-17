@@ -158,7 +158,8 @@ npx skills add . --skill k-humanizer --full-depth
 
 ## Validation and Data
 
-The v0 fixture contains 200 synthetic, anonymized examples:
+The v0 fixture contains 200 synthetic examples with no real personal or
+proprietary data:
 
 - 90 resume examples, including 40 role-specific cases
 - 20 personal and everyday examples
@@ -188,6 +189,18 @@ identify a person or organization.
 
 See the [dataset research notes](docs/dataset-research.md) and
 [contribution guide](CONTRIBUTING.md) for details.
+
+## Contributing
+
+You can report Korean that still sounds translated, propose a recurring
+AI-writing pattern, request a new use case, or fix an installation or
+documentation problem. Contributions are welcome in Korean or English.
+
+Do not submit real resumes, emails, chats, or customer data. Recreate the same
+writing problem as a synthetic example. See the [contribution guide](CONTRIBUTING.md)
+for the workflow and pull request criteria, or choose an
+[issue form](https://github.com/evergreentree97/K-Humanizer/issues/new/choose)
+to get started.
 
 ## License
 

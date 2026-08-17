@@ -156,7 +156,8 @@ npx skills add . --skill k-humanizer --full-depth
 
 ## 검증과 데이터
 
-v0 골든셋은 합성하고 익명화한 예시 200개로 구성했습니다.
+v0 골든셋은 실제 개인정보나 사내 자료를 포함하지 않은 합성 예시 200개로
+구성했습니다.
 
 - 이력서 90개, 이 중 직무별 평가 40개
 - 일상 20개
@@ -185,6 +186,17 @@ python3 scripts/check_public_hygiene.py
 
 자세한 내용은 [데이터셋 조사 기록](docs/dataset-research.md)과
 [기여 안내](CONTRIBUTING.md)를 참고하세요.
+
+## 기여하기
+
+한국어가 여전히 번역투로 들리는 사례, 반복해서 보이는 AI 문체, 새 사용 사례,
+설치나 문서 문제를 제보할 수 있습니다. 한국어나 영어로 작성해도 됩니다.
+
+실제 이력서, 메일, 대화, 고객 자료는 올리지 말고 같은 문제를 보여주는 합성
+예시로 바꿔 주세요. 참여 방법과 PR 기준은 [기여 안내](CONTRIBUTING.md)에
+정리했습니다. 바로 제보하려면
+[Issue 양식](https://github.com/evergreentree97/K-Humanizer/issues/new/choose)을
+이용해 주세요.
 
 ## 라이선스
 
