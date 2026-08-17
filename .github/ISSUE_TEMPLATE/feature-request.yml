@@ -1,0 +1,63 @@
+name: Feature or use-case request
+description: Suggest a new use case, supported context, evaluation need, or workflow improvement.
+title: "[Request]: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Explain the writing problem before proposing a solution. Use invented examples only. You may write in Korean or English.
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Request area
+      options:
+        - New writing context
+        - Resume or career workflow
+        - Naturalness rule
+        - Evaluation or fixture
+        - Installation or agent support
+        - Documentation
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem to solve
+      description: Who is writing, who will read it, and what currently goes wrong?
+    validations:
+      required: true
+
+  - type: textarea
+    id: example
+    attributes:
+      label: Synthetic example
+      description: Optional. Show an invented input and the behavior you want.
+      placeholder: |
+        Input: ...
+        Desired behavior: ...
+
+  - type: textarea
+    id: constraints
+    attributes:
+      label: Constraints
+      description: What facts, tone, terminology, uncertainty, or author voice must remain unchanged?
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Suggested approach
+      description: Optional. Describe a rule, reference file, fixture, or workflow change that could help.
+
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Safety check
+      options:
+        - label: This request contains no private, personal, customer, or proprietary text. Any example is entirely synthetic.
+          required: true
+        - label: I agree to follow the [Code of Conduct](https://github.com/evergreentree97/K-Humanizer/blob/main/CODE_OF_CONDUCT.md).
+          required: true

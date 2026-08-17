@@ -24,5 +24,5 @@ jobs:
       - name: Check public hygiene
         run: python3 scripts/check_public_hygiene.py
 
-      - name: Validate openai.yaml
-        run: ruby -ryaml -e 'YAML.load_file("skills/k-humanizer/agents/openai.yaml"); puts "openai.yaml OK"'
+      - name: Validate YAML files
+        run: ruby -ryaml -e 'Dir[".github/**/*.yml", "skills/**/*.yaml"].sort.each { |path| YAML.load_file(path); puts "#{path} OK" }'
