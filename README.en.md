@@ -31,17 +31,28 @@ changed and reports the result without abstract, translation-like phrasing.
 - Teams that need different levels of formality for chat, email, documents, and product UI
 - Writers who want to improve the Korean without losing facts or domain terminology
 
-## A Month of Cleaning Korean Text, Turned into a Skill
+## What 7,500+ edits across 120,000 Korean responses taught me
 
-I spent a month cleaning Korean text data every day. The same problems kept
-returning: grammatically correct sentences shaped like English, unnecessary
-formality, and abstract nouns hiding the actual action. I kept notes on those
-cases and turned the repeated corrections into rules with clear conditions and
-exceptions.
+AI-written Korean can be grammatically correct and still feel awkward.
+English-shaped word order remains, the tone is more formal than the situation
+calls for, and abstract wording makes the actual action hard to identify.
+
+I reviewed more than 120,000 Korean responses and made over 7,500 direct edits.
+The same phrase could sound natural in one context and awkward in another. I
+used those cases to decide what to change, when to leave a sentence alone, and
+how to preserve its meaning.
+
+K-Humanizer removes translation-like phrasing and generic AI language while
+keeping facts, numbers, domain terms, and the writer's voice. It adjusts
+formality and sentence length for resumes, emails, chat messages, product copy,
+and other contexts.
 
 K-Humanizer does not blindly replace words. For example, it keeps `~를 통해`
 when the phrase describes a real route or intermediary. It rewrites the phrase
 only when it makes a simple action harder to read.
+
+It is for anyone who wants more natural Korean or wants to turn an AI draft into
+something closer to the way they actually write.
 
 ## Try It
 
