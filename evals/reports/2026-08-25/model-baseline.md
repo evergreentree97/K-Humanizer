@@ -12,6 +12,9 @@ This report covers all 220 synthetic cases in
 `gpt-5.4` and scored separately by `claude-opus-5`. The evaluated skill revision
 was `814ffb022be6+skill-dfc50447df35`.
 
+This composite identifier records the repository base and the evaluated skill
+contents separately. The leading commit is the base from which the evaluation
+change was prepared; it is not the commit containing the evaluated skill files.
 The skill suffix is the first 12 characters of a SHA-256 digest over every file
 under `skills/k-humanizer`, sorted by relative path. Each path, a null byte, its
 file contents, and another null byte are added in sequence. The full digest for
