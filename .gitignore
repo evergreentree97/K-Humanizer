@@ -2,6 +2,10 @@
 evals/reports/*
 !evals/reports/.gitkeep
 !evals/reports/*.md
+!evals/reports/*/
+evals/reports/*/*
+!evals/reports/*/model-baseline.jsonl
+!evals/reports/*/model-baseline.md
 evals/datasets/*
 !evals/datasets/.gitkeep
 __pycache__/

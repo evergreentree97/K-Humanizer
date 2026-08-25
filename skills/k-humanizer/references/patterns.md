@@ -42,6 +42,18 @@ claim narrow instead of filling the gap.
 | `어긋남`, `맞지 않음`, `문제가 있다` without both sides of the comparison | Name what differed, when it happened, or what the reader needs to do | If only a check was performed, say what was checked; do not imply that a problem was found |
 | A spatial metaphor such as `뒤로 숨기다`, `비껴가다`, or `다음 단계로 넘어가지 않게` | State the actual relationship, missed condition, or stop rule | The metaphor is intentional and natural in personal or creative writing |
 | `꼼꼼히 살폈다`, `직접 검토했다`, `결과를 확인했다` without an object or method | Name what was reviewed and how it was checked when the source supplies it | The object and method are already clear from the surrounding sentences |
+| A promotional sentence pairs data, experience, or an abstract subject with a dramatic action | Use the literal action already supported by the source, such as reviewing responses, editing expressions, or identifying a repeated problem | The metaphor is intentional, natural for the channel, and does not make the work sound larger than it was |
+
+In promotional writing, check whether the subject and verb describe an action a
+person would naturally use for that work. Data can be reviewed or compared, an
+expression can be edited, and a repeated problem can be identified. Do not pick
+a vivid verb merely because it makes the sentence sound stronger. Also unpack
+abstract subjects that appear to hide, reveal, open, or transform something
+when the reader instead needs to know what became difficult to understand.
+
+This is not a blacklist. A word that sounds awkward in one subject-action pair
+may be the clearest choice elsewhere. Judge the actual subject, action, reader,
+and claim strength together.
 
 For product pages, dashboards, and documentation, remove self-introductions
 such as `이 화면은 ... 하는 화면입니다` when the title or UI already says the
@@ -56,6 +68,11 @@ understanding the sentence. The table below is for software or internal process
 writing only; skip it for unrelated genres. Keep official product names,
 identifiers, established domain terms, and exact job-posting keywords when
 replacing them would reduce precision.
+
+For a mixed or non-specialist audience, explain a necessary specialist term or
+acronym briefly at first use. Do not repeat the same English expansion in
+parentheses throughout the document. Keep product names, code identifiers,
+configuration keys, and exact job-posting terms unchanged.
 
 | If the reader does not need the internal term | Prefer |
 |---|---|

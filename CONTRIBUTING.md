@@ -73,6 +73,7 @@ one sentence and necessary in another.
 | Resume rules | `skills/k-humanizer/references/resume*.md` |
 | Evaluation criteria | `skills/k-humanizer/references/evaluation.md` |
 | Public test fixtures | `evals/fixtures/` |
+| Scored baseline validator | `scripts/validate_model_baseline.py` |
 | Reader documentation | `README.md` and `README.en.md` |
 
 Keep `skills/k-humanizer/SKILL.md` small. Put detailed examples, domain rules,
@@ -94,11 +95,13 @@ Fixtures use JSONL, with one JSON object per line:
 Accepted domains:
 
 - `resume`
+- `application`
 - `document`
 - `product_copy`
 - `everyday`
 - `messenger`
 - `email`
+- `public_post`
 - `code_review`
 - `dialogue`
 

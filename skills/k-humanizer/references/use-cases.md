@@ -19,12 +19,42 @@ Rules:
   every field into one generic achievement template.
 - Select, remove, or reorder experience only when the user asks for composition,
   tailoring, or a structural review.
+- Match the document's established bullet style. Use complete sentences for an
+  introduction or application essay; concise action-noun endings such as
+  `설계`, `구현`, `검증`, or `담당` can be natural in compact resume bullets.
+- Within one section, do not alternate between noun endings and full predicates
+  without a content or layout reason. Rewrite noun endings when they hide the
+  action behind repeated abstractions such as `개선` or `강화`.
 - Return paste-ready wording before diagnosis. Add questions only when a missing
   fact would materially change ownership, completion state, or claim strength.
 
 See `resume.md` for the minimal examples that define evidence and contribution
 boundaries. Keep broader coverage in the golden set instead of duplicating it
 in the runtime prompt.
+
+## Application Motivation
+
+Goal: connect a real experience to a specific organization or role and explain
+a contribution the applicant can credibly make.
+
+Rules:
+- Start with one defensible connection, not a chronological self-introduction.
+- Join the applicant's actual problem, choice, action, or learning with the
+  organization's specific work and the role's responsibility.
+- Do not place company praise beside an unrelated experience and call it a fit.
+- Replace an interest declaration with the supplied reason the interest began
+  and any action the applicant already took.
+- Explain future contribution as an application of verified experience, not a
+  large promise.
+- Swap in another organization name as a diagnostic check. If the paragraph
+  still works unchanged, make the connection more specific without inventing
+  private company information.
+
+Example:
+
+Before: 고객 문의를 유형별로 나누면서 반복 문의가 환불 조건에서 시작된다는 점을 확인했습니다. 문의 데이터를 제품 정책에 반영하는 귀사의 운영 방식에 매료되어, 이 경험을 바탕으로 함께 성장하고 싶습니다.
+
+After: 고객 문의를 유형별로 나눠 반복 문의가 환불 조건에서 시작된다는 점을 확인했습니다. 문의 데이터를 제품 정책에 반영하는 귀사의 운영 방식과 제 경험이 맞닿아 있어 지원했습니다.
 
 ## Documents and Reports
 
@@ -33,6 +63,8 @@ Goal: make the writing clear, structured, and professional without corporate fog
 Rules:
 - Keep consistent terms for the same concept.
 - Replace `~에 있어서`, `~측면에서`, `~을 통해` with direct phrasing.
+- Explain a necessary specialist term once at first use for a mixed audience.
+  Do not repeat the same English expansion in parentheses after that.
 - Avoid summary paragraphs that only repeat the section title.
 - If a comparison or mismatch matters, name both sides. If the source only says
   that a check was run, do not write as though a defect was found.
@@ -130,6 +162,34 @@ After: 실패 케이스 처리가 빠져 있어서 방어 로직을 추가해야
 Before: 이 변수명은 실제로 담고 있는 데이터의 의미를 명확하게 전달하지 못하고 있는 것으로 판단됩니다.
 
 After: 이 변수명만 보면 어떤 값인지 바로 알기 어려워요.
+
+## Public and Social Posts
+
+Goal: make a public post credible and easy to understand in a short reading
+session without turning it into clickbait or a compressed report.
+
+Rules:
+- Open with the actual observation, result, or tension already present in the
+  source.
+- Give each paragraph or post one main idea and enough context for a reader who
+  did not see the underlying work.
+- Keep numbers with their scope, comparison, and measurement status. Do not
+  present reviewed data, edits, synthetic examples, user evidence, and adoption
+  as the same kind of proof.
+- Use verbs that fit the work actually performed. Do not make a review sound
+  like a breakthrough or make an abstract noun perform a dramatic action.
+- Remove internal paths and implementation detail only when they do not help the
+  public reader and the user requested a public-facing restructure.
+- Avoid manufactured controversy, rhetorical hooks, engagement bait, and
+  endings such as asking readers to agree without giving them a real next step.
+- End with the implication, lesson, repository link, or concrete action already
+  supported by the source.
+
+Example:
+
+Before: 한국어 AI 글쓰기의 판도를 바꿀 도구입니다. 12만 개 응답을 훑고 7,500번 표현을 고쳐 얻은 압도적인 노하우가 어색한 문장을 가립니다. 여러분은 어떻게 생각하시나요?
+
+After: 12만 개가 넘는 한국어 응답을 검토하면서 7,500번 이상 표현을 직접 고쳤습니다. 그 과정에서 반복해서 확인한 번역투와 과한 격식 문제를 K-Humanizer에 정리했습니다.
 
 ## Dialogue
 
