@@ -17,6 +17,21 @@ SCORE_FIELDS = (
     "practical_usefulness",
 )
 
+ALLOWED_FAILURE_TYPES = {
+    "completion_state_change",
+    "context_mismatch",
+    "evidence_type_mixup",
+    "factual_drift",
+    "generic_organization_fit",
+    "not_ready",
+    "number_drift",
+    "other",
+    "over_editing",
+    "ownership_inflation",
+    "under_editing",
+    "unnatural_korean",
+}
+
 REQUIRED_FIELDS = {
     "id",
     "domain",
@@ -154,6 +169,12 @@ def validate_file(path: Path, fixture_path: Path) -> int:
             isinstance(value, str) and value.strip() for value in failure_types
         ):
             errors.append(f"{path}:{line_number}: failure_types must be a string list")
+        elif unknown_types := set(failure_types) - ALLOWED_FAILURE_TYPES:
+            errors.append(
+                f"{path}:{line_number}: unknown failure types: {sorted(unknown_types)}"
+            )
+        elif len(failure_types) != len(set(failure_types)):
+            errors.append(f"{path}:{line_number}: failure_types must not contain duplicates")
         elif critical_failure is True and not failure_types:
             errors.append(
                 f"{path}:{line_number}: a critical failure must name at least one failure type"

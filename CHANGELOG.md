@@ -20,8 +20,8 @@
 - Align the skill's UI description with its broader Korean-writing scope.
 - Add negative-control tests for golden-set domain counts, unknown domains, and duplicate IDs.
 - Add a scored-baseline validator that checks all fixture IDs, source inputs,
-  model attribution, five rubric scores, and recorded failures before a quality
-  report can be published.
+  model attribution, five rubric scores, and recorded failure labels before a
+  quality report can be published.
 - Add a complete 220-case `gpt-5.4` output baseline independently scored by
   Claude Opus, including domain averages, retained low-scoring cases, and a
   public failure summary.

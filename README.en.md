@@ -215,9 +215,10 @@ python3 scripts/validate_model_baseline.py \
 
 All 220 outputs were generated with `gpt-5.4` and scored in separate Claude
 Opus sessions. The five-measure average was 4.765, meaning fidelity was 4.800,
-and the judge marked no critical factual drift. This is a single-model score on
-synthetic fixtures, not a substitute for human review. The report retains weak
-and failed cases alongside the averages.
+and the judge marked no critical factual drift. This is a single-judge
+evaluation on synthetic fixtures, not a substitute for human review. The report
+retains weak and failed cases, including a disclosed rubric inconsistency,
+alongside the averages.
 
 This repository does not include third-party datasets. Do not submit private
 resumes, personal emails, real chat logs, customer data, or proprietary project

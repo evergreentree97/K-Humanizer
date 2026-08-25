@@ -86,6 +86,22 @@ class ValidateModelBaselineTest(unittest.TestCase):
         self.assertEqual(1, result)
         self.assertIn("must name at least one failure type", output)
 
+    def test_unknown_failure_type_is_rejected(self) -> None:
+        records = self.make_records()
+        records[0]["failure_types"] = ["invented_label"]
+        records[0]["review_notes"] = "Should fail before publication."
+        result, output = self.validate_records(records)
+        self.assertEqual(1, result)
+        self.assertIn("unknown failure types", output)
+
+    def test_duplicate_failure_type_is_rejected(self) -> None:
+        records = self.make_records()
+        records[0]["failure_types"] = ["under_editing", "under_editing"]
+        records[0]["review_notes"] = "Should fail before publication."
+        result, output = self.validate_records(records)
+        self.assertEqual(1, result)
+        self.assertIn("must not contain duplicates", output)
+
 
 if __name__ == "__main__":
     unittest.main()
