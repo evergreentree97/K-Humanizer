@@ -36,6 +36,20 @@ Risks:
 - Presenting a field change as past experience in the target role.
 - Flattening personal voice.
 
+### Application Writing
+
+Representative tasks:
+- Connect a verified experience to a specific organization or role.
+- Explain why the interest began and what action followed.
+- Turn earlier evidence into a credible contribution after joining.
+
+Risks:
+- Writing praise that works unchanged for any organization.
+- Copying a job-posting phrase into the applicant's experience.
+- Inventing private company information or a personal motivation.
+- Promising an unverified future result.
+- Hiding a genuine experience gap during a field change.
+
 ### Documents/Reports
 
 Representative tasks:
@@ -109,6 +123,21 @@ Risks:
 - Sounding accusatory toward the author.
 - Losing the technical reason for the suggestion.
 
+### Public and Social Posts
+
+Representative tasks:
+- Polish a title and body for a public reader.
+- Keep numbers, firsthand observations, synthetic examples, and adoption signals distinct.
+- Replace clickbait and mismatched dramatic verbs with source-backed wording.
+- End with a concrete implication, lesson, link, or action.
+
+Risks:
+- Manufacturing controversy or asking for empty engagement.
+- Presenting synthetic validation as user evidence.
+- Making a review or edit sound like a breakthrough.
+- Removing the scope or measurement status from a number.
+- Exposing internal paths or private implementation details in a public rewrite.
+
 ### Dialogue
 
 Representative tasks:
@@ -123,9 +152,10 @@ Risks:
 ## Golden Set Format
 
 Use JSONL. The current v0 fixture is `evals/fixtures/golden_set.v0.jsonl`.
-It contains 200 synthetic cases: 90 resume, 20 document, 20 personal/everyday,
-20 messenger, 20 email, 10 product/UI copy, 10 code review, and 10 dialogue
-cases. The resume set includes both rewrite triggers and preservation cases
+It contains 220 synthetic cases: 90 resume, 10 application, 20 document,
+20 personal/everyday, 20 messenger, 20 email, 10 product/UI copy, 10 public
+post, 10 code review, and 10 dialogue cases. The resume set includes both
+rewrite triggers and preservation cases
 where a required intermediary, permission, contrast, domain identifier, or
 exact job keyword must remain. Forty resume cases carry a `resume_role` field,
 with five cases for each supported role group.
@@ -173,8 +203,31 @@ Use these only after checking license and provenance:
 
 For each release candidate:
 
-1. Run the skill on the golden set.
+1. Run the skill on all 220 golden-set cases with the model and version recorded.
 2. Save outputs under `evals/reports/YYYY-MM-DD/`.
 3. Score each output with the rubric.
 4. Record the top 10 recurring failures.
 5. Update only the smallest necessary rule or example.
+
+Store one JSON object per case in the scored baseline. Repeat the generator
+model, judge model or human reviewer identifier, and skill revision on every
+line so a partial file remains attributable. Keep the fixture ID, domain, and
+input unchanged; add the generated output, all five integer scores, a critical
+failure flag, failure types, and review notes.
+
+When an independent model performs the first scoring pass, name it in
+`judge_model` and treat the result as model-scored. Do not present that result as
+human review. A human reviewer can replace the judge identifier and scores or
+publish a separate reviewed file.
+
+Validate completeness and score ranges before writing the summary report:
+
+```bash
+python3 scripts/validate_model_baseline.py \
+  evals/reports/YYYY-MM-DD/model-baseline.jsonl
+```
+
+The validator requires all fixture IDs, checks that source inputs and domains
+still match, and prints overall score averages and critical-failure count. It
+does not fail a valid baseline merely because its scores miss the release
+criteria; failed cases must remain visible in the report.

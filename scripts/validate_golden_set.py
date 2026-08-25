@@ -20,22 +20,26 @@ REQUIRED_FIELDS = {
 
 EXPECTED_DOMAINS = {
     "resume",
+    "application",
     "document",
     "product_copy",
     "everyday",
     "messenger",
     "email",
+    "public_post",
     "code_review",
     "dialogue",
 }
 
 V0_EXPECTED_COUNTS = {
     "resume": 90,
+    "application": 10,
     "document": 20,
     "product_copy": 10,
     "everyday": 20,
     "messenger": 20,
     "email": 20,
+    "public_post": 10,
     "code_review": 10,
     "dialogue": 10,
 }

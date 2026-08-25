@@ -71,6 +71,11 @@ After giving the five scores, check the domain-specific risks:
 - Personal/everyday: Did it preserve the writer's relationship, emotion, humor, and level of familiarity?
 - Messenger/casual: Is it short enough for chat? Did it avoid fake closeness, emojis, and slang unless asked?
 - Email: Is the ask easy to find? Is it polite enough without hiding the point?
+- Application writing: Does a verified experience explain the specific
+  organization or role choice and a credible contribution, rather than generic
+  company praise?
+- Public/social post: Does it lead with a real observation, keep numbers inside
+  their source boundary, and avoid clickbait or empty engagement prompts?
 - Code review: Does it point to the code and give a concrete suggestion?
 - Dialogue: Did it keep the speaker's voice, relationship, and scene tension?
 
@@ -84,6 +89,12 @@ If any of these happen, the score should be 2 or lower even if the sentence soun
 - Claims that a mismatch or defect was found when the source only says a check was run.
 - Makes a review comment so soft that the action item becomes unclear.
 - Turns ordinary chat into brand copy, corporate wording, or forced friendliness.
+- When the source supplies a real organization-specific connection, replaces it
+  with reusable praise, values, or job-posting phrases.
+- Turns a public post into manufactured controversy, merges unlike evidence
+  types, or makes the work sound larger through a mismatched dramatic verb.
+- Exposes internal paths or non-public implementation details without clear
+  permission.
 - Normalizes distinctive dialogue into generic polite Korean.
 
 For a resume, also cap Meaning Fidelity at 1 when the rewrite:
@@ -149,11 +160,13 @@ the action, condition, or decision that would support it.
 Keep a small test set across real use cases:
 
 - Resume/profile: 90 examples, including 5 cases for each of 8 role groups
+- Application writing: 10 examples
 - Documents/reports: 20 examples
 - Product/UI copy: 10 examples
 - Personal/everyday: 20 examples
 - Messenger/casual: 20 examples
 - Email: 20 examples
+- Public/social posts: 10 examples
 - Code review comments: 10 examples
 - Dialogue: 10 examples
 
