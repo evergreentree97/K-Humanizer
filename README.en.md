@@ -38,10 +38,11 @@ AI-written Korean can be grammatically correct and still feel awkward.
 English-shaped word order remains, the tone is more formal than the situation
 calls for, and abstract wording makes the actual action hard to identify.
 
-I reviewed more than 120,000 Korean responses and made over 7,500 direct edits.
-The same phrase could sound natural in one context and awkward in another. I
-used those cases to decide what to change, when to leave a sentence alone, and
-how to preserve its meaning.
+Separate from the 220 synthetic cases published in this repository, I reviewed
+more than 120,000 Korean responses and made over 7,500 direct edits. The same
+phrase could sound natural in one context and awkward in another. I used those
+cases to decide what to change, when to leave a sentence alone, and how to
+preserve its meaning.
 
 K-Humanizer removes translation-like phrasing and generic AI language while
 keeping facts, numbers, domain terms, and the writer's voice. It adjusts
@@ -214,7 +215,7 @@ python3 scripts/validate_model_baseline.py \
 - [Evaluation plan and v1.0 acceptance criteria](docs/validation-plan.md)
 
 All 220 outputs were generated with `gpt-5.4` and scored in separate Claude
-Opus sessions. The five-measure average was 4.765, meaning fidelity was 4.800,
+Opus sessions. The five-measure average was 4.765. Meaning fidelity was 4.800,
 and the judge marked no critical factual drift. This is a single-judge
 evaluation on synthetic fixtures, not a substitute for human review. The report
 retains weak and failed cases, including a disclosed rubric inconsistency,
