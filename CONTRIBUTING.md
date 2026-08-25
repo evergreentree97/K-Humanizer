@@ -133,6 +133,9 @@ Typical validation commands:
 
 ```bash
 python3 scripts/validate_golden_set.py
+python3 -m unittest scripts.test_validate_golden_set scripts.test_validate_model_baseline
+python3 scripts/validate_model_baseline.py \
+  evals/reports/2026-08-25/model-baseline.jsonl
 python3 scripts/check_public_hygiene.py
 ruby -ryaml -e 'Dir[".github/**/*.yml", "skills/**/*.yaml"].sort.each { |path| YAML.load_file(path) }'
 ```

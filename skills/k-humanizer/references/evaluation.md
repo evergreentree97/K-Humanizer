@@ -89,10 +89,12 @@ If any of these happen, the score should be 2 or lower even if the sentence soun
 - Claims that a mismatch or defect was found when the source only says a check was run.
 - Makes a review comment so soft that the action item becomes unclear.
 - Turns ordinary chat into brand copy, corporate wording, or forced friendliness.
-- Makes an application paragraph reusable for any organization by relying on
-  praise, values, or job-posting phrases instead of a real connection.
+- When the source supplies a real organization-specific connection, replaces it
+  with reusable praise, values, or job-posting phrases.
 - Turns a public post into manufactured controversy, merges unlike evidence
   types, or makes the work sound larger through a mismatched dramatic verb.
+- Exposes internal paths or non-public implementation details without clear
+  permission.
 - Normalizes distinctive dialogue into generic polite Korean.
 
 For a resume, also cap Meaning Fidelity at 1 when the rewrite:

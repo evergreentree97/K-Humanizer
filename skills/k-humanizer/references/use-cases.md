@@ -178,8 +178,10 @@ Rules:
   as the same kind of proof.
 - Use verbs that fit the work actually performed. Do not make a review sound
   like a breakthrough or make an abstract noun perform a dramatic action.
-- Remove internal paths and implementation detail only when they do not help the
-  public reader and the user requested a public-facing restructure.
+- Treat internal paths and non-public implementation details as sensitive. When
+  the text is clearly intended for publication, remove details that do not help
+  the reader. If publication intent or permission is unclear, do not expose or
+  silently delete them; flag them for confirmation.
 - Avoid manufactured controversy, rhetorical hooks, engagement bait, and
   endings such as asking readers to agree without giving them a real next step.
 - End with the implication, lesson, repository link, or concrete action already
