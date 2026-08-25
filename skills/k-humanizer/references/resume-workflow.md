@@ -86,10 +86,21 @@ project result.
 
 ### Application writing
 
-Use complete sentences and the applicant's actual motivation. Connect a real
-experience to the organization's stated work and the contribution the applicant
-can credibly make. Do not turn admiration for the company or a job-posting
-phrase into personal evidence.
+Use complete sentences and the applicant's actual motivation. Define one
+connection before drafting: a verified experience, the problem or working style
+it revealed, the organization's specific work, the role's responsibility, and
+a contribution the applicant can credibly make. Use only the links the source
+supports; all five parts do not need to appear when fewer are enough.
+
+Do not turn admiration for the company or a job-posting phrase into personal
+evidence. An interest statement should name the supplied event or action that
+created the interest. A future contribution should apply earlier evidence
+instead of promising a result the applicant cannot verify yet.
+
+As a diagnostic check, replace the organization name with another one. If the
+paragraph still works unchanged, the reason is too generic. Make the connection
+more specific with supplied official information, or keep the claim narrow when
+no specific basis is available.
 
 ## Prioritize only when tailoring is requested
 
@@ -124,7 +135,8 @@ different resumes combined.
 | One achievement appears in the summary, skills, and experience | Keep positioning in the summary, names in skills, and evidence in experience. |
 | Technical detail takes over the bullet | Put the work, decision, or user-facing change first. Keep only technical detail that helps explain the experience. |
 | A role is explained by comparing it with another role | State what the target role needs to see instead of using another field as the baseline. |
-| All bullets are noun phrases | Use complete predicates for experience and judgment. Reserve noun phrases for compact lists. |
+| All bullets use abstract noun endings such as `개선`, `강화`, or `고도화` | Name the supported action. Preserve concise action-noun endings such as `설계`, `구현`, `검증`, or `담당` when they match the document's established bullet style. |
+| One section mixes noun endings and full predicates without a reason | Use complete sentences for introductions and application prose; keep a consistent compact style for resume bullets when the destination uses it. |
 | The candidate is changing fields | Show transferable responsibilities without relabeling past experience. |
 
 ## Output patterns

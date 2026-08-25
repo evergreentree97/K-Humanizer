@@ -1,6 +1,6 @@
 ---
 name: k-humanizer
-description: Use when polishing Korean resumes, career descriptions, portfolio summaries, and application writing so they sound natural rather than AI-written across operations, planning, QA, design, marketing, customer service, research, education, and other fields. Preserve facts, meaning, ownership, results, field-specific terms, and the writer's voice while removing translationese, stiff abstraction, generic achievement claims, and mechanical structure. Compose from notes, restructure, or tailor to a job posting only when the user explicitly asks. Also use for natural Korean in documents, emails, messages, reports, product copy, review comments, and dialogue.
+description: Use when polishing Korean resumes, career descriptions, portfolio summaries, and application writing so they sound natural rather than AI-written across operations, planning, QA, design, marketing, customer service, research, education, and other fields. Preserve facts, meaning, ownership, results, field-specific terms, and the writer's voice while removing translationese, stiff abstraction, generic achievement claims, and mechanical structure. Compose from notes, restructure, or tailor to a job posting only when the user explicitly asks. Also use for natural Korean in documents, emails, messages, reports, product copy, public or social posts, review comments, and dialogue.
 ---
 
 # K-Humanizer
@@ -58,8 +58,14 @@ percentage.
      `references/resume-workflow.md`; preserve the field's normal language while
      removing AI-like phrasing, and protect evidence, ownership, measurement
      conditions, and contribution boundaries.
+   - Application writing: connect a verified experience to the specific
+     organization or role and a credible contribution. Do not turn company
+     praise or a job-posting phrase into personal evidence.
    - Product/UI copy: name what the reader can see or do; remove subtitles and
      self-descriptions that only repeat the title or component.
+   - Public/social post: lead with the actual observation, result, or tension;
+     keep numbers inside their source boundary; remove clickbait, manufactured
+     controversy, and engagement bait.
    - Dialogue: preserve speaker voice, relationship tension, and emotional beat.
    - Code review, when applicable: specific, respectful, and clear about the
      requested action.
@@ -99,6 +105,10 @@ percentage.
    - Any over-humanized slang, forced imperfection, or personality not present in the source?
    - For a resume, did the rewrite preserve who did the work, what was
      measured, and what remains unverified?
+   - For an application, does the organization-specific reason follow from a
+     real experience rather than praise that could be reused anywhere?
+   - For a public post, are the title, numbers, and ending credible without
+     overstating the source or asking for empty engagement?
    - Did a proper name, domain term, verified cause, or confirmed result change?
    - Does the rewritten prose contain U+2013, U+2014, or U+00B7?
 
@@ -156,7 +166,8 @@ separate these three states:
 
 Read the relevant reference only when the task needs it:
 
-- `references/use-cases.md`: genre-specific rewrite rules and examples.
+- `references/use-cases.md`: genre-specific rewrite rules and examples,
+  including application writing and public or social posts.
 - `references/resume.md`: evidence-safe resume and career-document rules.
 - `references/resume-workflow.md`: input classification, evidence extraction,
   section structure, and paste-ready resume output rules.

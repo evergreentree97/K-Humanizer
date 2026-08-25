@@ -6,7 +6,7 @@ K-Humanizer should be positioned as a Korean-native writing polish skill, not as
 
 Primary promise:
 
-> Make Korean text sound natural for its real channel: personal writing, everyday conversation, resume, document, product UI, messenger, email, code review, or dialogue.
+> Make Korean text sound natural for its real channel: personal writing, everyday conversation, resume, application, document, product UI, messenger, email, public post, code review, or dialogue.
 
 ## Scope
 
@@ -32,14 +32,15 @@ Out of scope:
 - MIT license
 - Portable `skills/k-humanizer/SKILL.md`
 - Use-case references
-- 200-item v0 golden set with everyday, resume integrity, eight role-specific resume groups, product/UI, code review, and dialogue cases
+- 220-item v0 golden set with everyday, resume integrity, eight role-specific resume groups, application motivation, product/UI, public-post, code-review, and dialogue cases
 - JSONL validation script
 
 ### v0.2: Validation Baseline
 
-- Manual evaluation report
+- Full model-scored evaluation report
 - Failure taxonomy
 - Clear examples of what the skill refuses to change
+- Human review of the lowest-scoring cases
 
 ### v0.3: Lightweight Metrics
 
@@ -65,17 +66,20 @@ Out of scope:
 
 ## Validation Design
 
-Use three layers:
+Use four layers:
 
 1. Golden-set checks: stable, hand-authored, anonymized examples.
 2. Public-dataset probes: optional local sampling from licensed datasets.
-3. Human review: score meaning fidelity, naturalness, register fit, and edit discipline.
+3. Independent model scoring: run the full fixture with generator and judge
+   versions recorded, then publish weak cases as well as averages.
+4. Human review: score meaning fidelity, Korean naturalness, context fit, edit
+   discipline, and practical usefulness.
 
 ## Differentiation From Existing Projects
 
 Existing Korean humanizer projects already cover AI-tell removal. K-Humanizer should differentiate through:
 
-- Practical channel modes: personal writing, everyday conversation, resume, docs, product UI, messenger, email, code review, dialogue.
+- Practical channel modes: personal writing, everyday conversation, resume, application writing, docs, product UI, messenger, email, public posts, code review, dialogue.
 - Role-aware resume evidence ordering for operations, planning, QA, design, marketing, customer service, research, and education.
 - Strict meaning preservation.
 - Clear anti-overpolishing policy.
@@ -85,8 +89,7 @@ Existing Korean humanizer projects already cover AI-tell removal. K-Humanizer sh
 
 ## Immediate Tasks
 
-1. Run K-Humanizer manually on the v0 golden set.
-2. Score outputs with `docs/validation-plan.md`.
-3. Add a first report under `evals/reports/`.
-4. Add a small pattern-count script if the manual report exposes repeatable failures.
-5. Publish the first scored validation report.
+1. Review the ten lowest-scoring cases in the 2026-08-25 model baseline.
+2. Add a small pattern-count script only if review confirms a repeatable rule
+   that can be detected without penalizing valid wording.
+3. Run a human scoring pass before describing the benchmark as human-validated.
