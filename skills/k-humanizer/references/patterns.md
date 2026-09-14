@@ -103,6 +103,34 @@ must not replace a documented method or category with a more fashionable but
 unsupported alternative. When an awkward required term must remain, use it near
 a concrete explanation instead of repeating it as a slogan.
 
+## Sentence and paragraph flow
+
+For connected prose, read neighboring sentences together before shortening
+or deleting transitions. Keep the thread of the paragraph: what the next
+sentence adds, contrasts with, explains, or carries forward. Use the smallest
+change that makes that relationship easy to follow.
+
+| Relationship supported by the source | Possible connection | Boundary |
+|---|---|---|
+| A stated reason leads to an action or result | `그래서`, `따라서`, `-아서/-어서` | Use causal wording only when the source establishes that cause, not merely because two events occur together |
+| Two facts contrast, or the second limits the first | `하지만`, `다만`, `-지만`, `-는데` | Keep the actual contrast or condition; do not manufacture disagreement for emphasis |
+| One action follows another | `이후`, `그다음`, `-고 나서`, `-한 뒤` | Preserve the supplied order without turning sequence into cause |
+| The next sentence adds detail about the same topic | `또`, `-고`, `-면서`, or a specific reference such as `이 기준은` | Keep the referent clear; use `-면서` only for actions that actually overlap |
+
+These are options, not required substitutions. Choose wording that fits the
+writer's register: a formal report may use `따라서`, while a casual message may
+flow better with `그래서` or a connective ending. Keep an existing connector
+when it does useful work. Do not insert one at every sentence boundary or
+rotate synonyms just to make the wording look varied.
+
+When adjacent short sentences share a subject and one thought, consider joining
+them with a connective ending. When a sentence contains too much, split it at a
+complete thought while retaining the necessary link to what follows. If a
+connector does not clarify the relation, restore a concrete shared subject or
+reference instead of adding filler. Do not join unrelated facts or separate
+resume bullets, UI labels, or deliberately clipped dialogue merely to smooth
+rhythm. Leave already coherent prose alone.
+
 ## Rhythm and punctuation
 
 U+2013 (en dash), U+2014 (em dash), and U+00B7 (middle dot) are hard bans in
@@ -112,9 +140,9 @@ identifiers, or URLs; separate that material from the rewrite when necessary.
 
 | If the source does this | Use |
 |---|---|
-| Places a comma immediately after `-고`, `-며`, `-지만`, `-면서`, `-아서`, `-어서`, `-는데`, or `-자` | Remove the comma. If the sentence remains long, split it at a complete thought |
-| Uses a comma in more than half of the sentences | Split some sentences or absorb the pause into a connective ending; do not preserve English-like comma rhythm |
-| Starts several sentences with `또한`, `그리고`, `따라서`, `특히`, or `이를 통해` | Delete the connector or state the actual relation such as cause, contrast, or sequence |
+| Places a comma immediately after `-고`, `-며`, `-지만`, `-면서`, `-아서`, `-어서`, `-는데`, or `-자` | Remove an unnecessary comma while keeping the connective ending. Split an overloaded sentence at a complete thought and preserve its link to the next sentence |
+| Repeatedly uses commas as English-like pauses | Remove unnecessary pauses or use natural connective endings. Judge the paragraph's flow rather than splitting sentences to meet a punctuation count |
+| Repeated sentence-opening connectors make the prose mechanical | Check what each connector does. Keep useful links; remove only redundant ones or express the same relation with a connective ending or clear reference |
 | Gives every sentence or bullet the same length and ending | Combine related points or split overloaded ones; do not add content only to vary rhythm |
 | Forces three parallel items | Keep the number of items supported by the source |
 | Ends several lines with noun phrases such as `~구축`, `~개선`, `~강화` | Turn some into complete predicates when the genre allows it |

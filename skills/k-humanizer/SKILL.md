@@ -74,7 +74,8 @@ percentage.
    - S1: factual drift, changed ownership or completion state, invented evidence,
      a hard-banned character, or wording that falsely claims a defect. Always fix.
    - S2: repeated translationese, abstract filler, register mismatch,
-     decorative structure, or vague claims. Fix unless the genre needs it.
+     decorative structure, broken sentence flow, or vague claims. Fix unless
+     the genre needs it.
    - S3: an isolated stylistic preference. Leave it alone unless it repeats.
    - With no S1 issue and at most two S2 issues, edit only those spans or return
      the source unchanged. Do not run a full rewrite to justify the skill.
@@ -82,7 +83,8 @@ percentage.
    - Translationese: `~를 통해`, `~에 대해`, `~에 있어서`, `가지고 있다`, `~할 수 있다` overuse.
    - Stiff nominalization: `~적인`, `~성`, `~화`, `~측면`, `~과정에서` clusters.
    - Generic AI closers: `결론적으로`, `시사하는 바가 크다`, `중요한 역할을 한다`.
-   - Mechanical structure: repeated `첫째/둘째/셋째`, mirrored sentence lengths, excessive bullets.
+   - Mechanical structure: repeated `첫째/둘째/셋째`, mirrored sentence lengths,
+     excessive bullets, or related thoughts chopped into disconnected sentences.
    - Punctuation tells: English-like comma rhythm, needless quotes, decorative emphasis.
    - Vague wording: `좋은 경험`, unnamed `문제 상황`, empty self-evaluation,
      or metaphors and process nouns that do not say what happened.
@@ -92,7 +94,14 @@ percentage.
      word replacement.
 4. Rewrite surgically.
    - Prefer verbs over abstract nouns.
-   - Cut filler before adding new words.
+   - Cut filler while keeping words that carry a logical relation or refer
+     back to the previous sentence. Shorter is not automatically more natural.
+   - Read connected prose as a paragraph. Where thoughts feel disconnected,
+     use a fitting conjunction, connective ending, or clear reference to the
+     previous idea; combine closely related sentences when that reads better.
+     Follow the sentence-flow guidance in `references/patterns.md`.
+   - Preserve useful connectors and the source's cause, contrast, and sequence.
+     Do not add a connector to every sentence or imply an unsupported relation.
    - Vary sentence endings only when it sounds natural for the genre.
    - Keep the user's level of confidence; do not make claims stronger.
    - Estimate the changed character share. Past roughly 30%, explain why. Past
@@ -101,6 +110,8 @@ percentage.
 5. Self-check.
    - Meaning preserved?
    - Register and formality appropriate for the target reader?
+   - Does each sentence follow naturally from the previous one? Did shortening
+     remove a useful link, or did a new connector imply a relation not in the source?
    - Any phrase that sounds like a generic LLM answer?
    - Any over-humanized slang, forced imperfection, or personality not present in the source?
    - For a resume, did the rewrite preserve who did the work, what was
