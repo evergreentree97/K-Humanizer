@@ -18,13 +18,32 @@ Did the rewrite keep the same meaning?
 
 ## Korean Naturalness
 
-Does it sound like Korean a person would write?
+Does it sound like Korean a person would write, both sentence by sentence
+and as a whole paragraph?
 
-5: It reads naturally for the situation.
+5: It reads naturally for the situation, with clear links between related thoughts.
 
-3: It is understandable, but still stiff, translated, or assistant-like.
+3: It is understandable, but still stiff, translated, assistant-like, or choppy between sentences.
 
-1: It still sounds like English translated into Korean, awkward honorifics, or forced casual speech.
+1: It sounds translated or forced, or reads as disconnected statements or a mechanical chain of connectors.
+
+For multi-sentence prose, check whether useful conjunctions, connective
+endings, and references survived the edit. A shorter output is not better when
+the reader has to reconstruct the links. Do not require transitions between
+independent bullets or labels, or erase deliberate pauses in dialogue.
+
+Use these synthetic cases to review sentence flow. The possible edits are
+examples, not exact-match targets; another natural edit may satisfy the same
+conditions.
+
+| Source | Possible edit or expected behavior | Must preserve or avoid |
+|---|---|---|
+| `신청 인원이 정원을 초과했습니다. 정원 초과로 접수를 조기 마감했습니다.` | `신청 인원이 정원을 초과했습니다. 그래서 접수를 조기 마감했습니다.` | Keep the stated reason for closing early without repeating it |
+| `초안은 완성했습니다. 검토는 아직 끝나지 않았습니다.` | `초안은 완성했지만 검토는 아직 끝나지 않았습니다.` | Preserve both completion states and their contrast |
+| `어제 안내문을 수정했습니다. 오늘 문의가 줄었습니다.` | Keep both observations; `오늘은` may make the time contrast clearer | Do not add `그래서` or claim the edit caused the decrease |
+| `오늘은 비가 와서 산책은 미루려고 해. 대신 집에서 책을 읽을까 해.` | Leave unchanged | Keep `대신`, the casual voice, and the tentative plans |
+| `자료를 확인했습니다. 그리고 표를 수정했습니다. 그리고 수정본을 보냈습니다.` | `자료를 확인하고 표를 수정한 뒤 수정본을 보냈습니다.` | Preserve the action order; do not replace each `그리고` with a different sentence-opening connector |
+
 
 ## Context Fit
 
@@ -84,6 +103,8 @@ After giving the five scores, check the domain-specific risks:
 If any of these happen, the score should be 2 or lower even if the sentence sounds smoother:
 
 - Adds a new fact, promise, metric, apology, or emotional stance.
+- Adds an unsupported cause, contrast, or sequence through a connector, or
+  deletes a meaningful link while shortening the text.
 - Removes a constraint, deadline, recipient, blocker, or uncertainty.
 - Replaces an exact name, domain term, or confirmed cause with an unsupported alternative.
 - Claims that a mismatch or defect was found when the source only says a check was run.

@@ -2,6 +2,10 @@
 
 ## 0.1.0 - Unreleased
 
+- Improve sentence and paragraph flow by preserving useful connectors, using
+  natural connective endings, and avoiding unnecessary sentence splitting.
+  Add synthetic review examples for continuity and unsupported causal links.
+
 - Add portable `k-humanizer` agent skill.
 - Add Korean writing references for use cases, patterns, and evaluation.
 - Add condition-to-rewrite tables with usage checks and exceptions instead of blind word replacement.

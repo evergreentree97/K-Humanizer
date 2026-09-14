@@ -114,7 +114,8 @@ After: 저녁 재료는 내가 사갈게.
 Goal: make the text sound like a real person wrote it in chat.
 
 Rules:
-- Shorten sentences.
+- Keep messages concise without cutting one connected thought into isolated
+  statements. Use natural connective endings or conjunctions where needed.
 - Use contractions and softer endings only when they fit the relationship.
 - Do not add emojis, slang, or over-familiarity unless already present.
 
