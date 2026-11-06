@@ -9,198 +9,74 @@
 
 [한국어](README.md)
 
-K-Humanizer is an Agent Skill for editing Korean in Cursor, Claude, and Codex.
-
-It reads the passage in context and edits what sounds awkward for the intended
-reader. It keeps the writer's voice and the original claims, including who did
-the work, under what conditions, and with what certainty. Natural wording
-stays as it is.
+K-Humanizer edits awkward Korean in AI-assisted resumes, emails, chat messages,
+and product copy. It is an Agent Skill for Cursor, Claude, and Codex.
 
 ```text
-Before: 고객 문의 분류 기준을 다시 정리하는 작업을 통해 주간 평균 처리 시간을 18시간에서 11시간으로 개선했습니다.
-After:  고객 문의 분류 기준을 다시 정리해 주간 평균 처리 시간을 18시간에서 11시간으로 줄였습니다.
+Before  고객 문의 분류 기준을 다시 정리하는 작업을 통해 주간 평균 처리 시간을 18시간에서 11시간으로 개선했습니다.
+After   고객 문의 분류 기준을 다시 정리해 주간 평균 처리 시간을 18시간에서 11시간으로 줄였습니다.
 ```
 
-The edit keeps the action and the change in handling time while removing the
-phrase that made a simple action sound more complicated.
+The shorter sentence still says what changed and gives the same numbers. In
+`이의 신청은 담당 상담사를 통해서만 접수할 수 있습니다`, however, the counselor
+is the only way to file an appeal. That wording does useful work, so it stays.
 
-## Who It Is For
-
-- Non-native Korean writers creating product copy, emails, or documents for Korean users
-- Job seekers whose AI-assisted Korean resumes sound stiff or exaggerated
-- Teams that need different levels of formality for chat, email, documents, and product UI
-- Writers polishing application motivation or public posts without inflating experience or numbers
-- Writers who want to improve the Korean without losing facts or domain terminology
-
-## What 7,500+ edits across 120,000 Korean responses taught me
-
-AI-written Korean can be grammatically correct and still feel awkward.
-English-shaped word order remains, the tone is more formal than the situation
-calls for, and abstract wording makes the actual action hard to identify.
-
-Separate from the 220 synthetic cases published in this repository, I reviewed
-more than 120,000 Korean responses and made over 7,500 direct edits. The same
-phrase could sound natural in one context and awkward in another. I used those
-cases to decide what to change, when to leave a sentence alone, and how to
-preserve its meaning.
-
-K-Humanizer removes translation-like phrasing and generic AI language while
-keeping facts, numbers, domain terms, and the writer's voice. It adjusts
-formality and sentence length for resumes, applications, emails, chat messages,
-product copy, public posts, and other contexts.
-
-In `상담사를 통해서만 접수할 수 있습니다`, the counselor is the required
-point of contact. What a phrase does in context determines how it is edited.
-Established terms such as `race condition` can stay in English for readers
-who use them.
-
-## Try It
+## Install
 
 ```bash
 npx skills add evergreentree97/K-Humanizer --skill k-humanizer --full-depth
 ```
 
-After installation, tell the skill where the text will appear and who will read
-it.
+Paste your text and tell the skill where it will appear. For an email to a
+colleague, try:
 
 ```text
-Use $k-humanizer to rewrite the Korean product copy below for Korean users.
-Keep the facts, numbers, names, and product terms unchanged. Remove only
-translation-like phrasing and unnecessary formality.
+Use $k-humanizer to edit this Korean email to a colleague.
+Keep the dates and the request. Soften any wording that sounds too formal.
 
-[paste text]
+[paste your email]
 ```
 
-For a resume:
+For a resume, the skill edits awkward wording in what you have already written.
+It can keep terms your readers use, such as `race condition` in a developer
+resume. If you want it to write bullets from notes or reorder your experience
+for a job posting, ask for that directly.
 
-```text
-Use $k-humanizer to polish the Korean resume below.
-Keep its facts, numbers, and field-specific terms unchanged. Remove only
-translationese and generic AI-style achievement language.
+## More examples
 
-[paste resume]
-```
+| Where it appears | Before | After |
+| --- | --- | --- |
+| Help article | 검토가 완료되지 않은 경우에도 임시 저장은 가능하나 제출은 불가합니다. | 검토가 끝나지 않아도 임시 저장은 할 수 있어요. 제출하려면 검토가 먼저 끝나야 해요. |
+| Team chat | 해당 일정에 대해 확인한 이후에 공유하도록 하겠습니다. | 일정 확인하고 공유할게요. |
 
-For a public post:
+[More examples for email, public posts, and code review](skills/k-humanizer/references/use-cases.md)
 
-```text
-Use $k-humanizer to polish the Korean public post below.
-Keep its facts and numbers unchanged. Remove clickbait and dramatic verbs that
-make the work sound larger than the source supports.
+## Why I built it
 
-[paste public post]
-```
+I reviewed more than 120,000 Korean responses and made over 7,500 edits. I used
+those edits to document when to rephrase a sentence and when to leave it alone.
 
-## What It Changes and What It Preserves
+## Evaluation
 
-| What the skill checks | What it does |
-|---|---|
-| English-shaped syntax and translationese | Uses word order and sentence structure that Korean readers expect |
-| Abstract nouns and long noun phrases | States the action and result already present in the source |
-| Tone across chat, email, documents, product UI, and public posts | Adjusts formality and sentence length for the reader and channel |
-| Facts, numbers, names, sources, and domain terms | Preserves them as written |
-| Ownership, completion state, and uncertainty | Preserves the stated responsibility and what has been confirmed |
-| Negation, exceptions, and conditions | Keeps them even when shortening the wording |
-| Unsupported results or emotions | Does not invent them |
-| Text that already sounds natural | Keeps it or edits only the necessary span |
+The public golden set contains 220 synthetic examples, separate from the
+responses I reviewed. It includes 90 resume examples, plus applications,
+everyday conversation, email, documents, product copy, public posts, and code
+review. [Fixture validation report](evals/reports/2026-08-25-fixture-baseline.md), [Original 200-case report](evals/reports/2026-08-17-fixture-baseline.md)
 
-The request and the source determine the size of the edit. A button label may
-need a new phrase, while a paragraph may need only a local fix. Ask for
-restructuring or a different selection of material when you want a broader edit.
+On August 25, 2026, `gpt-5.4` produced 220 answers using that version of the
+skill. A separate Claude Opus session scored them. The average across five
+measures was 4.765, and meaning fidelity averaged 4.800. The model judge
+reported no critical changes to the facts. The report includes low-scoring
+answers and a case where the score did not follow the rubric. [Model evaluation report](evals/reports/2026-08-25/model-baseline.md), [Evaluation plan](docs/validation-plan.md)
 
-## Examples
+Try the short synthetic cases to see how the current editing guidance works.
+[Review cases and rubric](skills/k-humanizer/references/evaluation.md#context-and-scope-review-cases)
 
-### Resume
-
-```text
-Before:
-저는 고객 문의 분류 기준을 다시 정리하는 작업을 통해 주간 평균 처리 시간을 18시간에서 11시간으로 개선했습니다.
-
-After:
-고객 문의 분류 기준을 다시 정리해 주간 평균 처리 시간을 18시간에서 11시간으로 줄였습니다.
-```
-
-### Product Copy
-
-```text
-Before: 이 화면은 업로드한 문서와 처리 상태를 한눈에 확인할 수 있도록 구성된 대시보드입니다.
-After:  업로드한 문서와 처리 상태를 보여줍니다.
-```
-
-### Messenger
-
-```text
-Before: 제가 그 일정에 대해 체크한 이후에 당신에게 공유할 수 있도록 하겠습니다.
-After:  일정 확인해 보고 공유드릴게요.
-```
-
-### Everyday Korean
-
-```text
-Before: 현재 비가 오고 있는 상황이므로 우산을 챙기는 것이 좋을 것으로 보입니다.
-After:  비 와서 우산 챙기는 게 좋겠어.
-```
-
-### Public Post
-
-```text
-Before: 12만 개가 넘는 한국어 응답을 훑고 7,500번 이상 표현을 직접 고쳐 압도적인 노하우를 완성했습니다.
-After:  12만 개가 넘는 한국어 응답을 검토하면서 7,500번 이상 표현을 직접 고쳤습니다.
-```
-
-See [use cases](skills/k-humanizer/references/use-cases.md) for more examples.
-
-## Resumes and Career Documents
-
-K-Humanizer treats editing an existing sentence and writing a new sentence from
-notes as different tasks. By default, it keeps the resume's facts and
-field-specific language and changes only the awkward phrasing. It writes from
-notes or reorders experience for a job posting only when asked.
-
-| Material supplied | What the skill does |
-|---|---|
-| Finished career bullets | Removes translationese and AI-sounding phrasing without changing facts or claim strength |
-| A full resume | Fixes recurring style problems while preserving field-specific terms and personal voice |
-| Notes or task lists | Writes career bullets from confirmed details only when requested |
-| A job posting and an existing resume | Reorders relevant existing experience only when requested |
-
-The skill keeps the details that make each role specific. Operational
-exceptions, planning scope decisions, QA reproduction conditions, and design
-rationale stay specific instead of becoming generic achievement language.
-
-- [Resume and career-document rules](skills/k-humanizer/references/resume.md)
-- [Resume workflow](skills/k-humanizer/references/resume-workflow.md)
-- [Role-aware resume rules](skills/k-humanizer/references/resume-roles.md)
-
-## Skill Files
-
-The portable skill lives in [skills/k-humanizer/SKILL.md](skills/k-humanizer/SKILL.md).
-
-- [Use cases](skills/k-humanizer/references/use-cases.md)
-- [Pattern checklist](skills/k-humanizer/references/patterns.md)
-- [Evaluation rubric](skills/k-humanizer/references/evaluation.md)
-
-To test the current files from a local checkout:
+## Try it from a local checkout
 
 ```bash
 npx skills add . --skill k-humanizer --full-depth
 ```
-
-## Validation and Data
-
-The v0 fixture contains 220 synthetic examples with no real personal or
-proprietary data:
-
-- 90 resume examples, including 40 role-specific cases
-- 10 application-motivation examples
-- 20 personal and everyday examples
-- 20 messenger examples
-- 20 email examples
-- 20 document examples
-- 10 product and UI copy examples
-- 10 public and social post examples
-- 10 dialogue examples
-- 10 code review comment examples
 
 ```bash
 python3 scripts/validate_golden_set.py
@@ -209,40 +85,14 @@ python3 scripts/validate_model_baseline.py \
   evals/reports/2026-08-25/model-baseline.jsonl
 ```
 
-- [Current v0 fixture integrity report](evals/reports/2026-08-25-fixture-baseline.md)
-- [Model-output baseline from August 25, 2026](evals/reports/2026-08-25/model-baseline.md)
-- [Original 200-case baseline](evals/reports/2026-08-17-fixture-baseline.md)
-- [Evaluation plan and v1.0 acceptance criteria](docs/validation-plan.md)
-
-For the August 25, 2026 baseline, all 220 outputs were generated with
-`gpt-5.4` and scored in separate Claude Opus sessions. The five-measure average
-was 4.765. Meaning fidelity was 4.800, and the judge marked no critical factual
-drift. This is a single-judge
-evaluation on synthetic fixtures, not a substitute for human review. The report
-retains weak and failed cases, including a disclosed rubric inconsistency,
-alongside the averages. The scores apply to the skill revision evaluated at
-the time. See the separate [synthetic review cases](skills/k-humanizer/references/evaluation.md#context-and-scope-review-cases)
-for the current editing guidance.
-
-This repository does not include third-party datasets. Do not submit private
-resumes, personal emails, real chat logs, customer data, or proprietary project
-text. Rewrite any example based on real work as a synthetic example that cannot
-identify a person or organization.
-
-See the [dataset research notes](docs/dataset-research.md) and
-[contribution guide](CONTRIBUTING.md) for details.
+The editing instructions are in the [skill file](skills/k-humanizer/SKILL.md).
+[Korean wording reference](skills/k-humanizer/references/patterns.md), [Resume editing](skills/k-humanizer/references/resume.md), [Resume workflow](skills/k-humanizer/references/resume-workflow.md), [Role-specific examples](skills/k-humanizer/references/resume-roles.md), [Evaluation rubric](skills/k-humanizer/references/evaluation.md)
 
 ## Contributing
 
-You can report Korean that still sounds translated, propose a recurring
-AI-writing pattern, request a new use case, or fix an installation or
-documentation problem. Contributions are welcome in Korean or English.
-
-Do not submit real resumes, emails, chats, or customer data. Recreate the same
-writing problem as a synthetic example. See the [contribution guide](CONTRIBUTING.md)
-for the workflow and pull request criteria, or choose an
-[issue form](https://github.com/evergreentree97/K-Humanizer/issues/new/choose)
-to get started.
+Reports about awkward Korean and installation problems are welcome in Korean
+or English. Make up an example that shows the same problem as a real resume,
+email, or customer document before posting it. [Open an issue](https://github.com/evergreentree97/K-Humanizer/issues/new/choose), [Contribution guide](CONTRIBUTING.md), [Dataset research](docs/dataset-research.md)
 
 ## License
 
