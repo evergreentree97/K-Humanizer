@@ -9,20 +9,20 @@
 
 [한국어](README.md)
 
-K-Humanizer is an Agent Skill that helps Cursor, Claude, and Codex write Korean
-that sounds natural to Korean readers.
+K-Humanizer is an Agent Skill for editing Korean in Cursor, Claude, and Codex.
 
-It rewrites awkward phrasing without changing the source's facts, numbers,
-names, domain terms, or level of certainty. If a sentence already reads
-naturally, the skill leaves it alone.
+It reads the passage in context and edits what sounds awkward for the intended
+reader. It keeps the writer's voice and the original claims, including who did
+the work, under what conditions, and with what certainty. Natural wording
+stays as it is.
 
 ```text
-Before: 고객 문의 분류 체계 고도화를 통해 주간 평균 처리 시간을 18시간에서 11시간으로 크게 개선했습니다.
-After:  고객 문의 분류 기준을 정리해 주간 평균 처리 시간을 18시간에서 11시간으로 줄였습니다.
+Before: 고객 문의 분류 기준을 다시 정리하는 작업을 통해 주간 평균 처리 시간을 18시간에서 11시간으로 개선했습니다.
+After:  고객 문의 분류 기준을 다시 정리해 주간 평균 처리 시간을 18시간에서 11시간으로 줄였습니다.
 ```
 
-Both sentences report the same result. The second is more direct: it says what
-changed and reports the result without abstract, translation-like phrasing.
+The edit keeps the action and the change in handling time while removing the
+phrase that made a simple action sound more complicated.
 
 ## Who It Is For
 
@@ -49,12 +49,10 @@ keeping facts, numbers, domain terms, and the writer's voice. It adjusts
 formality and sentence length for resumes, applications, emails, chat messages,
 product copy, public posts, and other contexts.
 
-K-Humanizer does not blindly replace words. For example, it keeps `~를 통해`
-when the phrase describes a real route or intermediary. It rewrites the phrase
-only when it makes a simple action harder to read.
-
-It is for anyone who wants more natural Korean or wants to turn an AI draft into
-something closer to the way they actually write.
+In `상담사를 통해서만 접수할 수 있습니다`, the counselor is the required
+point of contact. What a phrase does in context determines how it is edited.
+Established terms such as `race condition` can stay in English for readers
+who use them.
 
 ## Try It
 
@@ -101,12 +99,14 @@ make the work sound larger than the source supports.
 | Abstract nouns and long noun phrases | States the action and result already present in the source |
 | Tone across chat, email, documents, product UI, and public posts | Adjusts formality and sentence length for the reader and channel |
 | Facts, numbers, names, sources, and domain terms | Preserves them as written |
-| Ownership, completion state, and uncertainty | Does not make the claim stronger than the source |
+| Ownership, completion state, and uncertainty | Preserves the stated responsibility and what has been confirmed |
+| Negation, exceptions, and conditions | Keeps them even when shortening the wording |
 | Unsupported results or emotions | Does not invent them |
 | Text that already sounds natural | Keeps it or edits only the necessary span |
 
-K-Humanizer is not an AI-detector bypass tool. It does not invent resume
-achievements or make the source sound more certain than it is.
+The request and the source determine the size of the edit. A button label may
+need a new phrase, while a paragraph may need only a local fix. Ask for
+restructuring or a different selection of material when you want a broader edit.
 
 ## Examples
 
@@ -114,10 +114,10 @@ achievements or make the source sound more certain than it is.
 
 ```text
 Before:
-저는 고객 문의 분류 체계 고도화를 통해 주간 평균 처리 시간을 18시간에서 11시간으로 크게 개선했습니다.
+저는 고객 문의 분류 기준을 다시 정리하는 작업을 통해 주간 평균 처리 시간을 18시간에서 11시간으로 개선했습니다.
 
 After:
-고객 문의 분류 기준을 정리해 주간 평균 처리 시간을 18시간에서 11시간으로 줄였습니다.
+고객 문의 분류 기준을 다시 정리해 주간 평균 처리 시간을 18시간에서 11시간으로 줄였습니다.
 ```
 
 ### Product Copy
@@ -131,7 +131,7 @@ After:  업로드한 문서와 처리 상태를 보여줍니다.
 
 ```text
 Before: 제가 그 일정에 대해 체크한 이후에 당신에게 공유할 수 있도록 하겠습니다.
-After:  일정 확인해보고 공유드릴게요.
+After:  일정 확인해 보고 공유드릴게요.
 ```
 
 ### Everyday Korean
@@ -144,7 +144,7 @@ After:  비 와서 우산 챙기는 게 좋겠어.
 ### Public Post
 
 ```text
-Before: 12만 개 응답을 훑고 7,500번 표현을 고쳐 압도적인 노하우를 완성했습니다.
+Before: 12만 개가 넘는 한국어 응답을 훑고 7,500번 이상 표현을 직접 고쳐 압도적인 노하우를 완성했습니다.
 After:  12만 개가 넘는 한국어 응답을 검토하면서 7,500번 이상 표현을 직접 고쳤습니다.
 ```
 
@@ -210,16 +210,19 @@ python3 scripts/validate_model_baseline.py \
 ```
 
 - [Current v0 fixture integrity report](evals/reports/2026-08-25-fixture-baseline.md)
-- [Claude-scored evaluation of all 220 outputs](evals/reports/2026-08-25/model-baseline.md)
+- [Model-output baseline from August 25, 2026](evals/reports/2026-08-25/model-baseline.md)
 - [Original 200-case baseline](evals/reports/2026-08-17-fixture-baseline.md)
 - [Evaluation plan and v1.0 acceptance criteria](docs/validation-plan.md)
 
-All 220 outputs were generated with `gpt-5.4` and scored in separate Claude
-Opus sessions. The five-measure average was 4.765. Meaning fidelity was 4.800,
-and the judge marked no critical factual drift. This is a single-judge
+For the August 25, 2026 baseline, all 220 outputs were generated with
+`gpt-5.4` and scored in separate Claude Opus sessions. The five-measure average
+was 4.765. Meaning fidelity was 4.800, and the judge marked no critical factual
+drift. This is a single-judge
 evaluation on synthetic fixtures, not a substitute for human review. The report
 retains weak and failed cases, including a disclosed rubric inconsistency,
-alongside the averages.
+alongside the averages. The scores apply to the skill revision evaluated at
+the time. See the separate [synthetic review cases](skills/k-humanizer/references/evaluation.md#context-and-scope-review-cases)
+for the current editing guidance.
 
 This repository does not include third-party datasets. Do not submit private
 resumes, personal emails, real chat logs, customer data, or proprietary project

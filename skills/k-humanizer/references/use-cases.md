@@ -5,10 +5,7 @@
 Goal: make achievements concrete, credible, and easy to scan.
 
 Rules:
-- Read `resume.md` before editing a resume or career document.
-- Read `resume-workflow.md` to classify finished bullets, raw notes,
-  job-targeted rewrites, and full-document reviews.
-- Read `resume-roles.md` when a target role or job description is supplied.
+- Start with the resume references linked in [SKILL.md](../SKILL.md).
 - Prefer problem or scope, judgment and action, then confirmed result over broad self-description.
 - Remove inflated adjectives such as `탁월한`, `혁신적인`, `압도적인` unless proven by evidence.
 - Keep numbers with their comparison and measurement conditions.
@@ -62,7 +59,8 @@ Goal: make the writing clear, structured, and professional without corporate fog
 
 Rules:
 - Keep consistent terms for the same concept.
-- Replace `~에 있어서`, `~측면에서`, `~을 통해` with direct phrasing.
+- Recast translation-like phrasing when it obscures the actual action. Keep
+  a qualifier or intermediary when it changes the meaning.
 - Explain a necessary specialist term once at first use for a mixed audience.
   Do not repeat the same English expansion in parentheses after that.
 - Avoid summary paragraphs that only repeat the section title.
@@ -71,9 +69,9 @@ Rules:
 
 Example:
 
-Before: 이 기능은 사용자 경험을 더 나은 방향으로 가져가는 데 있어서 중요한 역할을 수행할 것으로 기대됩니다.
+Before: 자동 저장 기능을 통해 사용자가 작업 중이던 문서를 더 쉽게 다시 열 수 있을 것으로 예상합니다.
 
-After: 이 기능은 사용자가 더 편하게 작업하는 데 도움이 됩니다.
+After: 자동 저장을 적용하면 작업 중이던 문서를 더 쉽게 다시 열 수 있을 것으로 예상합니다.
 
 ## Product and UI Copy
 
@@ -107,7 +105,7 @@ Example:
 
 Before: 제가 오늘 저녁 식사에 필요한 재료들을 구매하는 역할을 수행할 수 있도록 하겠습니다.
 
-After: 저녁 재료는 내가 사갈게.
+After: 오늘 저녁 재료는 내가 살게.
 
 ## Messenger and Casual Korean
 
@@ -123,7 +121,7 @@ Example:
 
 Before: 제가 그 일정에 대해 체크한 이후에 당신에게 공유할 수 있도록 하겠습니다.
 
-After: 일정 확인해보고 공유드릴게요.
+After: 일정 확인해 보고 공유드릴게요.
 
 ## Email
 
@@ -158,7 +156,7 @@ After: 이 로직은 함수로 빼면 읽기 쉬울 것 같아요.
 
 Before: 현재 구현은 예외 상황에 대한 처리가 충분하지 않은 상태로 보입니다. 실패 케이스를 고려한 방어 로직을 추가하는 것이 적절할 것 같습니다.
 
-After: 실패 케이스 처리가 빠져 있어서 방어 로직을 추가해야 할 것 같아요.
+After: 현재 코드는 실패 상황을 충분히 처리하지 못하는 것 같아요. 실패 처리 로직을 보완하면 좋겠습니다.
 
 Before: 이 변수명은 실제로 담고 있는 데이터의 의미를 명확하게 전달하지 못하고 있는 것으로 판단됩니다.
 
@@ -190,9 +188,9 @@ Rules:
 
 Example:
 
-Before: 한국어 AI 글쓰기의 판도를 바꿀 도구입니다. 12만 개 응답을 훑고 7,500번 표현을 고쳐 얻은 압도적인 노하우가 어색한 문장을 가립니다. 여러분은 어떻게 생각하시나요?
+Before: 한국어 AI 글쓰기의 판도를 바꿀 도구입니다. 12만 개가 넘는 한국어 응답을 훑고 7,500번 이상 표현을 직접 고쳐 얻은 압도적인 노하우가 어색한 문장을 가립니다. 여러분은 어떻게 생각하시나요?
 
-After: 12만 개가 넘는 한국어 응답을 검토하면서 7,500번 이상 표현을 직접 고쳤습니다. 그 과정에서 반복해서 확인한 번역투와 과한 격식 문제를 K-Humanizer에 정리했습니다.
+After: 12만 개가 넘는 한국어 응답을 검토하면서 7,500번 이상 표현을 직접 고쳤습니다.
 
 ## Dialogue
 
