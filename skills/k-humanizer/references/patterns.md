@@ -2,13 +2,22 @@
 
 Use these tables to diagnose why a passage feels awkward. Read it with the
 surrounding text, identify what the phrase contributes, then recast the thought
-if needed. Keep ordinary wording that already fits the reader and genre.
+if needed. A phrase that matches the first column is not a reason to edit by
+itself; apply a row only when the passage actually reads stiff or translated
+because of it. Keep ordinary wording that already fits the reader and genre.
+
+No word in these tables is banned. `통해`, `제공`, `진행`, `관련하여`, and
+`대해` are ordinary Korean when they fit the sentence and reader. Do not swap a
+correct formal word for a casual near-synonym because it is shorter:
+`품질 관리에 중점을 두었습니다` and `품질 관리에 집중했습니다` do not mean the
+same thing, and a report may need the first. The same applies to translated
+text: judge the whole sentence in its channel, not each word against a list.
 
 ## Translationese and English-shaped grammar
 
 | If the source uses | Use this when the condition fits | Keep or handle differently when |
 |---|---|---|
-| `~를 통해` for a tool, place, or action | Use `~로`, `~에서`, or make the action the verb: `분석을 통해 확인했다` becomes `분석해 확인했다` | The path, intermediary, or mediation itself is important |
+| `~를 통해` for a tool, place, or action | Use `~로`, `~에서`, or make the action the verb: `분석을 통해 확인했다` becomes `분석해 확인했다` | The path, intermediary, or mediation itself is important, or the phrase is a set expression in formal notices such as `홈페이지를 통해 안내드립니다` |
 | `~에 대해`, `~에 대한` before a direct object | Attach `을/를` to the object or combine the nouns: `오류에 대해 분석했다` becomes `오류를 분석했다` | The sentence genuinely introduces a topic rather than an action target |
 | `~에 있어서` for a setting | Use `~에서` or delete it | The contrast between settings is the point |
 | `가지고 있다`, `보유하고 있다` for simple possession | Use `있다`, `갖췄다`, or name the capability directly | Legal ownership or asset possession is the exact claim |
@@ -16,8 +25,29 @@ if needed. Keep ordinary wording that already fits the reader and genre.
 | `~하게 되었다`, `~지게 되었다` for a completed action | State the action directly | A real transition, external cause, or loss of control matters |
 | Repeated `~할 수 있다`, `~할 것으로 보인다` | Remove redundant hedging only when the source supports a verified capability or result | Preserve permission, possibility, and uncertainty when they carry meaning |
 | `단순히 X가 아니라 Y`, `X를 넘어 Y` used for emphasis | State Y directly or name the real relationship between X and Y | The sentence corrects a genuine misunderstanding or the contrast changes the meaning |
-| `~에 대해서는`, `~와 관련하여` | Use `~은/는`, `~의`, or a direct object | The phrase marks a real scope boundary or legal relation |
+| `~에 대해서는`, `~와 관련하여` | Use `~은/는`, `~의`, or a direct object | The phrase marks a real scope boundary or legal relation, or names the subject of a formal notice such as `배송 지연 관련 안내` |
 | A literal translation hides an ordinary action or state, such as `처리 결과 미표시` in user-facing prose | Say what happens: `처리 결과가 보이지 않음` | A compact label, exact status name, or technical term is conventional for the intended reader |
+| Pronouns carried over from English: `당신`, `그것`, `그들`, `우리는`, repeated `귀하의` | Omit them only when the reader can still tell who acts; restate the actor when it changes, or use the reader's role (`고객님`, `회원님`) or the brand name | `귀하` in an official letter or legal notice where it is conventional, or a subject needed for contrast |
+| `~이 가능합니다`, `~이 불가합니다` for something a person does | `~할 수 있습니다`, `~할 수 없습니다` | Compact notices, tables, and labels where the noun form is conventional, such as `당일 배송 불가` |
+| A double negative such as `~가 아닌 한 ~할 수 없습니다` | State the condition directly with `~인 경우에만` | Approved legal wording, or a long list of exceptions that reads better as exclusions |
+| `진행` stacked on an action the reader does in one step: `설치를 진행해 주세요` | Name the action: `설치해 주세요` | A process with several steps or an ongoing state: `환불이 진행 중입니다` |
+| `~을 제공합니다` attached to every feature | Say what the reader gets or can do | A service, benefit, or support the business actually provides: `무료 배송을 제공합니다` |
+| An English idiom rendered word for word: `연락을 취하다` for "reach out", `게임 체인저`, `손끝에서` | State the action or benefit the source supports | Korean readers in that field already use the phrase |
+
+## Register and endings
+
+Formal Korean can still read easily, and natural Korean can still be formal.
+Choose the speech level from the reader, channel, and brand, then keep it
+consistent.
+
+| If the source does this | Use this when the condition fits | Keep or handle differently when |
+|---|---|---|
+| Mixes 합쇼체 and 해요체 within one piece | Use the level that matches the brand and channel throughout | The brand deliberately uses a different level in legal or notice sections |
+| Uses `~하시겠습니까?` in a consumer app whose other strings use 해요체 | `~할까요?` | Formal products such as banking, B2B tools, or government services |
+| Opens with ceremony: `다름이 아니오라`, `~에 대해 말씀드리고자 연락드리게 되었습니다` | State the reason for writing and the request | A formal letter where the relationship expects the ceremony |
+| `~하도록 하겠습니다`, `~할 수 있도록 하겠습니다` | `~하겠습니다` when the same speaker will act and the context already makes it a definite commitment | The speaker arranges for someone else to act, or the phrase marks effort or feasibility rather than a promise. Keep the actor and commitment strength |
+| A translated bare command as a call to action: `지금 구매하세요!`, `시작하세요` | Buttons: an action noun or `~하기` (`구매하기`, `무료로 시작하기`). Body copy: `~해 보세요` or a plain statement | Keep any urgency or deadline the source states; do not add one |
+| Several apology or thanks phrases stacked in one message | Keep one at the strength the source uses | The source deliberately repeats them, as in a formal apology from the business |
 
 ## Abstract nouns, filler, and empty weight
 
@@ -58,9 +88,11 @@ and claim strength together.
 
 For product pages, dashboards, and documentation, remove self-introductions
 such as `이 화면은 ... 하는 화면입니다` when the title or UI already says the
-same thing. Replace `한눈에`, decorative subtitles, bold labels, and balanced
-taglines with the actual items or states shown. Keep a subtitle when it adds a
-real scope, constraint, or audience that the title does not contain.
+same thing. When `한눈에`, a decorative subtitle, a bold label, or a balanced
+tagline describes nothing the reader can check, replace it with the actual
+items or states shown. Keep these when they carry a real claim, such as a
+landing page that does show everything on one screen, and keep a subtitle when
+it adds a scope, constraint, or audience that the title does not contain.
 
 ## English and insider wording
 
@@ -69,6 +101,11 @@ understanding the sentence. The table below is for software or internal process
 writing only; skip it for unrelated genres. Keep official product names,
 identifiers, established domain terms, and exact job-posting keywords when
 replacing them would reduce precision.
+
+In customer-facing copy, many loanwords are the customer's own vocabulary:
+`포인트` for reward points, `쿠폰`, `리뷰`, `구독`, `노쇼`, `라이더`. Keep them.
+When the product already uses a term in its Korean UI or help center, use the
+same term everywhere.
 
 For a mixed or non-specialist audience, explain a necessary specialist term or
 acronym briefly at first use. Do not repeat the same English expansion in
@@ -81,7 +118,7 @@ configuration keys, and exact job-posting terms unchanged.
 | 케이스 | 경우, 사례 |
 | 이슈 | 문제, 쟁점 |
 | 플로우 | 흐름, 절차 |
-| 포인트 | 요점, 지점, 핵심 |
+| 포인트 (meaning a point in an argument, not reward points) | 요점, 지점, 핵심 |
 | 리스크 | 위험, 우려, 실패 가능성 |
 | 체인 | 순서, 연결 관계 |
 | 게이트 | 품질 기준, 통과 조건, 먼저 확인하는 단계 |
@@ -106,10 +143,14 @@ a concrete explanation instead of repeating it as a slogan.
 
 ## Sentence and paragraph flow
 
-For connected prose, read neighboring sentences together before shortening
-or deleting transitions. Keep the thread of the paragraph: what the next
+For connected prose, read it as a paragraph before shortening or deleting
+transitions or subjects. Dropping a repeated subject is safe only while the
+reader can tell who acts. Keep the thread of the paragraph: what the next
 sentence adds, contrasts with, explains, or carries forward. Use the smallest
-change that makes that relationship easy to follow.
+change that makes that relationship easy to follow. When translating from
+English, the same applies to the Korean you build: Korean often joins two short
+English sentences with a connective ending, or splits a long one at a complete
+thought.
 
 | Relationship supported by the source | Possible connection | Boundary |
 |---|---|---|
@@ -128,7 +169,16 @@ When adjacent short sentences share a subject and one thought, consider joining
 them with a connective ending. When a sentence contains too much, split it at a
 complete thought while retaining the necessary link to what follows. If a
 connector does not clarify the relation, restore a concrete shared subject or
-reference instead of adding filler. Do not join unrelated facts or separate
+reference instead of adding filler.
+
+Before keeping a merged sentence, re-read it for the facts it joins. Each fact
+must keep its own state, condition, and time qualifier, and the reader must be
+able to tell which predicate or qualifier belongs to which fact. A current state
+and a possible future change are separate facts; a shared ending or a chain of
+connective endings must not let one read as a transition into the other. If
+merging obscures this, use a clearer connective or separate complete clauses.
+This does not require splitting sentences in general, and `-으로` or `-면서`
+stay fine when the relation is clear. Do not join unrelated facts or separate
 resume bullets, UI labels, or deliberately clipped dialogue merely to smooth
 rhythm. Leave already coherent prose alone.
 
@@ -138,13 +188,14 @@ Use the punctuation and formatting expected in the destination. Change a
 mark when it makes the sentence harder to read or conflicts with a supplied
 style guide. Keep punctuation that expresses a range, groups related terms, or
 serves a required format. Preserve verbatim quotes, official names, code,
-identifiers, and URLs.
+identifiers, placeholders, and URLs.
 
 | If the source does this | Use |
 |---|---|
 | Places a comma immediately after `-고`, `-며`, `-지만`, `-면서`, `-아서`, `-어서`, `-는데`, or `-자` | Remove an unnecessary comma while keeping the connective ending. Split an overloaded sentence at a complete thought and preserve its link to the next sentence |
 | Repeatedly uses commas as English-like pauses | Remove unnecessary pauses or use natural connective endings. Judge the paragraph's flow rather than splitting sentences to meet a punctuation count |
+| Carries over English dashes or exclamation marks into Korean body copy | Use a sentence break or connective ending when the dash only joins two clauses; keep an exclamation mark when the brand uses one |
 | Repeated sentence-opening connectors make the prose mechanical | Check what each connector does. Keep useful links; remove only redundant ones or express the same relation with a connective ending or clear reference |
 | Gives every sentence or bullet the same length and ending | Combine related points or split overloaded ones; do not add content only to vary rhythm |
 | Forces three parallel items | Keep the number of items supported by the source |
-| Ends several lines with noun phrases such as `~구축`, `~개선`, `~강화` | Turn some into complete predicates when the genre allows it |
+| Ends several lines of prose with noun phrases such as `~구축`, `~개선`, `~강화` | Turn some into complete predicates when the genre allows it. Keep noun endings in headlines, banners, labels, spec tables, and compact resume bullets |

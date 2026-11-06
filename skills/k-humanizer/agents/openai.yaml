@@ -1,7 +1,7 @@
 interface:
   display_name: "K-Humanizer"
-  short_description: "한국어 글의 번역투와 AI식 표현을 덜고 사실과 말투는 지킵니다"
-  default_prompt: "Use $k-humanizer to make this Korean writing sound natural while preserving its facts, terms, and the writer's voice."
+  short_description: "Localize and polish Korean for Korean customers"
+  default_prompt: "Use $k-humanizer to write, localize, or edit this text as natural Korean for its intended readers, keeping prices, dates, policies, names, and placeholders exact."
 
 policy:
   allow_implicit_invocation: true

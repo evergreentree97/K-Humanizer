@@ -1,99 +1,59 @@
 # K-Humanizer
 
-[![Validate](https://github.com/evergreentree97/K-Humanizer/actions/workflows/validate.yml/badge.svg)](https://github.com/evergreentree97/K-Humanizer/actions/workflows/validate.yml)
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![Agent Skill](https://img.shields.io/badge/Agent%20Skill-Codex%20%7C%20Claude%20%7C%20Cursor-blue)](skills/k-humanizer/SKILL.md)
-[![Language: Korean](https://img.shields.io/badge/Language-Korean-red)](skills/k-humanizer/SKILL.md)
-[![Status](https://img.shields.io/badge/Status-v0.1%20pre--release-yellow)](CHANGELOG.md)
-[![skills.sh](https://skills.sh/b/evergreentree97/K-Humanizer)](https://skills.sh/evergreentree97/K-Humanizer)
+![K-Humanizer](assets/k-humanizer-hero.png)
 
 [한국어](README.md)
 
-K-Humanizer edits awkward Korean in AI-assisted resumes, emails, chat messages,
-and product copy. It is an Agent Skill for Cursor, Claude, and Codex.
+K-Humanizer is a set of instructions that translates and polishes messages for Korean customers into natural Korean. It focuses on the translationese and awkward phrasing that overseas teams who are not native Korean speakers run into when writing sales emails, ads, product descriptions, customer support, app notices, and similar content.
 
-```text
-Before  고객 문의 분류 기준을 다시 정리하는 작업을 통해 주간 평균 처리 시간을 18시간에서 11시간으로 개선했습니다.
-After   고객 문의 분류 기준을 다시 정리해 주간 평균 처리 시간을 18시간에서 11시간으로 줄였습니다.
-```
+Besides foreign-language text, you can also use it to smooth the wording of resumes, documents, emails, and other material you wrote directly in Korean.
 
-The shorter sentence still says what changed and gives the same numbers. In
-`이의 신청은 담당 상담사를 통해서만 접수할 수 있습니다`, however, the counselor
-is the only way to file an appeal. That wording does useful work, so it stays.
+---
 
-## Install
+## Example
+
+| Item | Content |
+| :--- | :--- |
+| **What you want to say** | Could you send us your available times for next week? |
+| **Typical AI translation** | 다음 주 귀하의 이용 가능한 시간을 저희에게 보내주실 수 있으신가요? |
+| **Polished sentence** | 다음 주 가능한 시간을 알려주실 수 있을까요? |
+
+> This example is meant to aid understanding; actual model output may vary by environment.
+
+---
+
+## How to use it
+
+Give the LLM the instructions in [SKILL.md](skills/k-humanizer/SKILL.md) and the [use cases](skills/k-humanizer/references/use-cases.md) you need, then make a request like one of these.
+
+- You have only a Korean draft: it smooths awkward wording and translationese into natural Korean.
+- You have both the foreign-language text and a Korean draft: it compares the two and fixes anything missing or distorted, along with awkward wording.
+- You have only the foreign-language text: it translates it into Korean suited to the reader and channel.
+
+The checks used English source text; other source languages have not been evaluated. The instructions say to preserve conditions such as prices, dates, and policies, and not add claims the source does not contain.
+
+> Tell it who will read the text, which channel it is for, and the tone you want, and you will get more fitting wording. If you want explanations in English, say so in your request.
+
+---
+
+## Where to use it
+
+We recommend entering the instructions directly into an LLM API or a web chat interface. In agent environments, the instructions may conflict with internal system prompts and not work as intended. (Even in an API or on the web, results can vary with the model and settings you use.)
+
+In an API or on the web, a link alone may not let the model read the files, so paste the text of [SKILL.md](skills/k-humanizer/SKILL.md) and the reference files you need (such as the [use cases](skills/k-humanizer/references/use-cases.md)) directly.
+
+You can also install it as a skill in Codex, Claude, Cursor, and similar tools.
 
 ```bash
 npx skills add evergreentree97/K-Humanizer --skill k-humanizer --full-depth
 ```
 
-Paste your text and tell the skill where it will appear. For an email to a
-colleague, try:
-
-```text
-Use $k-humanizer to edit this Korean email to a colleague.
-Keep the dates and the request. Soften any wording that sounds too formal.
-
-[paste your email]
-```
-
-For a resume, the skill edits awkward wording in what you have already written.
-It can keep terms your readers use, such as `race condition` in a developer
-resume. If you want it to write bullets from notes or reorder your experience
-for a job posting, ask for that directly.
-
-## More examples
-
-| Where it appears | Before | After |
-| --- | --- | --- |
-| Help article | 검토가 완료되지 않은 경우에도 임시 저장은 가능하나 제출은 불가합니다. | 검토가 끝나지 않아도 임시 저장은 할 수 있어요. 제출하려면 검토가 먼저 끝나야 해요. |
-| Team chat | 해당 일정에 대해 확인한 이후에 공유하도록 하겠습니다. | 일정 확인하고 공유할게요. |
-
-[More examples for email, public posts, and code review](skills/k-humanizer/references/use-cases.md)
-
-## Why I built it
-
-I reviewed more than 120,000 Korean responses and made over 7,500 edits. I used
-those edits to document when to rephrase a sentence and when to leave it alone.
+---
 
 ## Evaluation
 
-The public golden set contains 220 synthetic examples, separate from the
-responses I reviewed. It includes 90 resume examples, plus applications,
-everyday conversation, email, documents, product copy, public posts, and code
-review. [Fixture validation report](evals/reports/2026-08-25-fixture-baseline.md), [Original 200-case report](evals/reports/2026-08-17-fixture-baseline.md)
-
-On August 25, 2026, `gpt-5.4` produced 220 answers using that version of the
-skill. A separate Claude Opus session scored them. The average across five
-measures was 4.765, and meaning fidelity averaged 4.800. The model judge
-reported no critical changes to the facts. The report includes low-scoring
-answers and a case where the score did not follow the rubric. [Model evaluation report](evals/reports/2026-08-25/model-baseline.md), [Evaluation plan](docs/validation-plan.md)
-
-Try the short synthetic cases to see how the current editing guidance works.
-[Review cases and rubric](skills/k-humanizer/references/evaluation.md#context-and-scope-review-cases)
-
-## Try it from a local checkout
-
-```bash
-npx skills add . --skill k-humanizer --full-depth
-```
-
-```bash
-python3 scripts/validate_golden_set.py
-python3 scripts/check_public_hygiene.py
-python3 scripts/validate_model_baseline.py \
-  evals/reports/2026-08-25/model-baseline.jsonl
-```
-
-The editing instructions are in the [skill file](skills/k-humanizer/SKILL.md).
-[Korean wording reference](skills/k-humanizer/references/patterns.md), [Resume editing](skills/k-humanizer/references/resume.md), [Resume workflow](skills/k-humanizer/references/resume-workflow.md), [Role-specific examples](skills/k-humanizer/references/resume-roles.md), [Evaluation rubric](skills/k-humanizer/references/evaluation.md)
-
-## Contributing
-
-Reports about awkward Korean and installation problems are welcome in Korean
-or English. Make up an example that shows the same problem as a real resume,
-email, or customer document before posting it. [Open an issue](https://github.com/evergreentree97/K-Humanizer/issues/new/choose), [Contribution guide](CONTRIBUTING.md), [Dataset research](docs/dataset-research.md)
+The record of the business Korean checks is in the [business Korean check report](evals/reports/2026-11-07-business-korean/business-review.md). They are development-stage checks in which one model handled model-written synthetic cases and another model scored them. They are not a native Korean reader's review or a customer study, so they do not validate quality.
 
 ## License
 
-MIT. See [LICENSE](LICENSE).
+[MIT](LICENSE)
