@@ -11,7 +11,7 @@ Natural wording cannot repair missing evidence. Protect the claim before
 polishing the sentence. Never turn a plan into completed work, a team result
 into an individual result, or an unmeasured effect into a metric.
 
-## Start with the evidence boundary
+## Start with the evidence
 
 Before rewriting, identify:
 
@@ -25,10 +25,8 @@ If any boundary is missing and the rewrite would change the strength of the
 claim, keep the source strength or flag the missing evidence. Do not fill the
 gap with a plausible achievement.
 
-The source may be polished prose, raw notes, a task list, or an entire resume.
-Raw material authorizes organization, not invention. When the notes support a
-clear action but no measured outcome, write the action as a complete
-achievement instead of fabricating a result to finish a template.
+When the user asks for a draft from notes, use only the supplied evidence.
+A verified action can stand on its own when there is no measured outcome.
 
 ## Conditional rewrite table
 
@@ -51,7 +49,7 @@ achievement instead of fabricating a result to finish a template.
 | The same experience is reused for a different role in a tailoring request | Change the evidence order and explanation to answer that role's hiring questions | Change the facts, contribution boundary, result, or completion state |
 | A required job keyword sounds less natural than the surrounding Korean | Use it once beside the verified action or mechanism | Repeat the keyword as self-evaluation or let it replace the actual evidence |
 | The introduction opens with years and a tool list | Lead with the closest verified problem, decision, or operating responsibility; keep duration and tools as support | Turn the introduction into a keyword inventory |
-| Several unrelated project areas compete for space | Choose one primary axis and one supporting axis for the target role | Give every project equal weight or hide a real experience gap |
+| Several unrelated project areas compete for space in a structural rewrite | Give the most space to experience relevant to the role | Force every project into the same format or hide a real experience gap |
 | The same sentence appears in the introduction, skills, and experience | Give each section a job: introduction for positioning, skills for tools, experience for evidence | Repeat one polished sentence across sections |
 | A private or unverified project name | Use a public product name or a functional description while preserving scope | Reveal an internal code name or infer that a repository proves personal ownership |
 | A future-looking `~하고자 합니다` in an achievement bullet | Use an existing action or result. Move genuine motivation to the application essay | Present intention as experience |
@@ -75,8 +73,10 @@ because the decision and its conditions matter.
 Section roles matter too. Use the introduction for positioning, skills for
 tools, credentials, and domain knowledge, and experience for evidence. If one achievement appears in
 all three sections, keep a different piece of information in each or remove the
-duplicate. Short noun phrases can work in a skills list; introductions and
-application essays should keep complete predicates and natural sentence rhythm.
+duplicate. Short noun phrases also work in compact experience bullets when they name
+a concrete action, such as `로그인 오류 재현 조건 확인`. Match the document's
+existing endings. Use complete sentences for introductions and application
+essays.
 
 Do not require the same kind of evidence from every role. Operations can show a
 repeatable response or exception rule, planning can show a scope or policy
@@ -85,20 +85,26 @@ interaction choice, and research can show a well-bounded finding. A metric is
 useful when it exists with interpretable conditions, not as a requirement for
 every bullet.
 
+Keep the constraint, finding, or method that explains why a choice worked.
+If the reader would understand the action or result differently without a
+detail, keep it close to the claim. Move reproduction steps or routine
+implementation detail only when restructuring is in scope. Avoid turning a
+meaningful choice into a generic improvement claim.
+
 ## Examples
 
 ### Measured result
 
 Before:
 
-> 저는 고객 문의 분류 체계 고도화를 통해 주간 평균 처리 시간을 18시간에서 11시간으로 크게 개선했습니다.
+> 저는 고객 문의 분류 기준을 다시 정리하는 작업을 통해 주간 평균 처리 시간을 18시간에서 11시간으로 개선했습니다.
 
 After:
 
-> 고객 문의 분류 기준을 정리해 주간 평균 처리 시간을 18시간에서 11시간으로 줄였습니다.
+> 고객 문의 분류 기준을 다시 정리해 주간 평균 처리 시간을 18시간에서 11시간으로 줄였습니다.
 
-The rewrite keeps the metric and comparison while removing first person,
-abstract wording, and unsupported praise.
+The edit keeps the action, averaging period, and before-and-after figures.
+It expresses the action as a verb instead of a long noun phrase.
 
 ### Contribution boundary
 
@@ -130,10 +136,9 @@ action, ownership, and result. If no evidence is available, omit the claim.
   distinct states.
 - Metrics keep their comparison and measurement conditions.
 - Unmeasured effects are not presented as facts.
-- A non-specialist can explain each sentence without internal vocabulary.
+- The intended reader can identify the work, decision, and result. Explain unfamiliar terms when needed.
 - Exact job-posting terms and established domain names remain where useful.
 - Exact proper names, methods, and domain terms remain unchanged.
 - Role-specific emphasis comes from the target responsibilities, not title matching alone.
 - Testing is not presented as a discovered defect when no defect was confirmed.
 - No private name or unsupported service classification was added.
-- No U+2013 en dash, U+2014 em dash, or U+00B7 middle dot appears.

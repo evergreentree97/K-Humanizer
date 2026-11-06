@@ -52,10 +52,10 @@ not a public issue.
 A useful language contribution includes four parts:
 
 ```text
-Before: 고객 문의 분류 체계 고도화를 통해 처리 시간을 개선했습니다.
-After:  고객 문의 분류 기준을 정리해 처리 시간을 줄였습니다.
+Before: 고객 문의 분류 기준을 다시 정리하는 작업을 통해 처리 시간을 개선했습니다.
+After:  고객 문의 분류 기준을 다시 정리해 처리 시간을 줄였습니다.
 
-Reason: The source hides the action behind an abstract noun phrase.
+Reason: The source turns the action into a long noun phrase.
 Must preserve: The work changed the classification rules. Do not invent a metric.
 Keep the original when: "through" describes a real route or intermediary.
 ```

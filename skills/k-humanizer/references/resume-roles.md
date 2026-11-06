@@ -12,8 +12,8 @@ state.
 - Use the field context to understand established terms and what the work means.
 - For a humanization-only request, keep the original experience selection and
   order.
-- If the user asks for job targeting and the posting combines roles, choose one
-  primary role and at most one supporting role.
+- If the user asks for job targeting and the posting combines roles, organize
+  the evidence around the posting's responsibilities.
 - If no target role is supplied, do not infer one. Apply the general rules in
   `resume.md`.
 - Do not copy the posting's responsibilities into the resume as experience.
