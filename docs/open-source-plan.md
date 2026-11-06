@@ -45,7 +45,7 @@ Out of scope:
 ### v0.3: Lightweight Metrics
 
 - Pattern count script
-- Change-rate guardrail
+- Review cases for preserving claims and writer voice
 - Simple report generator
 
 ### v0.4: Deeper Domain Coverage
@@ -83,7 +83,7 @@ Existing Korean humanizer projects already cover AI-tell removal. K-Humanizer sh
 - Role-aware resume evidence ordering for operations, planning, QA, design, marketing, customer service, research, and education.
 - Strict meaning preservation.
 - Clear anti-overpolishing policy.
-- A change budget that distinguishes polishing from rewriting.
+- Scope based on the editing request, with claim-by-claim checks for meaning drift.
 - Small portable skill structure.
 - Before/after examples from real editing patterns.
 

@@ -10,7 +10,7 @@ Ask, "Could someone actually use this sentence as-is?"
 
 Did the rewrite keep the same meaning?
 
-5: Nothing important changed. Facts, names, numbers, dates, requests, and limits are all still there.
+5: All material claims survive, including who did what, why, under what conditions, and with what certainty. Negation, names, numbers, units, dates, and requests keep their meaning.
 
 3: The main point is still there, but the strength or nuance changed a little.
 
@@ -65,9 +65,24 @@ Did it change only what needed changing?
 
 1: It rewrites the writer's voice, structure, or details without a good reason.
 
-For a humanization request, estimate the changed character share. A result over
-roughly 30% needs a reason. A result over roughly 50% should be treated as a
-rewrite and returned only when the user requested that larger scope.
+Judge the edit against the request. A rewritten short phrase can be a local
+edit. A small deletion can change a claim or erase the writer's voice.
+Preserve structure and evidence selection unless the user asks to revisit them.
+Check both the edits and the omissions.
+
+### Context and scope review cases
+
+These synthetic cases supplement the frozen v0 benchmark. Review each output
+against the stated context. Multiple wordings may pass.
+
+| Context and source | What a usable edit preserves |
+|---|---|
+| Button in a draft form: `작성 중인 내용의 임시 저장을 수행합니다` | The action is saving a draft. `임시 저장` can replace the entire label without broadening the task. |
+| Help article: `검토가 완료되지 않은 경우에도 임시 저장은 가능하나 제출은 불가합니다.` | Draft saving is possible before review ends. Submission is unavailable under that condition. |
+| Engineering resume: `동시 요청에서 race condition이 발생해 같은 주문이 두 번 저장되는 문제를 확인. 주문 키에 UNIQUE 제약을 걸어 중복 저장 방지` | Keep the concurrent condition, observed duplication, method, and result. A familiar term such as `race condition` can stay. Keep compact bullet endings when they fit the resume. |
+| Copyedit the grammar only in an approved line: `검토 기간은 3–5일이며 대상은 가입·인증 화면입니다.` | Leave the line unchanged. The range and approved grouping carry meaning. |
+| Edit for the support team: `이의 신청은 담당 상담사를 통해서만 접수할 수 있습니다.` | Keep the counselor as the required intermediary. A rewrite must retain the restriction expressed by `만`. |
+| Tighten a report: `새 안내를 올린 뒤 문의가 줄었습니다. 안내 수정이 영향을 줬는지는 아직 확인하지 못했습니다.` | Keep the order and decrease, along with the explicit uncertainty about cause. |
 
 ## Practical Usefulness
 

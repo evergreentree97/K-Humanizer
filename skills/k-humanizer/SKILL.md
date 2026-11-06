@@ -1,189 +1,73 @@
 ---
 name: k-humanizer
-description: Use when polishing Korean resumes, career descriptions, portfolio summaries, and application writing so they sound natural rather than AI-written across operations, planning, QA, design, marketing, customer service, research, education, and other fields. Preserve facts, meaning, ownership, results, field-specific terms, and the writer's voice while removing translationese, stiff abstraction, generic achievement claims, and mechanical structure. Compose from notes, restructure, or tailor to a job posting only when the user explicitly asks. Also use for natural Korean in documents, emails, messages, reports, product copy, public or social posts, review comments, and dialogue.
+description: Edit supplied Korean so it sounds natural for its reader and purpose. Use for awkward or AI-like phrasing in resumes, applications, documents, messages, emails, product copy, public posts, and dialogue. Preserve the writer's meaning, voice, and established terminology. Compose from notes, restructure, or tailor only when requested.
 ---
 
 # K-Humanizer
 
-## Core Rule
+Help the reader understand what the writer means in Korean that fits the
+situation. Treat signs of translationese as clues to reread the text.
+Evaluate the edit by meaning, readability, and fit for the reader. AI
+detector scores are outside the editing goal.
 
-Make Korean text sound naturally written by a fluent Korean speaker without changing facts, intent, constraints, names, numbers, or quoted text.
+## Edit in context
 
-Do not optimize for "AI detector bypass." Optimize for reader trust: clear meaning, believable rhythm, context-appropriate wording, and no over-polishing.
+1. **Set the scope.** Identify the reader, purpose, format, and register from
+   the request and surrounding text. Preserve the existing structure and
+   register by default. If the user asks for a local edit, use nearby text to
+   understand it and edit only the requested passage. Use the writer's own
+   wording or supplied examples of the genre for tone, never as a source of
+   facts.
+2. **Read for meaning before rewriting.** Identify the actor, action, reason,
+   conditions, and outcome. Keep negation, exceptions, deadlines, comparisons,
+   levels of certainty, and the difference between a request and a promise.
+   Preserve exact names, figures, units, citations, quotes, code, and
+   identifiers. Keep field terms readers actually use, including English
+   terms when those are clearer. Explain an unfamiliar term when the intended
+   reader needs it.
+3. **Fix the awkward thought where it occurs.** Rewrite an English-shaped
+   sentence from its meaning instead of swapping words. Use the concrete
+   action already supported by the source. If the source gives no action,
+   result, or reason, keep the claim narrow or flag the missing information.
+   Read connected sentences together. Keep the wording that carries cause,
+   contrast, sequence, or a reference to the previous sentence. Use
+   [patterns.md](references/patterns.md) when diagnosing phrasing or rhythm.
+4. **Stop when the text works.** Leave natural wording alone. A short label
+   may need a new phrase and a long paragraph may need only one local edit.
+   Judge scope by what changed in the text, including its content, order,
+   and voice. Follow the destination's punctuation and formatting conventions.
+   Change structure, select different material, or compose new passages only
+   when the user asks.
+5. **Compare the finished text with the source.** Check each claim and any
+   material that disappeared. Confirm that responsibility, conditions,
+   certainty, and the reason for a decision still match. Read the result in
+   context to catch choppy sentences, newly implied causes, or generic
+   wording that flattened the writer's voice.
 
-Never output U+2013 (en dash), U+2014 (em dash), or U+00B7 (middle dot) in
-rewritten prose. If quoted text, a code identifier, or a URL contains one,
-preserve the verbatim material separately instead of silently changing it.
+## Use the relevant reference
 
-## Resume First
+- **Resumes, career descriptions, and portfolio summaries:** Read
+  [resume.md](references/resume.md) and
+  [resume-workflow.md](references/resume-workflow.md). When a target role is
+  supplied, use [resume-roles.md](references/resume-roles.md) for terminology.
+  In a full review, inspect evidence, section roles, and repetition. Reorder
+  experience only when the request calls for it. Keep the writer's
+  contribution, the decision or method that explains it, and the conditions
+  needed to interpret a result.
+- **Application motivation:** Use the application section of
+  [use-cases.md](references/use-cases.md) to preserve the applicant's own reason
+  and any supported connection to the organization.
+- **Messages, email, documents, UI, public posts, code review, and dialogue:**
+  Use the matching section in [use-cases.md](references/use-cases.md) when the
+  channel or relationship changes how the text should read.
+- **Reviewing or comparing edits:** Use
+  [evaluation.md](references/evaluation.md). Compare what each version says
+  and how it reads in context.
 
-Treat resumes and career documents as a high-stakes humanization task. The
-default is to improve the supplied wording, regardless of field, without
-choosing a different career story for the user. For every resume, career
-description, portfolio summary, or application-writing task:
+## Return the result
 
-1. Read `references/resume.md` and `references/resume-workflow.md`.
-2. If a target role or job description is supplied, also read
-   `references/resume-roles.md`.
-3. Preserve the field's established terms and the writer's actual experience.
-4. Unless the user asks for composition or tailoring, do not select, remove, or
-   reorder experience. Remove only the AI-like wording and awkward Korean.
-
-Resume writing can be a light edit or a structural rewrite. Humanization is the
-default, and the user's request sets any broader scope:
-
-- Polish or humanize: edit only the supplied wording and follow the change budget.
-- Turn notes into bullets: organize only facts present in the notes and expose
-  any missing evidence that affects the claim.
-- Tailor to a posting: only when requested, rank verified experience for one
-  primary role and at most one supporting role. Do not copy requirements into
-  the resume.
-- Review a full resume: check section roles, repetition, evidence gaps, reader
-  fit, and contribution boundaries before rewriting affected sections.
-
-Do not force every career into one problem-action-metric formula. A policy
-decision, exception rule, research method, design choice, release decision,
-customer follow-up, or program operation can be useful experience without a
-percentage.
-
-## Workflow
-
-1. Identify the writing context.
-   - Personal/everyday: preserve the writer's relationship, emotion, humor, and
-     level of familiarity; remove stiffness without adding a new personality.
-   - Messenger/casual: short, spoken, context-aware, not overly friendly.
-   - Email: polite but direct; remove ceremony that does not carry meaning.
-   - Document/report/essay: clear hierarchy, stable terminology, restrained formality.
-   - Resume/profile: follow the Resume First instructions and
-     `references/resume-workflow.md`; preserve the field's normal language while
-     removing AI-like phrasing, and protect evidence, ownership, measurement
-     conditions, and contribution boundaries.
-   - Application writing: connect a verified experience to the specific
-     organization or role and a credible contribution. Do not turn company
-     praise or a job-posting phrase into personal evidence.
-   - Product/UI copy: name what the reader can see or do; remove subtitles and
-     self-descriptions that only repeat the title or component.
-   - Public/social post: lead with the actual observation, result, or tension;
-     keep numbers inside their source boundary; remove clickbait, manufactured
-     controversy, and engagement bait.
-   - Dialogue: preserve speaker voice, relationship tension, and emotional beat.
-   - Code review, when applicable: specific, respectful, and clear about the
-     requested action.
-   - Unknown: preserve the original register and only remove obvious stiffness.
-2. Triage Korean AI-tell patterns before rewriting.
-   - S1: factual drift, changed ownership or completion state, invented evidence,
-     a hard-banned character, or wording that falsely claims a defect. Always fix.
-   - S2: repeated translationese, abstract filler, register mismatch,
-     decorative structure, broken sentence flow, or vague claims. Fix unless
-     the genre needs it.
-   - S3: an isolated stylistic preference. Leave it alone unless it repeats.
-   - With no S1 issue and at most two S2 issues, edit only those spans or return
-     the source unchanged. Do not run a full rewrite to justify the skill.
-3. Detect the patterns that apply.
-   - Translationese: `~를 통해`, `~에 대해`, `~에 있어서`, `가지고 있다`, `~할 수 있다` overuse.
-   - Stiff nominalization: `~적인`, `~성`, `~화`, `~측면`, `~과정에서` clusters.
-   - Generic AI closers: `결론적으로`, `시사하는 바가 크다`, `중요한 역할을 한다`.
-   - Mechanical structure: repeated `첫째/둘째/셋째`, mirrored sentence lengths,
-     excessive bullets, or related thoughts chopped into disconnected sentences.
-   - Punctuation tells: English-like comma rhythm, needless quotes, decorative emphasis.
-   - Vague wording: `좋은 경험`, unnamed `문제 상황`, empty self-evaluation,
-     or metaphors and process nouns that do not say what happened.
-   - Register mismatch: too formal for chat, too casual for email, too polished for personal writing.
-   - Apply `references/patterns.md` as a condition table. Identify what the
-     phrase does in the sentence before choosing a rewrite. Do not run blind
-     word replacement.
-4. Rewrite surgically.
-   - Prefer verbs over abstract nouns.
-   - Cut filler while keeping words that carry a logical relation or refer
-     back to the previous sentence. Shorter is not automatically more natural.
-   - Read connected prose as a paragraph. Where thoughts feel disconnected,
-     use a fitting conjunction, connective ending, or clear reference to the
-     previous idea; combine closely related sentences when that reads better.
-     Follow the sentence-flow guidance in `references/patterns.md`.
-   - Preserve useful connectors and the source's cause, contrast, and sequence.
-     Do not add a connector to every sentence or imply an unsupported relation.
-   - Vary sentence endings only when it sounds natural for the genre.
-   - Keep the user's level of confidence; do not make claims stronger.
-   - Estimate the changed character share. Past roughly 30%, explain why. Past
-     roughly 50%, stop and return a partial edit unless the user explicitly
-     requested a rewrite or structural rework rather than humanization.
-5. Self-check.
-   - Meaning preserved?
-   - Register and formality appropriate for the target reader?
-   - Does each sentence follow naturally from the previous one? Did shortening
-     remove a useful link, or did a new connector imply a relation not in the source?
-   - Any phrase that sounds like a generic LLM answer?
-   - Any over-humanized slang, forced imperfection, or personality not present in the source?
-   - For a resume, did the rewrite preserve who did the work, what was
-     measured, and what remains unverified?
-   - For an application, does the organization-specific reason follow from a
-     real experience rather than praise that could be reused anywhere?
-   - For a public post, are the title, numbers, and ending credible without
-     overstating the source or asking for empty engagement?
-   - Did a proper name, domain term, verified cause, or confirmed result change?
-   - Does the rewritten prose contain U+2013, U+2014, or U+00B7?
-
-## Resume Workflow
-
-When handling career material, use this order:
-
-1. Classify the input as a finished bullet, raw notes, a job posting plus
-   experience, or a full document.
-2. Build an evidence boundary for each experience: problem or scope, judgment,
-   action, ownership, status, result, measurement condition, and disclosure
-   limit. Missing fields may stay missing.
-3. Identify the document section. A summary positions the candidate, experience
-   proves it, skills list relevant tools or domain knowledge, and a portfolio
-   explains judgment and contribution. Do not repeat the same sentence across
-   sections.
-4. Use the supplied role to understand the reader and established terminology.
-   Choose a primary and supporting role only when the user explicitly asks for
-   job-targeted restructuring.
-5. Draft the smallest usable version first. Lead with the evidence that answers
-   the target reader's hiring question and keep tools as supporting detail.
-6. Check that every bullet can be traced to the source and that a recruiter can
-   explain what the person actually did.
-
-## Output
-
-For short requests, return only the polished Korean text unless the user asks for explanation.
-
-For review-style requests, use:
-
-```markdown
-수정본:
-[polished text]
-
-주요 변경:
-- [brief reason]
-```
-
-For sensitive or high-stakes text such as resume, legal, medical, finance, or official documents, preserve claims exactly and flag uncertain wording instead of inventing details.
-
-For resume requests, return paste-ready wording first. Add `확인 필요` only when
-missing information prevents a reliable claim, and ask no more than three
-questions at once. Do not bury a usable edit under a long diagnosis.
-
-For a full resume review, organize feedback by the actual document sections and
-separate these three states:
-
-- Ready to use: supported wording that can be pasted now.
-- Needs evidence: a useful experience with a missing ownership, state, result,
-  or measurement condition.
-- Remove or move: repetition, unsupported self-evaluation, irrelevant detail,
-  or content placed in the wrong section.
-
-## Reference Files
-
-Read the relevant reference only when the task needs it:
-
-- `references/use-cases.md`: genre-specific rewrite rules and examples,
-  including application writing and public or social posts.
-- `references/resume.md`: evidence-safe resume and career-document rules.
-- `references/resume-workflow.md`: input classification, evidence extraction,
-  section structure, and paste-ready resume output rules.
-- `references/resume-roles.md`: field-specific language and optional evidence
-  order for operations, planning, QA, design, marketing, customer service,
-  research, and education.
-- `references/evaluation.md`: validation rubric for comparing outputs.
-- `references/patterns.md`: Korean AI-tell checklist.
+Put the revised text first. For a small edit, give the text alone unless a
+material ambiguity needs a note or the user asks for an explanation. For a
+review, distinguish meaning errors from optional style choices. Flag only
+evidence gaps that affect the wording, such as unclear ownership, an
+unverified result, or an unsupported causal claim.
