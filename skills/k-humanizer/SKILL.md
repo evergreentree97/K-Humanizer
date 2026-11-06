@@ -65,10 +65,13 @@ not mean casual. Unless the context points elsewhere:
 When the brand voice or another preference is missing, use these defaults and
 draft without noting them. When a material fact is missing or unclear, such as
 a price, period, or what a button actually does, still translate everything
-the source supports. Leave only that fact as a neutral placeholder or a
-plainly unresolved field, and ask about that one decision. Do not turn it into
-a set of questions about hypothetical variants, related terms the source never
-raised, or how the product might be built.
+the source supports. Identify the exact field the requested output needs, and
+leave only that field as a neutral placeholder or a plainly unresolved field.
+Match every question, including a parenthetical sub-question, to that field.
+Drop related questions that would matter only if the requested content grew,
+such as hypothetical variants, terms the source never raised, or how the
+product might be built. When a task has several independently missing facts,
+ask about each of them.
 
 ## 3. Write or edit
 
@@ -152,8 +155,10 @@ Follow the destination's punctuation and formatting.
 
 Compare the result with the source. Check each claim, condition, number, and
 placeholder, who is responsible and the reason for a decision, and look for
-anything that disappeared. Read the result in context to catch choppy
-sentences, newly implied causes, or generic wording
+anything that disappeared. Where clauses were merged, check that each fact
+keeps its own state, condition, and time qualifier, and that a current state
+cannot be read as a possible future change. Read the result in context to
+catch choppy sentences, newly implied causes, or generic wording
 that flattened the writer's voice.
 
 ## Use the relevant reference
@@ -189,8 +194,8 @@ allows. Then add only what the case needs:
   added promise, or a register changed to fix a clear mismatch. Routine
   defaults need no note.
 - **Missing fact or unresolved governing version:** the placeholder or
-  unresolved clause stays visible in the Korean, followed by the one question
-  that settles it.
+  unresolved clause stays visible in the Korean, followed by the question that
+  settles it (one per independently missing fact).
 
 Write notes and questions in the language of the request, so a user who does
 not read Korean can answer. Do not offer alternate tones or versions unless
