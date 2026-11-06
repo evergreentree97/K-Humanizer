@@ -1,73 +1,203 @@
 ---
 name: k-humanizer
-description: Edit supplied Korean so it sounds natural for its reader and purpose. Use for awkward or AI-like phrasing in resumes, applications, documents, messages, emails, product copy, public posts, and dialogue. Preserve the writer's meaning, voice, and established terminology. Compose from notes, restructure, or tailor only when requested.
+description: Write, localize, and edit Korean so Korean readers find it natural. Use when someone needs Korean for Korean customers, including non-native speakers who translate English sales emails, ads, landing and product pages, support replies, service notices, or app UI and notifications into Korean, check a Korean translation against its English source, or fix Korean that sounds translated, stiff, or AI-written. Also covers resumes, applications, documents, messages, email, public posts, code review, and dialogue. Preserves meaning, commercial terms, placeholders, and the writer's voice.
 ---
 
 # K-Humanizer
 
-Help the reader understand what the writer means in Korean that fits the
-situation. Treat signs of translationese as clues to reread the text.
-Evaluate the edit by meaning, readability, and fit for the reader. AI
-detector scores are outside the editing goal.
+Produce Korean that a Korean reader would accept as written for them, without
+changing what the text says. Many users cannot fully check the Korean
+themselves, so accuracy comes before polish. AI detector scores are outside the
+goal.
 
-## Edit in context
+## 1. Identify the input mode
 
-1. **Set the scope.** Identify the reader, purpose, format, and register from
-   the request and surrounding text. Preserve the existing structure and
-   register by default. If the user asks for a local edit, use nearby text to
-   understand it and edit only the requested passage. Use the writer's own
-   wording or supplied examples of the genre for tone, never as a source of
-   facts.
-2. **Read for meaning before rewriting.** Identify the actor, action, reason,
-   conditions, and outcome. Keep negation, exceptions, deadlines, comparisons,
-   levels of certainty, and the difference between a request and a promise.
-   Preserve exact names, figures, units, citations, quotes, code, and
-   identifiers. Keep field terms readers actually use, including English
-   terms when those are clearer. Explain an unfamiliar term when the intended
-   reader needs it.
-3. **Fix the awkward thought where it occurs.** Rewrite an English-shaped
-   sentence from its meaning instead of swapping words. Use the concrete
-   action already supported by the source. If the source gives no action,
-   result, or reason, keep the claim narrow or flag the missing information.
-   Read connected sentences together. Keep the wording that carries cause,
-   contrast, sequence, or a reference to the previous sentence. Use
-   [patterns.md](references/patterns.md) when diagnosing phrasing or rhythm.
-4. **Stop when the text works.** Leave natural wording alone. A short label
-   may need a new phrase and a long paragraph may need only one local edit.
-   Judge scope by what changed in the text, including its content, order,
-   and voice. Follow the destination's punctuation and formatting conventions.
-   Change structure, select different material, or compose new passages only
-   when the user asks.
-5. **Compare the finished text with the source.** Check each claim and any
-   material that disappeared. Confirm that responsibility, conditions,
-   certainty, and the reason for a decision still match. Read the result in
-   context to catch choppy sentences, newly implied causes, or generic
-   wording that flattened the writer's voice.
+| Input | Task | Scope |
+|---|---|---|
+| Korean only | Edit the Korean | Keep the voice and structure, and keep a coherent register. Change the register only when the user asks or the supplied context clearly shows a channel or brand mismatch. Read the surrounding text for context, but edit only the passage the request covers, and only where it does not work. |
+| English source with a Korean draft | Check the Korean against the source text, fix drift, then fix awkward Korean | Use the text the user names as the source. If they name none, use the English. Keep Korean wording that is accurate and natural. |
+| English only, Korean requested | Translate and localize | Build each sentence in Korean order. Merge, split, or reorder sentences when Korean reads better, keeping every fact and condition. Do not aim for word-by-word correspondence or minimal change from a machine translation. |
+
+When the Korean draft and the English disagree on a price, date, limit, policy,
+or promise, do not silently pick one. Decide from what the user and the
+context actually say:
+
+- If the user names one version as approved, current, or authoritative, follow
+  it without asking again.
+- If the Korean clearly mistranslates the English, such as a dropped exclusion
+  or a softened "only", and nothing marks the Korean as authoritative, fix it
+  and say so in one line.
+- If it is unclear which version governs and the choice would change
+  commercial terms, ask one focused question, or keep the Korean and mark the
+  clause as unresolved. Do not present that clause as verified, paste-ready
+  copy.
+
+A won price, a VAT note, or a Korea-specific policy does not by itself show
+that the Korean was approved. Do not infer approval or local policy from
+assumptions about the Korean market.
+
+Translating Korean into English is a different task. Do it when asked, keep it
+faithful, and do not apply this skill's Korean style guidance to the English.
+
+## 2. Read the situation
+
+Work out from the request, the text, and any existing Korean copy:
+
+- **Audience:** consumers, business customers, partners, or an internal team.
+- **Channel:** sales email, ad, landing or product page, app UI or
+  notification, support reply, formal notice, or a native-writing genre such as
+  a resume or chat message.
+- **Brand register:** speech level (합쇼체, 해요체, or short labels) and how
+  warm or restrained the brand sounds.
+- **Purpose:** purchase, information, inquiry, apology, or guidance, and what
+  the reader should do next.
+
+Infer defaults from context. Professional does not mean stiff, and natural does
+not mean casual. Unless the context points elsewhere:
+
+- B2B email, contracts, and formal notices use 합쇼체.
+- Consumer apps and many consumer brands use 해요체 in sentences.
+- Buttons, headlines, banners, and spec tables can use noun phrases.
+- Existing Korean strings, brand samples, or style guides override these
+  defaults. Defaults fill gaps; they do not justify changing Korean that is
+  already coherent.
+
+When the brand voice or another preference is missing, use these defaults and
+draft without noting them. When a material fact is missing or unclear, such as
+a price, period, or what a button actually does, still translate everything
+the source supports. Identify the exact field the requested output needs, and
+leave only that field as a neutral placeholder or a plainly unresolved field.
+Match every question, including a parenthetical sub-question, to that field.
+Drop related questions that would matter only if the requested content grew,
+such as hypothetical variants, terms the source never raised, or how the
+product might be built. When a task has several independently missing facts,
+ask about each of them.
+
+## 3. Write or edit
+
+Read for meaning first: actor, action, reason, conditions, and outcome. Then
+look for what a Korean reader would notice:
+
+- Translationese and English word order
+- Wording more formal or ceremonial than the channel needs
+- English idioms Korean readers do not use
+- Pronouns and subjects Korean leaves out, such as `당신`, `그것`, or `우리는`;
+  omit a subject only when the reader can still tell who acts, and restate the
+  actor when it changes
+- Long nominalized sentences
+- Speech levels that mix without reason or do not fit the brand
+- Calls to action that read like translated commands
+- Repeated AI phrasing
+
+Judge each sentence in its paragraph, for its reader and channel. No word is
+banned: `통해`, `제공`, `진행`, and `관련하여` are ordinary Korean when they fit.
+Do not shorten to meet a quota; a shorter or more casual synonym is not a fix.
+Read connected prose as a paragraph and keep the wording that carries cause,
+contrast, sequence, or reference. Keep field terms readers
+actually use, including English terms and loanwords, and explain an unfamiliar
+term when the reader needs it. Use [patterns.md](references/patterns.md) to
+diagnose phrasing and rhythm.
+
+When the source gives no action, result, or reason, keep the claim narrow or
+flag the gap. Use the writer's own wording or supplied samples for tone, never
+as a source of facts.
+
+## 4. Protect the facts and commitments
+
+Keep these exactly, along with their conditions:
+
+- Prices, currencies, discounts, and the conditions attached to them
+- Product, plan, brand, and personal names
+- Numbers and statistics, with their comparison and measurement conditions
+- Contract terms, eligibility rules, and usage limits
+- Dates, times, time zones, and deadlines
+- Refund, exchange, delivery, and cancellation policy
+- Warranty or guarantee scope and its exceptions
+- Quotes, citations, code, and identifiers
+
+Keep negation, exceptions, qualifiers such as "up to" or "about", levels of
+certainty, and the difference between a request, an offer, and a promise.
+
+Do not add benefits, performance claims, testimonials, urgency, scarcity,
+apologies, commitments, sales hooks, or cultural references the source lacks.
+Do not convert currencies, time zones, or units, or substitute local legal
+terms, unless the user asks and supplies the basis. Writing a date or amount in
+the usual Korean format is fine.
+
+These limits also apply to any sample, template, or alternative you offer.
+Where the source lacks a term, use a neutral placeholder such as `[보증 기간]`
+instead of a plausible value, coverage, or start date.
+
+For UI strings and notifications, keep placeholders, variables, keys, and
+markup exactly as written, and do not add new ones. A particle that depends on
+the last sound of an unknown value, such as `{name}과`, can be wrong;
+restructure around it. Button labels name the action they perform, and the text keeps the real outcome, such
+as a permanent deletion or a charge. Keep labels short; do not turn them into
+explanatory or marketing copy.
+
+## 5. Stop when the text works
+
+Use the surrounding text for context, but edit only the passage the user asked
+about. Supplied Korean keeps its voice and structure unless the request calls
+for more. When translating from English, restructure sentences as section 1
+allows, while keeping fields, keys, list items, and intentional formatting.
+
+When editing supplied Korean, accept a change only if you can name the concrete
+problem it fixes inside the requested scope: a meaning or fact error, broken
+grammar, translationese a Korean reader would notice, or a register or genre
+mismatch the user or context establishes. If the original word is valid and
+ordinary there, and the edit only swaps in a synonym, trims a particle, or
+shows that something was edited, keep
+the original. Already natural Korean stays unchanged; return it as is. Change
+structure, select different material, or compose new passages only when the
+user asks.
+Follow the destination's punctuation and formatting.
+
+Compare the result with the source. Check each claim, condition, number, and
+placeholder, who is responsible and the reason for a decision, and look for
+anything that disappeared. Where clauses were merged, check that each fact
+keeps its own state, condition, and time qualifier, and that a current state
+cannot be read as a possible future change. Read the result in context to
+catch choppy sentences, newly implied causes, or generic wording
+that flattened the writer's voice.
 
 ## Use the relevant reference
 
+- **Business Korean:** For sales email, marketing and ad copy, landing and
+  product pages, customer support and service notices, and app UI and
+  notifications, use the business sections of
+  [use-cases.md](references/use-cases.md). They show each input mode and
+  several registers, including text that should stay unchanged.
 - **Resumes, career descriptions, and portfolio summaries:** Read
   [resume.md](references/resume.md) and
   [resume-workflow.md](references/resume-workflow.md). When a target role is
   supplied, use [resume-roles.md](references/resume-roles.md) for terminology.
-  In a full review, inspect evidence, section roles, and repetition. Reorder
-  experience only when the request calls for it. Keep the writer's
-  contribution, the decision or method that explains it, and the conditions
-  needed to interpret a result.
-- **Application motivation:** Use the application section of
-  [use-cases.md](references/use-cases.md) to preserve the applicant's own reason
-  and any supported connection to the organization.
-- **Messages, email, documents, UI, public posts, code review, and dialogue:**
-  Use the matching section in [use-cases.md](references/use-cases.md) when the
-  channel or relationship changes how the text should read.
-- **Reviewing or comparing edits:** Use
-  [evaluation.md](references/evaluation.md). Compare what each version says
-  and how it reads in context.
+  Reorder experience only when the request calls for it.
+- **Application motivation, documents, personal writing, chat, email between
+  colleagues, public posts, code review, and dialogue:** Use the matching
+  native-writing section in [use-cases.md](references/use-cases.md).
+- **Reviewing or comparing edits and translations:** Use
+  [evaluation.md](references/evaluation.md).
 
 ## Return the result
 
-Put the revised text first. For a small edit, give the text alone unless a
-material ambiguity needs a note or the user asks for an explanation. For a
-review, distinguish meaning errors from optional style choices. Flag only
-evidence gaps that affect the wording, such as unclear ownership, an
-unverified result, or an unsupported causal claim.
+Start with the Korean, ready to paste, with nothing before it. Keep string
+keys, subject and preheader fields, list items, and intentional line breaks;
+within them, sentences may be reordered, merged, or split as the input mode
+allows. Then add only what the case needs:
+
+- **Simple edit, translation, or text that was already natural:** the Korean
+  alone. No verdict such as "수정할 부분이 없습니다", no list of edits, and no
+  confirmation that numbers or terms were kept.
+- **Corrected source drift or another material discrepancy:** one or two
+  sentences naming the actual difference, such as a dropped condition, an
+  added promise, or a register changed to fix a clear mismatch. Routine
+  defaults need no note.
+- **Missing fact or unresolved governing version:** the placeholder or
+  unresolved clause stays visible in the Korean, followed by the question that
+  settles it (one per independently missing fact).
+
+Write notes and questions in the language of the request, so a user who does
+not read Korean can answer. Do not offer alternate tones or versions unless
+asked. Explain the changes when the user asks. For a review, separate meaning
+errors from optional style choices.
