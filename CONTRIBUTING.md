@@ -4,6 +4,25 @@ Thanks for helping K-Humanizer write Korean that feels natural to Korean
 readers without changing the source. Contributions are welcome in Korean or
 English.
 
+## Current focus
+
+The primary target is business Korean written by people who are not native
+Korean speakers and who work with Korean customers, partners, or users: sales
+emails, ads, landing pages, support notices, and UI text. Native Korean
+writing, including resumes, documents, and everyday messages, remains in scope.
+
+Business requests arrive in one of three input modes:
+
+- `korean_edit`: Korean text to make natural, leaving already-natural Korean
+  alone.
+- `bilingual_edit`: an English source and a Korean draft to compare, following
+  the version the writer names as authoritative.
+- `english_to_korean`: English text to translate or localize without losing a
+  term, condition, or level of certainty.
+
+[`docs/validation-plan.md`](docs/validation-plan.md#business-korean-evaluation)
+describes each mode, the business domains, and the hard failures in detail.
+
 ## Choose the right starting point
 
 - If an output still sounds translated, stiff, or unlike the intended writer,
@@ -27,6 +46,8 @@ condition, exception, and expected result can be agreed on before implementation
   completion state, and uncertainty
 - Fixes for installation steps, links, and unclear documentation
 - Reports from non-native Korean writers creating text for Korean readers
+- Bilingual cases where a Korean draft drifts from its English source, or an
+  approved Korean text must not follow an older English version
 
 ## Privacy comes first
 
@@ -73,6 +94,7 @@ one sentence and necessary in another.
 | Resume rules | `skills/k-humanizer/references/resume*.md` |
 | Evaluation criteria | `skills/k-humanizer/references/evaluation.md` |
 | Public test fixtures | `evals/fixtures/` |
+| Business supplement validator | `scripts/validate_business_set.py` |
 | Scored baseline validator | `scripts/validate_model_baseline.py` |
 | Reader documentation | `README.md` and `README.en.md` |
 
@@ -84,9 +106,16 @@ domain counts. Open an issue before changing it or proposing a new fixture
 version. `golden_set.sample.jsonl` documents the format; it is not a collection
 of real user submissions.
 
-## Golden-set format
+Business Korean cases belong in `evals/fixtures/business_korean.v1.jsonl`, a
+separate synthetic supplement. Its schema, with `mode` and evaluator-only
+`grading` fields, is defined in
+[Business Supplement Format](docs/validation-plan.md#business-supplement-format);
+follow that section rather than the v0 format below.
 
-Fixtures use JSONL, with one JSON object per line:
+## Golden-set format (frozen v0)
+
+This format and domain list apply only to the frozen v0 golden set. v0 fixtures
+use JSONL, with one JSON object per line:
 
 ```json
 {"id":"email_001","domain":"email","input":"...","expected_traits":["polite","direct"],"must_preserve":["meeting date"],"avoid":["다름이 아니오라"]}
@@ -133,7 +162,8 @@ Typical validation commands:
 
 ```bash
 python3 scripts/validate_golden_set.py
-python3 -m unittest scripts.test_validate_golden_set scripts.test_validate_model_baseline
+python3 scripts/validate_business_set.py
+python3 -m unittest scripts.test_validate_golden_set scripts.test_validate_model_baseline scripts.test_validate_business_set
 python3 scripts/validate_model_baseline.py \
   evals/reports/2026-08-25/model-baseline.jsonl
 python3 scripts/check_public_hygiene.py

@@ -6,9 +6,27 @@ Do not ask, "Will this bypass an AI detector?"
 
 Ask, "Could someone actually use this sentence as-is?"
 
+## Scoring by input mode
+
+Identify the input mode before scoring. The same output can be disciplined in
+one mode and overreaching in another.
+
+| Input mode | Source of meaning | How to judge the amount of change |
+|---|---|---|
+| Korean only | The supplied Korean | Surrounding text gives context; change only the requested passage, and only what does not work there. Unchanged natural text scores well. |
+| English source with a Korean draft | The version the user names as authoritative; the English when they name none | Fix drift and awkward wording. Keep accurate, natural Korean from the draft. Asking again about a source the user already named lowers Practical Usefulness. When authority over a commercial term is unclear, one focused question or a clearly marked unresolved clause is correct; an unflagged material conflict lowers Meaning Fidelity. |
+| English only, Korean requested | The English | Judge the Korean as if it were written first in Korean. Restructuring sentences is expected. |
+
+Do not score a translation by word overlap with a reference, by how closely it
+follows English sentence boundaries, or by how little it differs from an
+earlier machine translation. A Korean draft is evidence of what the user had,
+not a target. Score the result by what it says, how a Korean reader in that
+channel would read it, and whether the user can paste it without fixing it.
+
 ## Meaning Fidelity
 
-Did the rewrite keep the same meaning?
+Did the rewrite keep the same meaning? In translation mode, compare with the
+English. In pair mode, compare with the source named in the input mode table.
 
 5: All material claims survive, including who did what, why, under what conditions, and with what certainty. Negation, names, numbers, units, dates, and requests keep their meaning.
 
@@ -55,6 +73,11 @@ Does it fit where it will be used?
 
 1: It is in the wrong style for the place, such as chat wording in an email or corporate wording in daily life.
 
+For business Korean, check the speech level and tone against the audience,
+channel, brand register, and purpose. A formal notice in 합쇼체 can score 5;
+so can a consumer app string in 해요체. Do not reward casual wording as more
+natural or formal wording as more professional by default.
+
 ## Edit Discipline
 
 Did it change only what needed changing?
@@ -70,6 +93,10 @@ edit. A small deletion can change a claim or erase the writer's voice.
 Preserve structure and evidence selection unless the user asks to revisit them.
 Check both the edits and the omissions.
 
+When translating from English, Edit Discipline means keeping the content of
+the source: no added offers, claims, or tone the brand did not choose, and
+nothing dropped. It does not mean staying close to English sentence structure.
+
 ### Context and scope review cases
 
 These synthetic cases supplement the frozen v0 benchmark. Review each output
@@ -81,7 +108,7 @@ against the stated context. Multiple wordings may pass.
 | Help article: `검토가 완료되지 않은 경우에도 임시 저장은 가능하나 제출은 불가합니다.` | Draft saving is possible before review ends. Submission is unavailable under that condition. |
 | Engineering resume: `동시 요청에서 race condition이 발생해 같은 주문이 두 번 저장되는 문제를 확인. 주문 키에 UNIQUE 제약을 걸어 중복 저장 방지` | Keep the concurrent condition, observed duplication, method, and result. A familiar term such as `race condition` can stay. Keep compact bullet endings when they fit the resume. |
 | Copyedit the grammar only in an approved line: `검토 기간은 3–5일이며 대상은 가입·인증 화면입니다.` | Leave the line unchanged. The range and approved grouping carry meaning. |
-| Edit for the support team: `이의 신청은 담당 상담사를 통해서만 접수할 수 있습니다.` | Keep the counselor as the required intermediary. A rewrite must retain the restriction expressed by `만`. |
+| Store policy notice: `교환은 구매하신 매장에서만 가능합니다. 온라인 주문 상품은 고객센터로 문의해 주세요.` | Leave it unchanged or make only a light edit. Exchanges are limited to the store of purchase, which `에서만` expresses, and online orders follow a different route. |
 | Tighten a report: `새 안내를 올린 뒤 문의가 줄었습니다. 안내 수정이 영향을 줬는지는 아직 확인하지 못했습니다.` | Keep the order and decrease, along with the explicit uncertainty about cause. |
 
 ## Practical Usefulness
@@ -98,6 +125,16 @@ Can the result be used right away?
 
 After giving the five scores, check the domain-specific risks:
 
+- B2B sales email: Are the recipient's name and title, the reason for writing,
+  and the request clear? Did it avoid invented results, references, or urgency?
+- Marketing and ad copy: Does each offer keep its condition, exclusion, and
+  deadline? Does the register match the brand without adding hype?
+- Landing and product pages: Do qualifiers such as `최대` and `약`, spec
+  conditions, prices, currencies, and VAT notes match the source?
+- Customer support and service notices: Are apologies, commitments, policy
+  limits, and exceptions at the same strength as the source?
+- App UI and notifications: Are keys, variables, and markup intact? Do buttons
+  name the action, and does the text keep the real outcome?
 - Resume/profile: Did it preserve evidence, contribution boundaries,
   measurement conditions, completion state, and public wording?
 - Documents/reports: Are terms consistent? Is the point clear without ceremonial summary text?
@@ -132,6 +169,35 @@ If any of these happen, the score should be 2 or lower even if the sentence soun
 - Exposes internal paths or non-public implementation details without clear
   permission.
 - Normalizes distinctive dialogue into generic polite Korean.
+
+## Hard fails for business Korean
+
+Cap Meaning Fidelity at 1 and mark the case as a critical failure when the
+output, compared with its source:
+
+- Changes, drops, or adds a price, currency, discount, or discount condition.
+- Changes a product, plan, or brand name.
+- Changes a number or statistic, or removes the condition that qualifies it,
+  such as "up to", "about", or a test mode.
+- Changes or drops a date, time, time zone, or deadline.
+- Weakens or drops a contract term, eligibility rule, usage limit, or "only"
+  restriction.
+- Changes refund, exchange, cancellation, or delivery policy, including a
+  dropped exclusion.
+- Widens or narrows warranty or guarantee scope, or drops an exception.
+- Turns a request or possibility into a promise, or adds a refund, apology,
+  compensation, or other commitment.
+- Adds a benefit, performance claim, testimonial, urgency, scarcity, or sales
+  hook the source does not contain.
+- Converts a currency, time zone, or unit, or substitutes a legal term, without
+  instruction.
+- Overwrites the version the user named as authoritative, or silently
+  resolves a material conflict between the English and Korean when neither the
+  user nor the context settles which governs.
+- Alters or removes a UI placeholder, variable, or key, or labels a button so
+  that its action or outcome is unclear or different.
+
+A hard fail applies even when the Korean reads naturally.
 
 For a resume, also cap Meaning Fidelity at 1 when the rewrite:
 
@@ -191,43 +257,18 @@ Do not penalize a role for lacking a percentage when the source has strong
 qualitative evidence. Do penalize wording that imports a role keyword without
 the action, condition, or decision that would support it.
 
-## Recommended Validation Set
+## Test fixtures
 
-Keep a small test set across real use cases:
+This rubric works without any other file. The K-Humanizer source repository
+also keeps synthetic test fixtures:
 
-- Resume/profile: 90 examples, including 5 cases for each of 8 role groups
-- Application writing: 10 examples
-- Documents/reports: 20 examples
-- Product/UI copy: 10 examples
-- Personal/everyday: 20 examples
-- Messenger/casual: 20 examples
-- Email: 20 examples
-- Public/social posts: 10 examples
-- Code review comments: 10 examples
-- Dialogue: 10 examples
+- `evals/fixtures/golden_set.v0.jsonl`: 220 Korean-only editing cases, frozen
+  as a historical baseline.
+- `evals/fixtures/business_korean.v1.jsonl`: 30 model-authored cases, 25
+  across the three input modes and five business domains and 5 native-writing
+  regression cases.
 
-Each item should say what must stay the same and what should disappear:
-
-```json
-{
-  "id": "email_001",
-  "domain": "email",
-  "input": "...",
-  "expected_traits": ["polite", "direct", "no extra claims"],
-  "must_preserve": ["date", "recipient", "request"],
-  "avoid": ["다름이 아니오라", "공유드릴 수 있도록 하겠습니다"]
-}
-```
-
-For code review examples, include the requested action when there is one:
-
-```json
-{
-  "id": "review_001",
-  "domain": "code_review",
-  "input": "...",
-  "expected_traits": ["specific", "respectful", "clear action"],
-  "must_preserve": ["extract helper function", "readability concern"],
-  "avoid": ["개선의 여지", "고려해볼 수 있을 것 같습니다"]
-}
-```
+The fixture format and release criteria are in `docs/validation-plan.md` in
+that repository. Each case should state what must stay the same and what the
+output should avoid. A fixture describes expected behavior; it is not evidence
+of quality until outputs are generated and scored.
