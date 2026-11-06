@@ -2,6 +2,58 @@
 
 ## 0.1.0 - Unreleased
 
+- Reposition K-Humanizer for people who write Korean for Korean customers
+  without being native or fully fluent Korean readers. Native Korean editing,
+  resumes, and applications remain supported.
+- Add three input modes to the skill: Korean only (use surrounding text for
+  context and edit only the requested passage), English with a Korean draft
+  (check against the version the user names as the source, or the English by
+  default, and fix drift), and English only (translate and localize in Korean
+  sentence order while keeping fields, keys, and intentional formatting).
+- Resolve English-Korean conflicts from what the user and context say: follow
+  a named source without asking again, fix a clear mistranslation with a
+  one-line note, and ask one question or mark the clause when it is unclear
+  which version's commercial terms govern. A won price or VAT note alone does
+  not count as approval.
+- Identify audience, channel, brand register, and purpose, with defaults
+  inferred from context. Use a default when the brand voice is missing; ask
+  first only when a missing fact blocks the draft or source authority is
+  unresolved.
+- Protect prices, currencies, discounts, names, numbers, limits, dates, refund
+  and delivery policy, warranty scope, and commitments. Do not add benefits,
+  urgency, testimonials, apologies, or promises, or convert currencies and time
+  zones. Keep UI placeholders and the real outcome of each action.
+- Rework `use-cases.md` around five business domains (B2B sales email,
+  marketing and ad copy, landing and product pages, customer support and
+  service notices, app UI and notifications), each with at least three
+  synthetic examples showing context, English, a machine translation, revised
+  Korean, and an English explanation. Examples include unchanged text, formal
+  notices, and restrained brands. Native-writing sections remain, with context
+  added where an example changes the speech level.
+- Update `patterns.md`: state that no word is banned, make rows for `통해`,
+  `관련하여`, `진행`, `제공`, `~이 가능합니다`, carried-over pronouns, and double
+  negatives conditional, add a register and endings section, and keep
+  customer-facing loanwords and noun endings in headlines and labels. Simplify
+  `~하도록 하겠습니다` only when the actor and commitment strength stay the
+  same.
+- Update `evaluation.md`: score by input mode instead of word overlap or edit
+  size, add checks for the five business domains, and add hard fails for
+  commercial drift. Replace the counselor-intermediary review case with a
+  store-exchange case that keeps the same restriction.
+- Add 30 model-authored synthetic cases (25 business, 5 native-writing
+  regression) in `evals/fixtures/business_korean.v1.jsonl`, with
+  `scripts/validate_business_set.py` and its tests. Model outputs for these
+  cases have not been generated or scored.
+- Point the rubric to the synthetic business fixture and the validation plan
+  instead of repeating the fixture schema.
+- Update the agent metadata with an English description for the new audience.
+- Rewrite both READMEs around the new audience, with copy-ready prompts for
+  each input mode and links to the five business domains. Label all examples
+  as synthetic, and the 220-case results and 2026-08-25 scores as records of
+  the earlier version on synthetic Korean-only editing cases.
+- Add unpublished promotion drafts in `docs/promotion.md` and update the
+  positioning and task priorities in `docs/open-source-plan.md`.
+
 - Edit for the reader and purpose. Check each claim against the source,
   including negation, conditions, ownership, and the reasoning behind a
   decision. Preserve established terminology and natural wording.
