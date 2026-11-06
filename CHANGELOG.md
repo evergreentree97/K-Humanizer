@@ -2,6 +2,13 @@
 
 ## 0.1.0 - Unreleased
 
+- Edit for the reader and purpose. Check each claim against the source,
+  including negation, conditions, ownership, and the reasoning behind a
+  decision. Preserve established terminology and natural wording.
+- Replace character-change thresholds and blanket punctuation bans with the
+  requested edit scope and the destination's style. Add synthetic review
+  cases for the new guidance alongside the unchanged v0 benchmark.
+
 - Improve sentence and paragraph flow by preserving useful connectors, using
   natural connective endings, and avoiding unnecessary sentence splitting.
   Add synthetic review examples for continuity and unsupported causal links.
@@ -10,10 +17,9 @@
 - Add Korean writing references for use cases, patterns, and evaluation.
 - Add condition-to-rewrite tables with usage checks and exceptions instead of blind word replacement.
 - Add evidence-safe resume rules for contribution boundaries, measurement conditions, completion state, and recruiter-facing terminology.
-- Add severity-based triage and a change budget so small problems receive small edits.
 - Add reader-facing rules for personal writing, product/UI copy, vague claims, and exact terminology when the genre needs it.
 - Add role-aware resume guidance for operations, planning, QA, design, marketing, customer service, research, and education.
-- Add a resume-first workflow that humanizes supplied content by default and
+- Add a resume workflow that humanizes supplied content by default and
   handles raw notes, job-targeted rewrites, and full-document reviews only when
   requested.
 - Add 220-item synthetic v0 golden set, including 40 role-specific resume cases, 10 application-motivation cases, 10 public-post cases, and preserve-when-valid counterexamples.

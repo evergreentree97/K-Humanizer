@@ -1,8 +1,8 @@
-# Korean AI-Tell Patterns
+# Korean Editing Patterns
 
-Use these tables as routing rules, not a global find-and-replace list. First
-decide what a phrase means in its sentence, then choose the matching rewrite.
-Keep the source wording when an exception applies.
+Use these tables to diagnose why a passage feels awkward. Read it with the
+surrounding text, identify what the phrase contributes, then recast the thought
+if needed. Keep ordinary wording that already fits the reader and genre.
 
 ## Translationese and English-shaped grammar
 
@@ -14,9 +14,10 @@ Keep the source wording when an exception applies.
 | `가지고 있다`, `보유하고 있다` for simple possession | Use `있다`, `갖췄다`, or name the capability directly | Legal ownership or asset possession is the exact claim |
 | `~에 의해` with a known actor | Make the actor the subject and use active voice | The actor is unknown, irrelevant, or intentionally withheld |
 | `~하게 되었다`, `~지게 되었다` for a completed action | State the action directly | A real transition, external cause, or loss of control matters |
-| Repeated `~할 수 있다`, `~할 것으로 보인다` | State the verified capability or result directly | Permission, possibility, or uncertainty is part of the meaning |
+| Repeated `~할 수 있다`, `~할 것으로 보인다` | Remove redundant hedging only when the source supports a verified capability or result | Preserve permission, possibility, and uncertainty when they carry meaning |
 | `단순히 X가 아니라 Y`, `X를 넘어 Y` used for emphasis | State Y directly or name the real relationship between X and Y | The sentence corrects a genuine misunderstanding or the contrast changes the meaning |
 | `~에 대해서는`, `~와 관련하여` | Use `~은/는`, `~의`, or a direct object | The phrase marks a real scope boundary or legal relation |
+| A literal translation hides an ordinary action or state, such as `처리 결과 미표시` in user-facing prose | Say what happens: `처리 결과가 보이지 않음` | A compact label, exact status name, or technical term is conventional for the intended reader |
 
 ## Abstract nouns, filler, and empty weight
 
@@ -133,10 +134,11 @@ rhythm. Leave already coherent prose alone.
 
 ## Rhythm and punctuation
 
-U+2013 (en dash), U+2014 (em dash), and U+00B7 (middle dot) are hard bans in
-rewritten prose. Restructure with a comma, period, colon, slash, parentheses, or
-conjunction. Do not alter the character inside verbatim quoted text, code,
-identifiers, or URLs; separate that material from the rewrite when necessary.
+Use the punctuation and formatting expected in the destination. Change a
+mark when it makes the sentence harder to read or conflicts with a supplied
+style guide. Keep punctuation that expresses a range, groups related terms, or
+serves a required format. Preserve verbatim quotes, official names, code,
+identifiers, and URLs.
 
 | If the source does this | Use |
 |---|---|

@@ -14,9 +14,10 @@ and voice. It composes or restructures only when the user asks.
 | Raw notes, meeting notes, or a task list | Compose only when requested | Extract confirmed facts and list only evidence gaps that affect the draft. |
 | A job posting and existing experience | Tailor only when requested | Reorder verified experience without copying the posting or inventing a match. |
 
-If the user requests composition, restructuring, or a role-targeted rewrite, a
-change over 50% can be appropriate. The evidence boundary still applies even
-when the wording and order change substantially.
+The request determines whether the content or order may change. A local
+phrasing fix may replace a whole bullet while preserving its claim. When a
+structural rewrite is requested, compare the finished document with the
+source to confirm that important contributions and decisions survived.
 
 ## Build an evidence record
 
@@ -43,10 +44,10 @@ For a humanization-only request, preserve the original sections and order.
 
 ### Summary
 
-Use two or three compact sentences when enough evidence exists. Establish the
-target work, the closest verified scope, and one differentiating way of working
-or result. Do not open with a tool inventory, a personality claim, or an
-aspiration such as `성장하고 싶은 인재입니다`.
+Use a short introduction that connects the target work to verified experience
+and a relevant way of working or result. Give the reader enough context to
+understand that connection. An unsupported trait or a tool inventory adds
+little.
 
 For people moving between fields, lead with transferable work already done. Do
 not rename the previous job or imply experience in a new field that the source
@@ -119,10 +120,9 @@ user also asks to tailor, reorder, or restructure the resume.
 5. Remove details that consume space without helping the target reader judge the
    work.
 
-For mixed roles, choose one primary role and one supporting role. For example,
-an operations applicant may use planning experience to show policy decisions,
-but the document should still read as an operations resume rather than eight
-different resumes combined.
+For mixed roles, organize the document around the responsibilities that
+matter most for the posting. An operations applicant can use planning
+experience to show how they made a policy decision.
 
 ## Common resume failures
 
