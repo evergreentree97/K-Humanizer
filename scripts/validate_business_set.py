@@ -37,6 +37,13 @@ EXPECTED_BEHAVIORS = {
     "ask_one_question",
 }
 
+# Native regression cases already include no-ops, so these behaviors must also
+# appear in the business cases themselves.
+BUSINESS_REQUIRED_BEHAVIORS = {
+    "keep_unchanged",
+    "ask_one_question",
+}
+
 # The generator sees only `id` and `input`. Everything under `grading` is for
 # the evaluator; `domain` and `mode` are coverage metadata.
 TOP_LEVEL_FIELDS = {"id", "domain", "mode", "input", "grading"}
@@ -55,6 +62,7 @@ def validate_file(path: Path) -> int:
     business_modes: Counter[str] = Counter()
     business_pairs: set[tuple[str, str]] = set()
     behaviors: Counter[str] = Counter()
+    business_behaviors: Counter[str] = Counter()
 
     try:
         lines = path.read_text(encoding="utf-8").splitlines()
@@ -130,6 +138,8 @@ def validate_file(path: Path) -> int:
             errors.append(f"{where}: unknown expected_behavior: {behavior!r}")
         else:
             behaviors[behavior] += 1
+            if domain in BUSINESS_DOMAINS:
+                business_behaviors[behavior] += 1
 
         for field in LIST_FIELDS:
             value = grading.get(field)
@@ -150,6 +160,8 @@ def validate_file(path: Path) -> int:
                 errors.append(f"{path}: missing business domain/mode coverage: {domain}/{mode}")
     for behavior in sorted(EXPECTED_BEHAVIORS - behaviors.keys()):
         errors.append(f"{path}: missing expected_behavior coverage: {behavior}")
+    for behavior in sorted(BUSINESS_REQUIRED_BEHAVIORS - business_behaviors.keys()):
+        errors.append(f"{path}: missing business behavior coverage: {behavior}")
 
     if errors:
         for error in errors:

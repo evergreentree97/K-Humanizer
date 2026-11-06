@@ -16,8 +16,13 @@ original, a plausible AI translation, the revised Korean, and the reason for
 the change. In Korean-only examples, the English is shown for reference; the
 user pasted only the Korean.
 
-Some examples leave the Korean unchanged. Returning good text as is counts as a
-correct result.
+These headings, the English, and the "Why this is better" paragraphs explain
+the examples to the reader of this file. They are not a response format. The
+response is the revised Korean, followed by a note only where an example shows
+"Note returned with the result".
+
+Some examples leave the Korean unchanged. The correct response is the same
+text returned as is.
 
 ### B2B sales email
 
@@ -165,7 +170,7 @@ Revised Korean:
 ```text
 매일 바르기 좋은 가벼운 선크림
 백탁 없이 발려요. SPF 50+ PA++++
-첫 주문 20% 할인은 이번 주에만 드려요.
+이번 주에만 첫 주문을 20% 할인해 드려요.
 ```
 
 Why this is better: `당신의` sounds like a translated letter, and a Korean ad
@@ -283,8 +288,9 @@ Revised Korean:
 ```
 
 Why this is better: `~할 수 있도록 하세요` turns the headline into an
-instruction aimed at the clinic owner, and `연중무휴 24시간` says "always"
-twice. The revision states what patients can do. `노쇼` is the word Korean
+instruction aimed at the clinic owner. `연중무휴 24시간` is an accurate,
+conventional rendering of "24/7" and would also be acceptable; the revision
+simply states what patients can do. `노쇼` is the word Korean
 clinic staff use, so it stays. `리마인더` becomes `알림`, which is clearer to a
 general owner. The button uses the usual `~하기` form. "Reduce no-shows" keeps
 the same strength, with no number added. `10분 미만이 소요됩니다` is stiff, but
@@ -521,9 +527,9 @@ toast.workout_saved: "운동 기록을 저장했어요"
 ```
 
 Why this is better: `당신` and `그것` are English pronouns that Korean leaves
-out. `기록을 깨다` usually means setting a new record, the opposite of the
-intended meaning, so the revision encourages the user to keep the streak
-going. `{name}` and `{days}` stay exactly as written. `님` after `{name}` is
+out. `기록을 깨다` can mean setting a new record, so it is ambiguous for ending a
+streak; the revision says plainly to keep the streak going. `{name}` and
+`{days}` stay exactly as written. `님` after `{name}` is
 safe because it does not depend on the last sound of the name. The button says
 what tapping it does, and the toast follows the app's 해요체. No reward or
 emoji was added.
@@ -556,7 +562,7 @@ Revised Korean:
 
 ```text
 title: "프로젝트를 삭제하시겠습니까?"
-body: "{project_name} 프로젝트와 모든 파일이 팀 전체에서 영구 삭제됩니다. 삭제한 후에는 되돌릴 수 없습니다."
+body: "{project_name} 프로젝트와 프로젝트 안의 모든 파일이 팀 전체에서 영구 삭제됩니다. 삭제한 후에는 되돌릴 수 없습니다."
 confirm: "삭제"
 cancel: "취소"
 ```
@@ -568,7 +574,8 @@ Why this is better: Those three details are the reason the dialog exists.
 `확인` does not tell the user that the button deletes anything, so it becomes
 `삭제`. `과` after `{project_name}` is correct only when the name ends in a
 consonant; adding `프로젝트` after the variable makes `와` correct for every
-name. The title already fits the product's formal voice, so it stays.
+name, and `프로젝트 안의 모든 파일` makes clear that the files belong to the
+project. The title already fits the product's formal voice, so it stays.
 
 #### Delivery notifications with one awkward string
 

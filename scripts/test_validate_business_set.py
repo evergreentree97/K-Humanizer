@@ -48,7 +48,7 @@ class ValidateBusinessSetTest(unittest.TestCase):
         with contextlib.redirect_stdout(output):
             result = validate_file(FIXTURE)
         self.assertEqual(0, result, output.getvalue())
-        self.assertIn("(30 cases)", output.getvalue())
+        self.assertIn("(32 cases)", output.getvalue())
 
     def test_malformed_json_is_rejected(self) -> None:
         lines = [json.dumps(item, ensure_ascii=False) for item in self.items]
@@ -177,6 +177,28 @@ class ValidateBusinessSetTest(unittest.TestCase):
                     if item["grading"]["expected_behavior"] != behavior
                 ]
                 self.assert_rejected(items, f"missing expected_behavior coverage: {behavior}")
+
+    def test_native_no_op_cases_do_not_satisfy_business_no_op_coverage(self) -> None:
+        items = self.fresh_items()
+        native_no_ops = 0
+        for item in items:
+            if item["grading"]["expected_behavior"] != "keep_unchanged":
+                continue
+            if item["domain"] in {"resume", "everyday", "document"}:
+                native_no_ops += 1
+            else:
+                item["grading"]["expected_behavior"] = "produce_korean"
+        self.assertGreater(native_no_ops, 0)
+
+        result, output = self.validate_items(items)
+        self.assertEqual(1, result, output)
+        self.assertIn("missing business behavior coverage: keep_unchanged", output)
+        self.assertNotIn("missing business behavior coverage: ask_one_question", output)
+        # Overall coverage is still satisfied by the native no-op cases.
+        self.assertNotIn("missing expected_behavior coverage", output)
+        self.assertNotIn("missing business domain", output)
+        self.assertNotIn("missing business mode", output)
+        self.assertNotIn("missing native regression", output)
 
     def test_empty_file_is_rejected(self) -> None:
         result, output = self.validate_lines([])
