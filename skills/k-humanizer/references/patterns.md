@@ -169,7 +169,16 @@ When adjacent short sentences share a subject and one thought, consider joining
 them with a connective ending. When a sentence contains too much, split it at a
 complete thought while retaining the necessary link to what follows. If a
 connector does not clarify the relation, restore a concrete shared subject or
-reference instead of adding filler. Do not join unrelated facts or separate
+reference instead of adding filler.
+
+Before keeping a merged sentence, re-read it for the facts it joins. Each fact
+must keep its own state, condition, and time qualifier, and the reader must be
+able to tell which predicate or qualifier belongs to which fact. A current state
+and a possible future change are separate facts; a shared ending or a chain of
+connective endings must not let one read as a transition into the other. If
+merging obscures this, use a clearer connective or separate complete clauses.
+This does not require splitting sentences in general, and `-으로` or `-면서`
+stay fine when the relation is clear. Do not join unrelated facts or separate
 resume bullets, UI labels, or deliberately clipped dialogue merely to smooth
 rhythm. Leave already coherent prose alone.
 
