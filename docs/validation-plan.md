@@ -142,10 +142,14 @@ The two evaluation sets have different evidence status. Report them separately.
   are synthetic examples authored for this workflow by a model from the
   maintainer's requirements. They are not customer data or customer evidence.
   Raw outputs and independent review artifacts belong under `evals/reports/`.
-  Any result for this supplement must cite its own generator model, skill
-  revision, and fixture revision, and applies only to that snapshot. The
-  initial 30-case run and any later 32-case rerun are distinct snapshots: do
-  not rewrite or rescore the first, and do not merge their counts.
+  Any result for this supplement must cite its own generator model, judge,
+  skill revision, fixture revision, and harness, and it applies only to that
+  combination. The 2026-11-07 development checks are a 30-case initial run, a
+  32-case rerun, an unscored 7-case diagnostic, and an isolated 8-case check,
+  all reported separately in
+  [business-review.md](../evals/reports/2026-11-07-business-korean/business-review.md).
+  They are development-set checks, not held-out validation. Do not rewrite or
+  rescore earlier runs, and do not merge their counts.
 
 ### Business Supplement Format
 
@@ -221,13 +225,24 @@ Run one bounded pass over all supplement cases in the fixture revision under
 test (32 in the current fixture) per skill revision under test. Record the
 fixture revision with the attribution, and keep each run's results separate. Do not retry cases, pick the best of several runs, or edit outputs.
 
+Prefer one clean context per case. A batch session shares context across cases
+and can pick up unrelated personal or project instructions from the host. For
+evaluation runs with Claude Code, start a fresh process for each request with
+`--safe-mode`, which turns off customizations and `CLAUDE.md` discovery, and
+`--restricted` for read-only tools. Then load the pinned skill files
+explicitly. These flags are for evaluation only, not for installing or using
+the skill. Batch runs are still useful as stress tests; record them as a
+separate run with their own harness description. Every result statement
+applies only to the harness, models, and fixture it was measured with.
+
 1. **Record attribution.** Name the exact generator model ID and the skill
    revision. Use the composite form from the v0 baseline: the repository base
    commit, then `+skill-` and the first 12 characters of a SHA-256 digest over
    every file under `skills/k-humanizer`, sorted by relative path, with each
    path, a null byte, the file contents, and another null byte added in
    sequence. Record the full digest in the report and preserve the evaluated
-   snapshot in a commit.
+   snapshot in a commit. Also record the harness: batch or one process per
+   case, the CLI version, and the isolation flags.
 2. **Generate blind.** Give the generator the skill files and, for each case,
    only `id` and `input`. Do not show `domain`, `mode`, or anything under
    `grading`.
@@ -250,12 +265,15 @@ fixture revision with the attribution, and keep each run's results separate. Do 
    attribution, the number of cases reviewed, every hard failure, every missed
    `keep_unchanged` or `ask_one_question` case, and recurring failure types.
    Label model-scored results as model-scored, not human review. Keep failed
-   cases in the totals.
+   cases in the totals. Count from the review rows, not from a judge's prose
+   summary. A judge's "no hard failure" label is not proof of correct meaning,
+   so report any ambiguity found in review even when the judge did not flag it.
 
 No validator exists yet for the output and review files; check them by hand
 against the fixture IDs and inputs until one is added.
 
-Targets for the business supplement, not achieved results:
+Targets for the business supplement, not achieved results. The 2026-11-07
+checks did not meet the question-case target; see the report.
 
 - Zero hard failures.
 - `expected_behavior` met on every `keep_unchanged` and `ask_one_question` case.

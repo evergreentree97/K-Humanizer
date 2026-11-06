@@ -19,7 +19,8 @@ order, carries over pronouns Korean leaves out, and uses a tone that does not
 fit the channel. Sometimes it is also wrong in ways that are hard to catch
 unless you read Korean closely, such as a dropped shipping exclusion or a
 refund the English never offered. K-Humanizer rewrites the Korean for its
-reader and channel and keeps prices, dates, policies, and placeholders exact.
+reader and channel, and its instructions say to keep prices, dates, policies,
+and placeholders exact.
 
 The example below is synthetic. The revised Korean illustrates the expected
 result; it is not a recorded model output.
@@ -57,6 +58,7 @@ word for word.
 Use $k-humanizer to write this in natural Korean for our Korean customers.
 Channel: landing page. Audience: small clinic owners.
 Tone: friendly but professional.
+Write any notes or questions in English.
 
 [paste English]
 ```
@@ -69,7 +71,7 @@ the Korean is approved or current, it follows the Korean without asking again.
 ```text
 Use $k-humanizer to check this Korean translation against the English source.
 Fix anything that drifted or sounds translated. Tell me in English about any
-difference in prices, dates, or policies.
+difference in prices, dates, or policies, and ask any questions in English.
 
 English:
 [paste English]
@@ -88,15 +90,23 @@ customer, so keep our formal tone. Briefly explain the changes in English.
 [paste Korean]
 ```
 
-You get the Korean first, ready to paste. Notes are short and cover only what
-you need to act on, such as a conflict between the English and the Korean.
+The instructions put the Korean first, ready to paste. A simple edit or
+translation comes back as the Korean alone, and text that was already natural
+gets no "nothing to change" verdict or list of edits. Notes are one or two
+sentences and cover only what you need to act on, such as a conflict between
+the English and the Korean. Ask for English explanations and questions
+explicitly, as the prompts above do: in our checks, some English requests
+without that line got their notes in Korean.
 
 ### Context that helps
 
 All of this is optional. Without it, the skill infers what it can from the text
-or uses a sensible default. It asks first only when a missing fact, such as a
-price or deadline, blocks the draft, or when it cannot tell whether the English
-or the Korean commercial terms govern.
+or uses a sensible default. Its instructions say to ask first when it cannot
+tell whether the English or the Korean commercial terms govern. If a fact such as a price or
+period is missing, the instructions tell it to translate everything the source
+supports, leave only that fact as a placeholder like `[보증 기간]`, and ask
+about that one decision. They rule out lists of questions about hypothetical
+variants or related terms.
 
 - **Audience:** consumers, business buyers, partners, or your own team
 - **Channel:** sales email, ad, landing page, app UI, support reply, or formal
@@ -107,6 +117,11 @@ or the Korean commercial terms govern.
 - **Terms to keep:** product names, plan names, or approved Korean terms
 
 ### What it keeps exact
+
+This section describes the skill's editing instructions. It is not a guarantee
+that a model follows them every time; see [Evaluation](#evaluation) for what
+was observed and its limits. Prices and policies are carried over from the text
+you supply. The skill does not check whether they are correct.
 
 Prices and currencies, discounts and their conditions, product and plan names,
 numbers, dates and time zones, contract and eligibility limits, refund and
@@ -122,7 +137,15 @@ the choice changes commercial terms, it asks one question or marks the clause
 as unresolved. A won price or VAT note alone is not treated as proof that the
 Korean was approved.
 
-Korean that already reads naturally comes back unchanged.
+When it edits supplied Korean, the instructions allow a change only if it can
+name a concrete problem within the requested scope: a meaning or fact error,
+broken grammar, translationese a Korean reader would notice, or a register or
+genre mismatch the user or context establishes. If the original wording is
+valid and ordinary there, and the change would only swap in a synonym or trim a
+particle, the original stays. Korean that already reads naturally comes back
+unchanged. The skill reads a paragraph as a whole, keeps connectors that carry
+cause, contrast, or sequence, and does not invent a causal link the source
+lacks.
 
 ## Examples by channel
 
@@ -163,15 +186,37 @@ those edits to document when to rephrase a sentence and when to leave it alone.
 
 The business Korean guidance is new.
 [`evals/fixtures/business_korean.v1.jsonl`](evals/fixtures/business_korean.v1.jsonl)
-holds 30 synthetic test cases: 25 cover the three input modes and five
-business channels, and 5 check for native-writing regressions. They were
-authored by a model, not taken from customer material. They describe expected behavior.
-Model outputs for them have not been generated or scored yet, so they are not
-evidence of output quality. [Evaluation plan](docs/validation-plan.md)
+holds 32 synthetic test cases: 27 cover all 15 pairs of the three input modes
+and five business channels, and 5 check for native-writing regressions. Seven
+of the 32 are text that should stay unchanged, and three are cases where the
+skill should ask one question about a missing fact. A model authored them; they
+are not taken from customer material. [Evaluation plan](docs/validation-plan.md)
+
+While the guidance was being repaired, development checks ran with Sonnet 5.5
+generating outputs and Opus 5.5 judging them separately. The final check ran
+seven selected cases plus one probe that asks for English explanations, each
+in its own fresh process. Six of the eight met the expected behavior, and the
+judge marked no hard failures. These problems are still open:
+
+- When one fact is missing, the skill sometimes asks about related details
+  too.
+- English requests sometimes get their notes and questions in Korean.
+- A paragraph that sounds translated can stay choppy.
+
+Case counts, two grading descriptions, and the harness changed between runs,
+so the numbers cannot be pooled or read as an improvement. Every run, every
+failed case, and the limits are in the
+[business Korean check report](evals/reports/2026-11-07-business-korean/business-review.md).
+
+These are model outputs on model-authored synthetic cases, scored by another
+model. The cases are the same ones used to repair the instructions, so they do
+not measure performance on unseen text. They are not a customer study and have
+not had a native Korean reader's review, so they do not validate quality.
 
 The records below measured an earlier version of the skill on synthetic
-Korean-only editing cases. They do not measure translation or business
-localization.
+Korean-only editing cases and are unchanged. They do not measure translation or
+business localization. The full 220-case set was not rerun against the current
+skill; only its data validator was run.
 
 The public golden set contains 220 synthetic examples, separate from the
 responses I reviewed. It includes 90 resume examples, plus applications,
