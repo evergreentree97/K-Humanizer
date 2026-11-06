@@ -73,9 +73,17 @@ Out of scope:
 - Audience, channel, brand register, and purpose handling
 - Hard fails for commercial drift in the evaluation rubric
 - Five business domains in `use-cases.md`, each with at least three examples
-- Synthetic fixture `evals/fixtures/business_korean.v1.jsonl`
-- Model-scored run on the business fixture
-- Rerun of the v0 golden set to check native-writing regressions
+- Synthetic fixture `evals/fixtures/business_korean.v1.jsonl`: 32 cases (27
+  business, 5 native regression) covering all 15 domain and mode pairs
+- Done: model-scored development checks (Sonnet 5.5 outputs, Opus 5.5 judge)
+  with instruction repairs between runs, reported run by run in
+  [business-review.md](../evals/reports/2026-11-07-business-korean/business-review.md).
+  These are development-set checks, not held-out or human validation.
+- Open in the final check: questions that go beyond the one missing fact,
+  notes and questions in Korean for English requests, paragraph flow on a
+  security section, and an intermittent beta-state ambiguity.
+- Not done: a rerun of the 220-case v0 golden set for behavior. Only its data
+  validator has passed against the current repository.
 
 ### v0.4: Deeper Coverage
 
@@ -114,9 +122,10 @@ as a critical failure. The fixture format and release criteria are in
 
 Keep the evidence types separate in public writing. A synthetic fixture is
 test coverage, a model-scored run is a model judgment, and only a human pass
-supports the phrase "human-validated". The 2026-08-25 scores measured an
-earlier version on synthetic Korean-only editing cases and are not business
-localization results.
+supports the phrase "human-validated". The business runs use model-authored
+synthetic cases, one generator model, and one judge model; they are not a
+customer study. The 2026-08-25 scores measured an earlier version on synthetic
+Korean-only editing cases and are not business localization results.
 
 ## Differentiation From Existing Projects
 
@@ -125,11 +134,12 @@ translation tools already produce understandable Korean. K-Humanizer should
 differentiate through:
 
 - Output built for a user who may not be able to check it: Korean first, short
-  notes in the user's language, and a flag when the English and Korean
-  disagree and the user has not named which governs.
+  notes (in English when the user asks for it; default language matching is
+  not yet reliable), and a flag when the English and Korean disagree and the
+  user has not named which governs.
 - Three input modes with different edit scopes.
-- Strict protection of prices, conditions, policies, commitments, and UI
-  placeholders.
+- Instructions that strictly protect prices, conditions, policies,
+  commitments, and UI placeholders.
 - Register chosen from the audience, channel, and brand, without assuming that
   natural means casual.
 - Practical channel modes for business Korean and native writing.
@@ -142,15 +152,20 @@ differentiate through:
 
 ## Immediate Tasks
 
-1. Run the business fixture through the current skill with the generator and
-   judge recorded, and publish the result with its weak cases. Until then,
-   describe the fixture only as test coverage.
-2. Rerun the v0 golden set with the new skill revision to check for
-   native-writing regressions.
-3. Ask a native Korean speaker to review the business examples in
-   `use-cases.md` and the business fixture.
-4. Review the ten lowest-scoring cases in the 2026-08-25 model baseline.
-5. Before any draft in [promotion.md](promotion.md) is posted, recheck that
+1. Keep public claims within the results and limits in
+   [business-review.md](../evals/reports/2026-11-07-business-korean/business-review.md).
+2. Before any draft in [promotion.md](promotion.md) is posted, recheck that
    its claims still match the repository.
-6. Run a human scoring pass before describing any benchmark as
-   human-validated.
+
+Optional next validation steps, none of them performed or committed to:
+
+- Write fresh held-out synthetic cases that were not used to repair the
+  instructions, and run them one clean process per case.
+- Rerun the full 32-case fixture with the isolated harness.
+- Ask a native Korean speaker to review the business examples in
+  `use-cases.md` and the business fixture.
+- Rerun the full 220-case v0 golden set against the current skill to check
+  native-writing behavior.
+- Review the ten lowest-scoring cases in the 2026-08-25 model baseline.
+- Run a human scoring pass before describing any benchmark as
+  human-validated.

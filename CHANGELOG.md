@@ -17,8 +17,7 @@
   not count as approval.
 - Identify audience, channel, brand register, and purpose, with defaults
   inferred from context. Use a default when the brand voice is missing; ask
-  first only when a missing fact blocks the draft or source authority is
-  unresolved.
+  only when a material fact is missing or source authority is unresolved.
 - Protect prices, currencies, discounts, names, numbers, limits, dates, refund
   and delivery policy, warranty scope, and commitments. Do not add benefits,
   urgency, testimonials, apologies, or promises, or convert currencies and time
@@ -40,17 +39,57 @@
   size, add checks for the five business domains, and add hard fails for
   commercial drift. Replace the counselor-intermediary review case with a
   store-exchange case that keeps the same restriction.
-- Add 30 model-authored synthetic cases (25 business, 5 native-writing
-  regression) in `evals/fixtures/business_korean.v1.jsonl`, with
-  `scripts/validate_business_set.py` and its tests. Model outputs for these
-  cases have not been generated or scored.
+- Tighten the editing and output instructions after an initial behavioral run
+  (see below). Supplied Korean changes only where a concrete problem inside the
+  requested scope can be named, and valid, ordinary wording stays. Natural
+  Korean comes back as the Korean alone, with no verdict or edit list. Output
+  notes are one or two sentences, and only for a corrected discrepancy or an
+  unresolved item. When a material fact is missing, everything the source
+  supports is still translated, only that fact stays as a placeholder such as
+  `[보증 기간]`, and one question is asked. Samples and templates follow the same
+  limits as the main text and do not add terms the source lacks. Paragraphs are
+  read as a whole, so connectors that carry cause, contrast, or sequence are
+  kept and no causal link is invented.
+- Add 32 model-authored synthetic cases (27 business, 5 native-writing
+  regression) in `evals/fixtures/business_korean.v1.jsonl`, covering all 15
+  domain and input-mode pairs, with 7 unchanged-text cases and 3 cases that
+  call for one clarifying question, plus `scripts/validate_business_set.py`
+  and its tests. The business examples in `use-cases.md` still total 17.
+- Record model-scored development checks in
+  `evals/reports/2026-11-07-business-korean/business-review.md`, with Sonnet
+  5.5 generating and Opus 5.5 judging. Each run is kept separately with its
+  raw outputs, and none is pooled with another:
+  - initial 30 cases: 26 met the expected behavior
+  - full 32-case rerun: 29 met
+  - unscored 7-case diagnostic batch
+  - isolated final check of 7 selected cases plus one English-explanation
+    probe, each request in a fresh `--safe-mode --restricted` process: 6 of 8
+    met
+
+  The judge flagged no hard failures, but review treated one beta-status
+  wording as a real ambiguity. Still open: questions that go beyond the one
+  missing fact, notes in Korean for English requests, and choppy paragraph
+  flow. These are development-set checks, not held-out validation, human
+  review, or a customer study.
+- Resolve the findings of the initial source review: the register exception,
+  default English versus approved Korean, business-only no-op coverage in the
+  validator, delete-dialog scope, state versus possibility in merged clauses,
+  actor, reason, and compact-label checks, and corrected explanations of
+  `연중무휴 24시간` and streak wording.
+- Recommend one clean process per case for evaluation in
+  `docs/validation-plan.md`, and record batch runs separately.
 - Point the rubric to the synthetic business fixture and the validation plan
   instead of repeating the fixture schema.
-- Update the agent metadata with an English description for the new audience.
+- Update the agent metadata with an English description for the new audience
+  and a default prompt that also fits native writing.
 - Rewrite both READMEs around the new audience, with copy-ready prompts for
   each input mode and links to the five business domains. Label all examples
   as synthetic, and the 220-case results and 2026-08-25 scores as records of
-  the earlier version on synthetic Korean-only editing cases.
+  the earlier version on synthetic Korean-only editing cases. Describe the
+  preservation rules as the skill's instructions rather than a guarantee, link
+  the observed results and their limits, and replace the bare English link in
+  the Korean README with a line pointing to `README.en.md`. The English prompts
+  now ask for notes and questions in English explicitly.
 - Add unpublished promotion drafts in `docs/promotion.md` and update the
   positioning and task priorities in `docs/open-source-plan.md`.
 
