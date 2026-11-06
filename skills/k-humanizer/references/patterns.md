@@ -2,7 +2,9 @@
 
 Use these tables to diagnose why a passage feels awkward. Read it with the
 surrounding text, identify what the phrase contributes, then recast the thought
-if needed. Keep ordinary wording that already fits the reader and genre.
+if needed. A phrase that matches the first column is not a reason to edit by
+itself; apply a row only when the passage actually reads stiff or translated
+because of it. Keep ordinary wording that already fits the reader and genre.
 
 No word in these tables is banned. `통해`, `제공`, `진행`, `관련하여`, and
 `대해` are ordinary Korean when they fit the sentence and reader. Do not swap a
@@ -25,7 +27,7 @@ text: judge the whole sentence in its channel, not each word against a list.
 | `단순히 X가 아니라 Y`, `X를 넘어 Y` used for emphasis | State Y directly or name the real relationship between X and Y | The sentence corrects a genuine misunderstanding or the contrast changes the meaning |
 | `~에 대해서는`, `~와 관련하여` | Use `~은/는`, `~의`, or a direct object | The phrase marks a real scope boundary or legal relation, or names the subject of a formal notice such as `배송 지연 관련 안내` |
 | A literal translation hides an ordinary action or state, such as `처리 결과 미표시` in user-facing prose | Say what happens: `처리 결과가 보이지 않음` | A compact label, exact status name, or technical term is conventional for the intended reader |
-| Pronouns carried over from English: `당신`, `그것`, `그들`, `우리는`, repeated `귀하의` | Omit them when the referent is clear, or use the reader's role (`고객님`, `회원님`) or the brand name | `귀하` in an official letter or legal notice where it is conventional, or a subject needed for contrast |
+| Pronouns carried over from English: `당신`, `그것`, `그들`, `우리는`, repeated `귀하의` | Omit them only when the reader can still tell who acts; restate the actor when it changes, or use the reader's role (`고객님`, `회원님`) or the brand name | `귀하` in an official letter or legal notice where it is conventional, or a subject needed for contrast |
 | `~이 가능합니다`, `~이 불가합니다` for something a person does | `~할 수 있습니다`, `~할 수 없습니다` | Compact notices, tables, and labels where the noun form is conventional, such as `당일 배송 불가` |
 | A double negative such as `~가 아닌 한 ~할 수 없습니다` | State the condition directly with `~인 경우에만` | Approved legal wording, or a long list of exceptions that reads better as exclusions |
 | `진행` stacked on an action the reader does in one step: `설치를 진행해 주세요` | Name the action: `설치해 주세요` | A process with several steps or an ongoing state: `환불이 진행 중입니다` |
@@ -141,8 +143,9 @@ a concrete explanation instead of repeating it as a slogan.
 
 ## Sentence and paragraph flow
 
-For connected prose, read neighboring sentences together before shortening
-or deleting transitions. Keep the thread of the paragraph: what the next
+For connected prose, read it as a paragraph before shortening or deleting
+transitions or subjects. Dropping a repeated subject is safe only while the
+reader can tell who acts. Keep the thread of the paragraph: what the next
 sentence adds, contrasts with, explains, or carries forward. Use the smallest
 change that makes that relationship easy to follow. When translating from
 English, the same applies to the Korean you build: Korean often joins two short

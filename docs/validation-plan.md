@@ -32,6 +32,14 @@ When the user designates an approved Korean text as current, an older English
 version must not overwrite it. When a fact the user asks for is missing and
 changes the output materially, ask one focused question rather than guessing.
 
+When the user supplies English and Korean without naming either as approved or
+current, English is the default source and the Korean is checked against it.
+Do not ask which version is approved unless something in the request suggests
+a local Korean policy override. If the two versions state conflicting
+commercial terms, such as price, tax treatment, or refund conditions, and
+neither is identified as approved, do not pick one. Ask one focused question
+and keep both supplied values visible as alternatives.
+
 ### Business Domains
 
 #### B2B Sales
@@ -109,10 +117,14 @@ sounds:
   widened, or narrowed.
 - A benefit, compensation, testimonial, certification, or claim is added.
 - An apology, commitment, release date, or urgency is added.
-- A request, plan, or possibility becomes a promise or a certainty.
+- A commitment or fact is strengthened or weakened: a request, plan, or
+  possibility becomes a promise or a certainty, or a firm commitment or
+  confirmed fact becomes tentative.
 - A placeholder is renamed, translated, or removed.
 - A user-designated authoritative text is overwritten by the other version.
 - A missing material fact is invented instead of asked about.
+- An unresolved conflict between supplied versions is settled without asking,
+  for example by treating one as approved because of its language or currency.
 
 ### Evidence Status
 
@@ -125,20 +137,43 @@ The two evaluation sets have different evidence status. Report them separately.
   [the baseline report](../evals/reports/2026-08-25/model-baseline.md) and do
   not describe the business guidance. Do not edit, re-score, or extend these
   files.
-- **Business supplement (synthetic, unscored).** The 30 cases in
+- **Business supplement (synthetic).** The 32 cases in
   [`evals/fixtures/business_korean.v1.jsonl`](../evals/fixtures/business_korean.v1.jsonl)
   are synthetic examples authored for this workflow by a model from the
-  maintainer's requirements. They are not customer data or customer evidence. Until a reviewed run is published under `evals/reports/`, the
-  supplement has no scores or pass counts.
+  maintainer's requirements. They are not customer data or customer evidence.
+  Raw outputs and independent review artifacts belong under `evals/reports/`.
+  Any result for this supplement must cite its own generator model, skill
+  revision, and fixture revision, and applies only to that snapshot. The
+  initial 30-case run and any later 32-case rerun are distinct snapshots: do
+  not rewrite or rescore the first, and do not merge their counts.
 
 ### Business Supplement Format
 
-The supplement covers every pairing of the five business domains and the three
-modes. It includes already-natural cases that should stay unchanged, cases that need one
-focused question, a bilingual draft whose eligibility differs from the
-original, an approved Korean policy that must not follow an older English
-version, and native regression cases for resume technical terms, everyday
-personal tone, and a connected report paragraph with explicit uncertainty.
+The supplement has 32 cases: 27 business cases and 5 native regression cases.
+It covers every pairing of the five business domains and the three modes.
+
+| Coverage | Count |
+|---|---|
+| Business domains | `b2b_sales` 5, `marketing_ad` 5, `landing_page` 6, `support_notice` 6, `ui_notification` 5 |
+| Native regression domains | `resume` 2, `everyday` 2, `document` 1 |
+| Business modes | `korean_edit` 10, `bilingual_edit` 7, `english_to_korean` 10 |
+| Expected behaviors, all cases | `produce_korean` 22, `keep_unchanged` 7, `ask_one_question` 3 |
+| Expected behaviors, business cases | `produce_korean` 19, `keep_unchanged` 5, `ask_one_question` 3 |
+
+The cases include already-natural business drafts that should stay unchanged,
+cases that need one focused question, a bilingual draft whose eligibility
+differs from the original, and an approved Korean policy that must not follow
+an older English version. Two cases test source authority when no version is
+designated: `bk_landing_006` supplies conflicting English and Korean pricing
+and refund blocks with no approved version and expects one question while both
+values stay visible, and `bk_support_006` supplies an unlabeled English source
+and a Korean translation that turns a request into a refund promise and
+expects a corrected Korean text, a brief note, and no question. Native
+regression cases cover resume technical terms, everyday personal tone, and a
+connected report paragraph with explicit uncertainty.
+
+Native no-op cases do not count toward business coverage. The business cases
+alone must include `keep_unchanged` and `ask_one_question` cases.
 
 Each line is one JSON object:
 
@@ -173,8 +208,8 @@ The validator checks JSON syntax, object rows, field types, blank inputs and
 list entries, duplicate IDs, unknown fields, domains, modes, and expected
 behaviors, and the required coverage of business domains, business modes,
 every business domain/mode pair, native regression domains, unchanged cases,
-and question cases. It does not
-judge Korean quality.
+and question cases overall, and the business-only presence of unchanged and
+question cases. It does not judge Korean quality.
 
 `scripts/validate_golden_set.py` and `scripts/validate_model_baseline.py` are
 tied to the v0 format and do not accept this fixture or outputs generated from
@@ -182,8 +217,9 @@ it.
 
 ### Business Forward Test
 
-Run one bounded pass over the 30 supplement cases per skill revision under
-test. Do not retry cases, pick the best of several runs, or edit outputs.
+Run one bounded pass over all supplement cases in the fixture revision under
+test (32 in the current fixture) per skill revision under test. Record the
+fixture revision with the attribution, and keep each run's results separate. Do not retry cases, pick the best of several runs, or edit outputs.
 
 1. **Record attribution.** Name the exact generator model ID and the skill
    revision. Use the composite form from the v0 baseline: the repository base

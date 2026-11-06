@@ -1,7 +1,7 @@
 interface:
   display_name: "K-Humanizer"
   short_description: "Localize and polish Korean for Korean customers"
-  default_prompt: "Use $k-humanizer to turn this English or Korean copy into natural Korean for Korean customers, keeping prices, dates, policies, names, and placeholders exact."
+  default_prompt: "Use $k-humanizer to write, localize, or edit this text as natural Korean for its intended readers, keeping prices, dates, policies, names, and placeholders exact."
 
 policy:
   allow_implicit_invocation: true

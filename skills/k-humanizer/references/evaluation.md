@@ -13,7 +13,7 @@ one mode and overreaching in another.
 
 | Input mode | Source of meaning | How to judge the amount of change |
 |---|---|---|
-| Korean only | The supplied Korean | Surrounding text gives context; change only the requested passage, and only what does not work there. Unchanged natural text scores well. |
+| Korean only | The supplied Korean | Surrounding text gives context; change only the requested passage, and only what does not work there. Unchanged natural text scores well. A coherent register stays unless the user asks or the context clearly shows a mismatch; a default assumption alone is not a reason to change it. |
 | English source with a Korean draft | The version the user names as authoritative; the English when they name none | Fix drift and awkward wording. Keep accurate, natural Korean from the draft. Asking again about a source the user already named lowers Practical Usefulness. When authority over a commercial term is unclear, one focused question or a clearly marked unresolved clause is correct; an unflagged material conflict lowers Meaning Fidelity. |
 | English only, Korean requested | The English | Judge the Korean as if it were written first in Korean. Restructuring sentences is expected. |
 
@@ -30,7 +30,7 @@ English. In pair mode, compare with the source named in the input mode table.
 
 5: All material claims survive, including who did what, why, under what conditions, and with what certainty. Negation, names, numbers, units, dates, and requests keep their meaning.
 
-3: The main point is still there, but the strength or nuance changed a little.
+3: The main point is still there, but the strength or nuance changed a little. Certainty can drift in either direction: a possibility strengthened into a promise, or a firm commitment or confirmed fact weakened into a hedge.
 
 1: The rewrite added a new claim, removed a condition, changed who does what, or changed the request.
 
@@ -187,6 +187,9 @@ output, compared with its source:
 - Widens or narrows warranty or guarantee scope, or drops an exception.
 - Turns a request or possibility into a promise, or adds a refund, apology,
   compensation, or other commitment.
+- Weakens a firm commitment or confirmed fact into a possibility, request, or
+  hedge. Judge both directions against the governing source, which is the
+  version the user named or a change in scope the user requested.
 - Adds a benefit, performance claim, testimonial, urgency, scarcity, or sales
   hook the source does not contain.
 - Converts a currency, time zone, or unit, or substitutes a legal term, without
