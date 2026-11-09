@@ -7,7 +7,12 @@ the Korea Standard Time day of the release.
 
 ## Unreleased
 
+## 0.6.0 - 2026-11-10
+
+Install as a plugin, with resumes in their own skill.
+
 - Package both skills as a Claude Code and Codex plugin, split business and native-writing references with contents lists, and write skill descriptions in third person.
+- Add a plugin icon at `assets/icon.png`, cropped from the README hero image.
 - Split the changelog into versioned releases and add a version history to
   both READMEs.
 - Move resume and job-application guidance into a separate

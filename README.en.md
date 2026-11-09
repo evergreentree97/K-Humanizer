@@ -76,7 +76,8 @@ In a web chat or an API, a link alone may not let the model read the files, so p
 
 | Version | Date | Highlights |
 | :--- | :--- | :--- |
-| **0.5.0** | 2026-11-07 | Business Korean for Korean customers: translate and check sales emails, ads, product pages, support replies, and app strings against the English source |
+| **0.6.0** | 2026-11-10 | Install as a Claude Code or Codex plugin; resumes and job applications move to a separate `k-humanizer-resume` skill |
+| 0.5.0 | 2026-11-07 | Business Korean for Korean customers: translate and check sales emails, ads, product pages, support replies, and app strings against the English source |
 | 0.4.0 | 2026-11-06 | Edits by context and meaning instead of character-change limits |
 | 0.3.1 | 2026-09-14 | Keeps connectors and sentence flow |
 | 0.3.0 | 2026-08-25 | Application-motivation and public-post guidance, and a 220-case model baseline |
