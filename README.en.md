@@ -88,6 +88,19 @@ The instructions already say to write notes and questions in English when the re
 
 ## Evaluation
 
+The same model (Claude Sonnet 5.5) handled 32 business Korean requests twice, once without the skill and once with it. Claude Opus 5.5 scored the outputs without knowing which run each came from.
+
+| Measure (32 cases) | Without skill | With skill |
+| :--- | ---: | ---: |
+| Added something the source did not say | 12 | 0 |
+| Dropped a requirement | 6 | 0 |
+| Left already-natural text alone (of 7) | 2 | 6 |
+| Did what the request asked | 25 | 29 |
+
+Without the skill, the model added a promise the source never made ("더욱 안정적인 서비스로 보답하겠습니다", roughly "we will repay you with a more stable service") to a maintenance notice, and rewrote emails that were already fine. With the skill, it added nothing and returned text that needed no change as it was.
+
+The results and raw outputs are in the [comparison report](evals/reports/2026-11-10-skill-vs-baseline/README.md).
+
 The record of the business Korean checks is in the [business Korean check report](evals/reports/2026-11-07-business-korean/business-review.md). They are development-stage checks in which one model handled model-written synthetic cases and another model scored them. They are not a native Korean reader's review or a customer study, so they do not validate quality.
 
 ## License

@@ -87,7 +87,18 @@ npx skills add evergreentree97/K-Humanizer --skill k-humanizer-resume --full-dep
 
 ## 평가
 
-비즈니스 한국어 점검 기록은 [비즈니스 한국어 점검 보고서](evals/reports/2026-11-07-business-korean/business-review.md)에 있습니다. 
+같은 모델(Claude Sonnet 5.5)에 비즈니스 한국어 요청 32건을 스킬 없이 한 번, 스킬과 함께 한 번 맡겨 결과를 비교했습니다. 채점은 Claude Opus 5.5가 어느 쪽 결과인지 모르는 상태로 했습니다.
+
+| 항목 (32건) | 스킬 없음 | 스킬 사용 |
+| :--- | ---: | ---: |
+| 원문에 없는 내용을 덧붙임 | 12건 | 0건 |
+| 요구 사항을 빠뜨림 | 6건 | 0건 |
+| 이미 자연스러운 글을 그대로 둠 (7건 중) | 2건 | 6건 |
+| 요청한 대로 처리함 | 25건 | 29건 |
+
+스킬 없이 맡기면 점검 안내문에 원문에 없던 "더욱 안정적인 서비스로 보답하겠습니다"를 넣거나, 이미 자연스러운 메일의 표현을 바꿨습니다. 스킬을 쓰면 원문에 없는 말을 넣지 않았고, 고칠 필요가 없는 글은 그대로 돌려줬습니다.
+
+결과와 원본 출력은 [비교 보고서](evals/reports/2026-11-10-skill-vs-baseline/README.md)에, 이전 점검 기록은 [비즈니스 한국어 점검 보고서](evals/reports/2026-11-07-business-korean/business-review.md)에 있습니다.
 
 ## 라이선스
 
