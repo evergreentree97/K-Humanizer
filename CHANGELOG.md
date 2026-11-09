@@ -7,6 +7,9 @@ the Korea Standard Time day of the release.
 
 ## Unreleased
 
+- Add a skill vs no-skill comparison on the 32 business Korean cases, with
+  raw outputs, blind judge rows, and the harness.
+
 ## 0.6.0 - 2026-11-10
 
 Install as a plugin, with resumes in their own skill.
