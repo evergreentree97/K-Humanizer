@@ -13,6 +13,8 @@ the Korea Standard Time day of the release.
   `k-humanizer-resume` skill, so `k-humanizer` focuses on Korean for Korean
   customers.
 - Remove internal planning and promotion drafts from `docs/`.
+- Recommend installing as an agent skill first in both READMEs, and state that
+  English notes for English requests are not yet reliable.
 
 ## 0.5.0 - 2026-11-07
 
