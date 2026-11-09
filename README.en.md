@@ -4,7 +4,7 @@
 
 [한국어](README.md)
 
-[![Version](https://img.shields.io/badge/version-0.5.0-2f6feb)](CHANGELOG.md)
+[![Version](https://img.shields.io/github/v/release/evergreentree97/K-Humanizer?label=version&color=2f6feb)](CHANGELOG.md)
 
 K-Humanizer is a set of instructions that translates and polishes messages for Korean customers into natural Korean. It focuses on the translationese and awkward phrasing that overseas teams who are not native Korean speakers run into when writing sales emails, ads, product descriptions, customer support, app notices, and similar content.
 
