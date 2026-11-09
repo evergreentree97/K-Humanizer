@@ -1,6 +1,6 @@
 ---
 name: k-humanizer-resume
-description: Edit Korean resumes, career descriptions, portfolio summaries, LinkedIn profiles, and job application essays so they read naturally and stay credible. Keeps every claim inside the supplied evidence, keeps individual and team work distinct, and keeps metrics with their conditions. For other Korean text, use k-humanizer.
+description: Edits Korean resumes, career descriptions, portfolio summaries, LinkedIn profiles, and job application essays so they read naturally and stay credible. Keeps every claim inside the supplied evidence, keeps individual and team work distinct, and keeps metrics with their conditions. Routes other Korean text to k-humanizer.
 ---
 
 # K-Humanizer Resume

@@ -1,5 +1,18 @@
 # Evaluation Rubric
 
+## Contents
+
+- [Scoring by input mode](#scoring-by-input-mode)
+- [Meaning Fidelity](#meaning-fidelity)
+- [Korean Naturalness](#korean-naturalness)
+- [Context Fit](#context-fit)
+- [Edit Discipline](#edit-discipline)
+- [Practical Usefulness](#practical-usefulness)
+- [Domain Checks](#domain-checks)
+- [Red Flags](#red-flags)
+- [Hard fails for business Korean](#hard-fails-for-business-korean)
+- [Test fixtures](#test-fixtures)
+
 Score each output from 1 to 5.
 
 Do not ask, "Will this bypass an AI detector?"

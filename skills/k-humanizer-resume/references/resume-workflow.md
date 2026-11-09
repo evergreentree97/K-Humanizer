@@ -1,5 +1,15 @@
 # Resume Workflow
 
+## Contents
+
+- [Choose the task before editing](#choose-the-task-before-editing)
+- [Build an evidence record](#build-an-evidence-record)
+- [Give each section one job when structure is in scope](#give-each-section-one-job-when-structure-is-in-scope)
+- [Prioritize only when tailoring is requested](#prioritize-only-when-tailoring-is-requested)
+- [Common resume failures](#common-resume-failures)
+- [Output patterns](#output-patterns)
+- [Final document check](#final-document-check)
+
 Use this reference with `resume.md` for every resume, career description,
 portfolio summary, LinkedIn profile, or application-writing task. Its default
 job is to remove AI-like Korean while preserving the supplied content, field,

@@ -7,6 +7,7 @@ the Korea Standard Time day of the release.
 
 ## Unreleased
 
+- Package both skills as a Claude Code and Codex plugin, split business and native-writing references with contents lists, and write skill descriptions in third person.
 - Split the changelog into versioned releases and add a version history to
   both READMEs.
 - Move resume and job-application guidance into a separate

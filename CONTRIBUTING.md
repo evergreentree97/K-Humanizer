@@ -90,13 +90,14 @@ one sentence and necessary in another.
 |---|---|
 | Core routing and workflow | `skills/k-humanizer/SKILL.md` |
 | Korean AI-writing patterns and exceptions | `skills/k-humanizer/references/patterns.md` |
-| Use-case examples | `skills/k-humanizer/references/use-cases.md` |
+| Use-case examples | `skills/k-humanizer/references/business-korean.md` and `skills/k-humanizer/references/native-writing.md` |
 | Resume and application rules | `skills/k-humanizer-resume/` |
 | Evaluation criteria | `skills/k-humanizer/references/evaluation.md` |
 | Public test fixtures | `evals/fixtures/` |
 | Business supplement validator | `scripts/validate_business_set.py` |
 | Scored baseline validator | `scripts/validate_model_baseline.py` |
 | Reader documentation | `README.md` and `README.en.md` |
+| Plugin manifests and marketplaces | `plugin.json`, `.claude-plugin/`, and `.agents/plugins/marketplace.json` |
 
 Keep `skills/k-humanizer/SKILL.md` small. Put detailed examples, domain rules,
 and checklists under `skills/k-humanizer/references/`.

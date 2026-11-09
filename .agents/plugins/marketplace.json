@@ -1,0 +1,20 @@
+{
+  "name": "k-humanizer",
+  "interface": {
+    "displayName": "K-Humanizer"
+  },
+  "plugins": [
+    {
+      "name": "k-humanizer",
+      "source": {
+        "source": "local",
+        "path": "./"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

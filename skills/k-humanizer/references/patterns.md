@@ -1,5 +1,15 @@
 # Korean Editing Patterns
 
+## Contents
+
+- [Translationese and English-shaped grammar](#translationese-and-english-shaped-grammar)
+- [Register and endings](#register-and-endings)
+- [Abstract nouns, filler, and empty weight](#abstract-nouns-filler-and-empty-weight)
+- [Reader-facing specificity](#reader-facing-specificity)
+- [English and insider wording](#english-and-insider-wording)
+- [Sentence and paragraph flow](#sentence-and-paragraph-flow)
+- [Rhythm and punctuation](#rhythm-and-punctuation)
+
 Use these tables to diagnose why a passage feels awkward. Read it with the
 surrounding text, identify what the phrase contributes, then recast the thought
 if needed. A phrase that matches the first column is not a reason to edit by

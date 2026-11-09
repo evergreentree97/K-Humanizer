@@ -26,7 +26,7 @@ K-Humanizer는 한국 고객에게 보낼 메시지를 자연스러운 한국어
 
 ## 사용 방법
 
-[SKILL.md](skills/k-humanizer/SKILL.md)의 지침과 필요한 [사용 사례](skills/k-humanizer/references/use-cases.md)를 LLM에 전달한 뒤, 다음과 같이 요청해 보세요.
+[SKILL.md](skills/k-humanizer/SKILL.md)의 지침과 필요한 [비즈니스 한국어](skills/k-humanizer/references/business-korean.md)와 [한국어 글쓰기 사례](skills/k-humanizer/references/native-writing.md)를 LLM에 전달한 뒤, 다음과 같이 요청해 보세요.
 
 - 한국어 초안만 있을 때: 어색한 표현과 번역투를 자연스럽게 다듬습니다.
 - 외국어와 한국어 초안이 함께 있을 때: 두 내용을 비교해 누락되거나 왜곡된 부분, 어색한 표현을 바로잡습니다.
@@ -39,7 +39,23 @@ K-Humanizer는 한국 고객에게 보낼 메시지를 자연스러운 한국어
 
 ## 사용 환경
 
-Codex, Claude Code, Cursor 같은 에이전트에 스킬로 설치해 쓰는 방식을 권장합니다.
+Claude Code와 Codex에서는 플러그인으로 두 스킬을 함께 설치할 수 있습니다.
+
+Claude Code:
+
+```bash
+claude plugin marketplace add evergreentree97/K-Humanizer
+claude plugin install k-humanizer@k-humanizer
+```
+
+Codex:
+
+```bash
+codex plugin marketplace add evergreentree97/K-Humanizer
+codex plugin add k-humanizer@k-humanizer
+```
+
+Cursor 같은 다른 에이전트에서는 스킬을 개별 설치하세요.
 
 ```bash
 npx skills add evergreentree97/K-Humanizer --skill k-humanizer --full-depth
@@ -51,7 +67,7 @@ npx skills add evergreentree97/K-Humanizer --skill k-humanizer --full-depth
 npx skills add evergreentree97/K-Humanizer --skill k-humanizer-resume --full-depth
 ```
 
-웹 채팅이나 API에서 쓸 때는 링크만 알려 주면 모델이 파일을 읽지 못할 수 있으므로, [SKILL.md](skills/k-humanizer/SKILL.md)와 필요한 참고 파일([사용 사례](skills/k-humanizer/references/use-cases.md) 등)의 텍스트를 직접 붙여 넣어 주세요. 결과는 사용하는 모델과 설정에 따라 다를 수 있습니다.
+웹 채팅이나 API에서 쓸 때는 링크만 알려 주면 모델이 파일을 읽지 못할 수 있으므로, [SKILL.md](skills/k-humanizer/SKILL.md)와 필요한 참고 파일([비즈니스 한국어](skills/k-humanizer/references/business-korean.md)와 [한국어 글쓰기 사례](skills/k-humanizer/references/native-writing.md) 등)의 텍스트를 직접 붙여 넣어 주세요. 결과는 사용하는 모델과 설정에 따라 다를 수 있습니다.
 
 ---
 

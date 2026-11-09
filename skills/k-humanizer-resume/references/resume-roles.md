@@ -1,5 +1,13 @@
 # Field-Aware Resume Writing
 
+## Contents
+
+- [Use field context safely](#use-field-context-safely)
+- [Field context table](#field-context-table)
+- [What a strong bullet answers](#what-a-strong-bullet-answers)
+- [Shared safeguards](#shared-safeguards)
+- [Final role check](#final-role-check)
+
 Read this reference after `resume.md` when the source includes a target role,
 job description, or clear professional context. Its first job is to keep the
 field's real language and work intact while removing AI-like wording. Change

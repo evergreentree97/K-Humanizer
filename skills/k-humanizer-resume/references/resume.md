@@ -1,5 +1,13 @@
 # Resume and Career Documents
 
+## Contents
+
+- [Start with the evidence](#start-with-the-evidence)
+- [Conditional rewrite table](#conditional-rewrite-table)
+- [Sentence order](#sentence-order)
+- [Examples](#examples)
+- [Final resume check](#final-resume-check)
+
 Use this reference for resumes, career descriptions, portfolio summaries,
 LinkedIn profiles, and application essays. The goal is a credible document a
 recruiter and hiring manager can scan quickly. When a target role or job

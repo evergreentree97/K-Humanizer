@@ -1,6 +1,6 @@
 ---
 name: k-humanizer
-description: Write, localize, and edit Korean so Korean readers find it natural. Use when someone needs Korean for Korean customers, including non-native speakers who translate English sales emails, ads, landing and product pages, support replies, service notices, or app UI and notifications into Korean, check a Korean translation against its English source, or fix Korean that sounds translated, stiff, or AI-written. Also covers documents, messages, email, public posts, code review, and dialogue. For resumes and job applications, use k-humanizer-resume. Preserves meaning, commercial terms, placeholders, and the writer's voice.
+description: Writes, localizes, and edits Korean for Korean customers so Korean readers find it natural. Helps writers, including non-native speakers, translate English sales emails, ads, landing and product pages, support replies, service notices, or app UI and notifications into Korean, check a Korean translation against its English source, or fix Korean that sounds translated, stiff, or AI-written. Also covers documents, messages, email, public posts, code review, and dialogue. Routes resumes and job applications to k-humanizer-resume. Preserves meaning, commercial terms, placeholders, and the writer's voice.
 ---
 
 # K-Humanizer
@@ -166,12 +166,12 @@ that flattened the writer's voice.
 - **Business Korean:** For sales email, marketing and ad copy, landing and
   product pages, customer support and service notices, and app UI and
   notifications, use the business sections of
-  [use-cases.md](references/use-cases.md). They show each input mode and
+  [business-korean.md](references/business-korean.md). They show each input mode and
   several registers, including text that should stay unchanged.
 - **Resumes, career descriptions, portfolio summaries, and job applications:**
   Use the separate `k-humanizer-resume` skill.
 - **Documents, personal writing, chat, email between colleagues, public posts, code review, and dialogue:** Use the matching
-  native-writing section in [use-cases.md](references/use-cases.md).
+  native-writing section in [native-writing.md](references/native-writing.md).
 - **Reviewing or comparing edits and translations:** Use
   [evaluation.md](references/evaluation.md).
 

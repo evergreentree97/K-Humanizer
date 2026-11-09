@@ -26,7 +26,7 @@ Besides foreign-language text, you can also use it to smooth the wording of docu
 
 ## How to use it
 
-Give the LLM the instructions in [SKILL.md](skills/k-humanizer/SKILL.md) and the [use cases](skills/k-humanizer/references/use-cases.md) you need, then make a request like one of these.
+Give the LLM the instructions in [SKILL.md](skills/k-humanizer/SKILL.md) and the [business Korean](skills/k-humanizer/references/business-korean.md) and [native Korean writing examples](skills/k-humanizer/references/native-writing.md) you need, then make a request like one of these.
 
 - You have only a Korean draft: it smooths awkward wording and translationese into natural Korean.
 - You have both the foreign-language text and a Korean draft: it compares the two and fixes anything missing or distorted, along with awkward wording.
@@ -40,7 +40,23 @@ The checks used English source text; other source languages have not been evalua
 
 ## Where to use it
 
-We recommend installing it as a skill in an agent such as Codex, Claude Code, or Cursor.
+In Claude Code and Codex, install both skills together as a plugin.
+
+Claude Code:
+
+```bash
+claude plugin marketplace add evergreentree97/K-Humanizer
+claude plugin install k-humanizer@k-humanizer
+```
+
+Codex:
+
+```bash
+codex plugin marketplace add evergreentree97/K-Humanizer
+codex plugin add k-humanizer@k-humanizer
+```
+
+For other agents such as Cursor, install the skills individually instead.
 
 ```bash
 npx skills add evergreentree97/K-Humanizer --skill k-humanizer --full-depth
@@ -52,7 +68,7 @@ For resumes and job applications, also install the resume skill.
 npx skills add evergreentree97/K-Humanizer --skill k-humanizer-resume --full-depth
 ```
 
-In a web chat or an API, a link alone may not let the model read the files, so paste the text of [SKILL.md](skills/k-humanizer/SKILL.md) and the reference files you need (such as the [use cases](skills/k-humanizer/references/use-cases.md)) directly. Results can vary with the model and settings you use.
+In a web chat or an API, a link alone may not let the model read the files, so paste the text of [SKILL.md](skills/k-humanizer/SKILL.md) and the reference files you need (such as the [business Korean](skills/k-humanizer/references/business-korean.md) and [native Korean writing examples](skills/k-humanizer/references/native-writing.md)) directly. Results can vary with the model and settings you use.
 
 ---
 

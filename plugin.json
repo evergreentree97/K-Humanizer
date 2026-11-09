@@ -1,0 +1,30 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "k-humanizer",
+  "version": "0.5.0",
+  "description": "An Agent Skill that translates English into natural Korean for Korean customers, keeping prices, dates, policies, and placeholders exact.",
+  "author": {
+    "name": "evergreen_ricky",
+    "url": "https://github.com/evergreentree97"
+  },
+  "homepage": "https://github.com/evergreentree97/K-Humanizer",
+  "repository": "https://github.com/evergreentree97/K-Humanizer",
+  "license": "MIT",
+  "keywords": ["korean", "translation", "localization", "writing", "resume"],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "K-Humanizer",
+        "shortDescription": "Natural Korean for customers",
+        "longDescription": "An Agent Skill that translates English into natural Korean for Korean customers, keeping prices, dates, policies, and placeholders exact. Includes k-humanizer for customer-facing and native Korean writing, and k-humanizer-resume for Korean resumes, career descriptions, portfolio summaries, LinkedIn profiles, and job application essays.",
+        "developerName": "evergreen_ricky",
+        "category": "Productivity",
+        "defaultPrompt": [
+          "Translate this English text into natural Korean for Korean customers, keeping prices, dates, policies, and placeholders exact.",
+          "Edit this Korean resume so it reads naturally while preserving the supplied evidence, ownership, and metrics."
+        ],
+        "websiteURL": "https://github.com/evergreentree97/K-Humanizer"
+      }
+    }
+  }
+}
