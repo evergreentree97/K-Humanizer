@@ -1,0 +1,13 @@
+{
+  "name": "k-humanizer",
+  "displayName": "K-Humanizer",
+  "description": "An Agent Skill that translates English into natural Korean for Korean customers, keeping prices, dates, policies, and placeholders exact. Includes a Korean resume and job-application skill.",
+  "author": {
+    "name": "evergreen_ricky",
+    "url": "https://github.com/evergreentree97"
+  },
+  "homepage": "https://github.com/evergreentree97/K-Humanizer",
+  "repository": "https://github.com/evergreentree97/K-Humanizer",
+  "license": "MIT",
+  "keywords": ["korean", "translation", "localization", "writing", "resume"]
+}

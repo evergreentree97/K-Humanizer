@@ -1,0 +1,14 @@
+{
+  "name": "k-humanizer",
+  "description": "Natural Korean for Korean customers, plus a Korean resume and job-application skill.",
+  "owner": {
+    "name": "evergreen_ricky"
+  },
+  "plugins": [
+    {
+      "name": "k-humanizer",
+      "source": "./",
+      "description": "Natural Korean writing and translation, with a separate resume and job-application skill."
+    }
+  ]
+}
