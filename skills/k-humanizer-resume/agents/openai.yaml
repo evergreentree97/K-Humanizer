@@ -1,0 +1,7 @@
+interface:
+  display_name: "K-Humanizer Resume"
+  short_description: "Polish Korean resumes and applications without inventing claims"
+  default_prompt: "Use $k-humanizer-resume to make this Korean resume or application read naturally, keeping every claim, metric, and contribution boundary inside the supplied evidence."
+
+policy:
+  allow_implicit_invocation: true

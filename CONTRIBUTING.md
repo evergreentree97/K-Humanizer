@@ -91,7 +91,7 @@ one sentence and necessary in another.
 | Core routing and workflow | `skills/k-humanizer/SKILL.md` |
 | Korean AI-writing patterns and exceptions | `skills/k-humanizer/references/patterns.md` |
 | Use-case examples | `skills/k-humanizer/references/use-cases.md` |
-| Resume rules | `skills/k-humanizer/references/resume*.md` |
+| Resume and application rules | `skills/k-humanizer-resume/` |
 | Evaluation criteria | `skills/k-humanizer/references/evaluation.md` |
 | Public test fixtures | `evals/fixtures/` |
 | Business supplement validator | `scripts/validate_business_set.py` |
