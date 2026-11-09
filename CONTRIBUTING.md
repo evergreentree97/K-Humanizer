@@ -199,7 +199,8 @@ Maintainers cut a release by:
    changes, a patch bump when a fix keeps the scope the same.
 2. Renaming `## Unreleased` to `## X.Y.Z - YYYY-MM-DD` and adding a new empty
    `## Unreleased` section.
-3. Updating the version badge and the version history table in both READMEs.
+3. Updating the version history table in both READMEs. The version badge
+   reads the latest GitHub release, so it needs no edit.
 4. Tagging the release commit `vX.Y.Z` and publishing a GitHub release with
    the changelog section as its notes.
 
