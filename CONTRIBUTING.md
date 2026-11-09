@@ -187,4 +187,20 @@ Reviewers will check that the change:
 - Keeps detailed guidance out of the core skill when a reference file is a
   better fit
 
+## Changelog and releases
+
+Add a line under `## Unreleased` in [CHANGELOG.md](CHANGELOG.md) for any
+change that affects the skill, its references, the fixtures, or the public
+documentation.
+
+Maintainers cut a release by:
+
+1. Choosing the version: a minor bump when guidance is added or its behavior
+   changes, a patch bump when a fix keeps the scope the same.
+2. Renaming `## Unreleased` to `## X.Y.Z - YYYY-MM-DD` and adding a new empty
+   `## Unreleased` section.
+3. Updating the version badge and the version history table in both READMEs.
+4. Tagging the release commit `vX.Y.Z` and publishing a GitHub release with
+   the changelog section as its notes.
+
 By participating, you agree to follow the [Code of Conduct](CODE_OF_CONDUCT.md).

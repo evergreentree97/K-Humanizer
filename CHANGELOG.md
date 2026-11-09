@@ -1,6 +1,18 @@
 # Changelog
 
-## 0.1.0 - Unreleased
+All notable changes to K-Humanizer are recorded here. Versions follow
+[Semantic Versioning](https://semver.org/): a minor version adds or changes
+guidance, and a patch version fixes it without changing its scope. Dates use
+the Korea Standard Time day of the release.
+
+## Unreleased
+
+- Split the changelog into versioned releases and add a version history to
+  both READMEs.
+
+## 0.5.0 - 2026-11-07
+
+Business Korean for Korean customers.
 
 - Reposition K-Humanizer for people who write Korean for Korean customers
   without being native or fully fluent Korean readers. Native Korean editing,
@@ -93,6 +105,10 @@
 - Add unpublished promotion drafts in `docs/promotion.md` and update the
   positioning and task priorities in `docs/open-source-plan.md`.
 
+## 0.4.0 - 2026-11-06
+
+Context-first editing.
+
 - Edit for the reader and purpose. Check each claim against the source,
   including negation, conditions, ownership, and the reasoning behind a
   decision. Preserve established terminology and natural wording.
@@ -100,19 +116,16 @@
   requested edit scope and the destination's style. Add synthetic review
   cases for the new guidance alongside the unchanged v0 benchmark.
 
+## 0.3.1 - 2026-09-14
+
 - Improve sentence and paragraph flow by preserving useful connectors, using
   natural connective endings, and avoiding unnecessary sentence splitting.
   Add synthetic review examples for continuity and unsupported causal links.
 
-- Add portable `k-humanizer` agent skill.
-- Add Korean writing references for use cases, patterns, and evaluation.
-- Add condition-to-rewrite tables with usage checks and exceptions instead of blind word replacement.
-- Add evidence-safe resume rules for contribution boundaries, measurement conditions, completion state, and recruiter-facing terminology.
-- Add reader-facing rules for personal writing, product/UI copy, vague claims, and exact terminology when the genre needs it.
-- Add role-aware resume guidance for operations, planning, QA, design, marketing, customer service, research, and education.
-- Add a resume workflow that humanizes supplied content by default and
-  handles raw notes, job-targeted rewrites, and full-document reviews only when
-  requested.
+## 0.3.0 - 2026-08-25
+
+Application motivation, public posts, and the first scored model baseline.
+
 - Add 220-item synthetic v0 golden set, including 40 role-specific resume cases, 10 application-motivation cases, 10 public-post cases, and preserve-when-valid counterexamples.
 - Add public and social post guidance for evidence boundaries, credible openings, subject-verb fit, and non-clickbait endings.
 - Add application-motivation guidance that connects verified experience to an organization, role, and credible contribution.
@@ -126,9 +139,31 @@
 - Add a complete 220-case `gpt-5.4` output baseline independently scored by
   Claude Opus, including domain averages, retained low-scoring cases, and a
   public failure summary.
-- Add validation and public hygiene scripts.
-- Add GitHub Actions validation workflow.
+
+## 0.2.0 - 2026-08-17
+
+Resume guidance and public validation.
+
+- Add condition-to-rewrite tables with usage checks and exceptions instead of blind word replacement.
+- Add evidence-safe resume rules for contribution boundaries, measurement conditions, completion state, and recruiter-facing terminology.
+- Add reader-facing rules for personal writing, product/UI copy, vague claims, and exact terminology when the genre needs it.
+- Add role-aware resume guidance for operations, planning, QA, design, marketing, customer service, research, and education.
+- Add a resume workflow that humanizes supplied content by default and
+  handles raw notes, job-targeted rewrites, and full-document reviews only when
+  requested.
 - Add a public v0 fixture integrity baseline that separates structural checks
   from future model-output scoring.
 - Scan public evaluation reports for private-data patterns.
 - Add a 30-second quick start and skills.sh badge to both READMEs.
+- Expand the synthetic v0 golden set to 200 items, including 40 role-specific
+  resume cases.
+
+## 0.1.0 - 2026-07-04
+
+First public release.
+
+- Add portable `k-humanizer` agent skill.
+- Add Korean writing references for use cases, patterns, and evaluation.
+- Add validation and public hygiene scripts.
+- Add GitHub Actions validation workflow.
+- Add an 80-item synthetic v0 golden set.

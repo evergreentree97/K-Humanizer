@@ -4,6 +4,8 @@
 
 [한국어](README.md)
 
+[![Version](https://img.shields.io/badge/version-0.5.0-2f6feb)](CHANGELOG.md)
+
 K-Humanizer is a set of instructions that translates and polishes messages for Korean customers into natural Korean. It focuses on the translationese and awkward phrasing that overseas teams who are not native Korean speakers run into when writing sales emails, ads, product descriptions, customer support, app notices, and similar content.
 
 Besides foreign-language text, you can also use it to smooth the wording of resumes, documents, emails, and other material you wrote directly in Korean.
@@ -49,6 +51,19 @@ npx skills add evergreentree97/K-Humanizer --skill k-humanizer --full-depth
 ```
 
 ---
+
+## Version history
+
+| Version | Date | Highlights |
+| :--- | :--- | :--- |
+| **0.5.0** | 2026-11-07 | Business Korean for Korean customers: translate and check sales emails, ads, product pages, support replies, and app strings against the English source |
+| 0.4.0 | 2026-11-06 | Edits by context and meaning instead of character-change limits |
+| 0.3.1 | 2026-09-14 | Keeps connectors and sentence flow |
+| 0.3.0 | 2026-08-25 | Application-motivation and public-post guidance, and a 220-case model baseline |
+| 0.2.0 | 2026-08-17 | Resume guidance and public validation tools |
+| 0.1.0 | 2026-07-04 | First public release |
+
+Planned next: answer notes and questions in English when the request is in English, and add a back-translation and a short register note so people who do not read Korean can check the result. See the [CHANGELOG](CHANGELOG.md) for every change.
 
 ## Evaluation
 
