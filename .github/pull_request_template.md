@@ -44,5 +44,6 @@ python3 scripts/check_public_hygiene.py
 - [ ] Every contributed language example is entirely synthetic.
 - [ ] I checked that facts, numbers, names, domain terms, authorship, completion state, and uncertainty are not changed by the proposed rewrite.
 - [ ] I documented the condition and exception for any new language rule.
+- [ ] I added a line under `## Unreleased` in CHANGELOG.md, or this change does not need one.
 - [ ] I kept the core skill small and placed detailed examples or checklists under `skills/k-humanizer/references/`.
 - [ ] I read [CONTRIBUTING.md](https://github.com/evergreentree97/K-Humanizer/blob/main/CONTRIBUTING.md) and the [Code of Conduct](https://github.com/evergreentree97/K-Humanizer/blob/main/CODE_OF_CONDUCT.md).
