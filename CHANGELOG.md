@@ -9,6 +9,10 @@ the Korea Standard Time day of the release.
 
 - Split the changelog into versioned releases and add a version history to
   both READMEs.
+- Move resume and job-application guidance into a separate
+  `k-humanizer-resume` skill, so `k-humanizer` focuses on Korean for Korean
+  customers.
+- Remove internal planning and promotion drafts from `docs/`.
 
 ## 0.5.0 - 2026-11-07
 

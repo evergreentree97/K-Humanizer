@@ -8,7 +8,7 @@
 
 K-Humanizer is a set of instructions that translates and polishes messages for Korean customers into natural Korean. It focuses on the translationese and awkward phrasing that overseas teams who are not native Korean speakers run into when writing sales emails, ads, product descriptions, customer support, app notices, and similar content.
 
-Besides foreign-language text, you can also use it to smooth the wording of resumes, documents, emails, and other material you wrote directly in Korean.
+Besides foreign-language text, you can also use it to smooth the wording of documents, emails, and other material you wrote directly in Korean. Resumes and job applications are handled by a separate skill, [K-Humanizer Resume](skills/k-humanizer-resume/SKILL.md).
 
 ---
 
@@ -48,6 +48,12 @@ You can also install it as a skill in Codex, Claude, Cursor, and similar tools.
 
 ```bash
 npx skills add evergreentree97/K-Humanizer --skill k-humanizer --full-depth
+```
+
+For resumes and job applications, install the resume skill.
+
+```bash
+npx skills add evergreentree97/K-Humanizer --skill k-humanizer-resume --full-depth
 ```
 
 ---
