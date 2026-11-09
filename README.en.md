@@ -40,21 +40,19 @@ The checks used English source text; other source languages have not been evalua
 
 ## Where to use it
 
-We recommend entering the instructions directly into an LLM API or a web chat interface. In agent environments, the instructions may conflict with internal system prompts and not work as intended. (Even in an API or on the web, results can vary with the model and settings you use.)
-
-In an API or on the web, a link alone may not let the model read the files, so paste the text of [SKILL.md](skills/k-humanizer/SKILL.md) and the reference files you need (such as the [use cases](skills/k-humanizer/references/use-cases.md)) directly.
-
-You can also install it as a skill in Codex, Claude, Cursor, and similar tools.
+We recommend installing it as a skill in an agent such as Codex, Claude Code, or Cursor.
 
 ```bash
 npx skills add evergreentree97/K-Humanizer --skill k-humanizer --full-depth
 ```
 
-For resumes and job applications, install the resume skill.
+For resumes and job applications, also install the resume skill.
 
 ```bash
 npx skills add evergreentree97/K-Humanizer --skill k-humanizer-resume --full-depth
 ```
+
+In a web chat or an API, a link alone may not let the model read the files, so paste the text of [SKILL.md](skills/k-humanizer/SKILL.md) and the reference files you need (such as the [use cases](skills/k-humanizer/references/use-cases.md)) directly. Results can vary with the model and settings you use.
 
 ---
 
@@ -69,7 +67,7 @@ npx skills add evergreentree97/K-Humanizer --skill k-humanizer-resume --full-dep
 | 0.2.0 | 2026-08-17 | Resume guidance and public validation tools |
 | 0.1.0 | 2026-07-04 | First public release |
 
-Planned next: answer notes and questions in English when the request is in English, and add a back-translation and a short register note so people who do not read Korean can check the result. See the [CHANGELOG](CHANGELOG.md) for every change.
+The instructions already say to write notes and questions in English when the request is in English, but in the default checks all 3 such cases came back in Korean. For now, ask for English explanations explicitly. Planned next: fix that default, and add a back-translation and a short register note so people who do not read Korean can check the result. See the [CHANGELOG](CHANGELOG.md) for every change.
 
 ## Evaluation
 

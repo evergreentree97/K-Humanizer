@@ -39,21 +39,19 @@ K-Humanizer는 한국 고객에게 보낼 메시지를 자연스러운 한국어
 
 ## 사용 환경
 
-LLM API나 웹 채팅 인터페이스에 지침을 직접 입력해 사용하는 방식을 권장합니다. 에이전트 환경에서는 내부 시스템 프롬프트 등과 충돌하여 가이드가 의도대로 작동하지 않을 수 있습니다. (API나 웹에서도 사용하는 모델과 설정에 따라 결과가 다를 수 있습니다.)
-
-API나 웹에서는 링크 주소만 알려 주면 모델이 파일을 읽지 못할 수 있으므로, [SKILL.md](skills/k-humanizer/SKILL.md)와 필요한 참고 파일([사용 사례](skills/k-humanizer/references/use-cases.md) 등)의 텍스트를 직접 붙여 넣어 주세요.
-
-Codex, Claude, Cursor 등에서 스킬 형태로 바로 설치할 수도 있습니다.
+Codex, Claude Code, Cursor 같은 에이전트에 스킬로 설치해 쓰는 방식을 권장합니다.
 
 ```bash
 npx skills add evergreentree97/K-Humanizer --skill k-humanizer --full-depth
 ```
 
-이력서와 지원서를 다듬으려면 이력서 스킬을 설치하세요.
+이력서와 지원서를 다듬으려면 이력서 스킬도 설치하세요.
 
 ```bash
 npx skills add evergreentree97/K-Humanizer --skill k-humanizer-resume --full-depth
 ```
+
+웹 채팅이나 API에서 쓸 때는 링크만 알려 주면 모델이 파일을 읽지 못할 수 있으므로, [SKILL.md](skills/k-humanizer/SKILL.md)와 필요한 참고 파일([사용 사례](skills/k-humanizer/references/use-cases.md) 등)의 텍스트를 직접 붙여 넣어 주세요. 결과는 사용하는 모델과 설정에 따라 다를 수 있습니다.
 
 ---
 
@@ -68,7 +66,7 @@ npx skills add evergreentree97/K-Humanizer --skill k-humanizer-resume --full-dep
 | 0.2.0 | 2026-08-17 | 이력서 지침과 공개 검증 도구를 추가했습니다 |
 | 0.1.0 | 2026-07-04 | 첫 공개 |
 
-다음 버전에서는 영어로 요청하면 설명과 질문도 영어로 답하도록 고치고, 한국어를 읽지 못하는 사용자가 결과를 확인할 수 있게 역번역과 말투 설명을 붙일 계획입니다. 전체 변경 내역은 [CHANGELOG](CHANGELOG.md)에 있습니다.
+영어로 요청하면 설명과 질문도 영어로 답하라는 지시는 이미 들어 있지만, 기본 상태로 점검한 3건은 모두 한국어로 답했습니다. 지금은 설명을 영어로 받고 싶다고 요청에 함께 적어 주세요. 다음 버전에서는 이 부분을 고치고, 한국어를 읽지 못하는 사용자가 결과를 확인할 수 있게 역번역과 말투 설명을 붙일 계획입니다. 전체 변경 내역은 [CHANGELOG](CHANGELOG.md)에 있습니다.
 
 ## 평가
 
