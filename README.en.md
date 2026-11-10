@@ -1,6 +1,6 @@
 # K-Humanizer
 
-![K-Humanizer](assets/k-humanizer-hero.png)
+![K-Humanizer](assets/k-humanizer-hero.jpg)
 
 [한국어](README.md)
 
