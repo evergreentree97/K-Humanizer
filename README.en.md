@@ -20,8 +20,6 @@ Besides foreign-language text, you can also use it to smooth the wording of docu
 | **Typical AI translation** | 다음 주 귀하의 이용 가능한 시간을 저희에게 보내주실 수 있으신가요? |
 | **Polished sentence** | 다음 주 가능한 시간을 알려주실 수 있을까요? |
 
-> This example is meant to aid understanding; actual model output may vary by environment.
-
 ---
 
 ## How to use it
@@ -68,23 +66,9 @@ For resumes and job applications, also install the resume skill.
 npx skills add evergreentree97/K-Humanizer --skill k-humanizer-resume --full-depth
 ```
 
-In a web chat or an API, a link alone may not let the model read the files, so paste the text of [SKILL.md](skills/k-humanizer/SKILL.md) and the reference files you need (such as the [business Korean](skills/k-humanizer/references/business-korean.md) and [native Korean writing examples](skills/k-humanizer/references/native-writing.md)) directly. Results can vary with the model and settings you use.
+In a web chat or an API, a link alone may not let the model read the files, so paste the text of [SKILL.md](skills/k-humanizer/SKILL.md) and the reference files you need (such as the [business Korean](skills/k-humanizer/references/business-korean.md) and [native Korean writing examples](skills/k-humanizer/references/native-writing.md)) directly.
 
 ---
-
-## Version history
-
-| Version | Date | Highlights |
-| :--- | :--- | :--- |
-| **0.6.0** | 2026-11-10 | Install as a Claude Code or Codex plugin; resumes and job applications move to a separate `k-humanizer-resume` skill |
-| 0.5.0 | 2026-11-07 | Business Korean for Korean customers: translate and check sales emails, ads, product pages, support replies, and app strings against the English source |
-| 0.4.0 | 2026-11-06 | Edits by context and meaning instead of character-change limits |
-| 0.3.1 | 2026-09-14 | Keeps connectors and sentence flow |
-| 0.3.0 | 2026-08-25 | Application-motivation and public-post guidance, and a 220-case model baseline |
-| 0.2.0 | 2026-08-17 | Resume guidance and public validation tools |
-| 0.1.0 | 2026-07-04 | First public release |
-
-The instructions already say to write notes and questions in English when the request is in English, but in the default checks all 3 such cases came back in Korean. For now, ask for English explanations explicitly. Planned next: fix that default, and add a back-translation and a short register note so people who do not read Korean can check the result. See the [CHANGELOG](CHANGELOG.md) for every change.
 
 ## Evaluation
 
@@ -97,11 +81,7 @@ The same model (Claude Sonnet 5.5) handled 32 business Korean requests twice, on
 | Left already-natural text alone (of 7) | 2 | 6 |
 | Did what the request asked | 25 | 29 |
 
-Without the skill, the model added a promise the source never made ("더욱 안정적인 서비스로 보답하겠습니다", roughly "we will repay you with a more stable service") to a maintenance notice, and rewrote emails that were already fine. With the skill, it added nothing and returned text that needed no change as it was.
-
-The results and raw outputs are in the [comparison report](evals/reports/2026-11-10-skill-vs-baseline/README.md).
-
-The record of the business Korean checks is in the [business Korean check report](evals/reports/2026-11-07-business-korean/business-review.md). They are development-stage checks in which one model handled model-written synthetic cases and another model scored them. They are not a native Korean reader's review or a customer study, so they do not validate quality.
+The results and raw outputs are in the [comparison report](evals/reports/2026-11-10-skill-vs-baseline/README.md), and earlier checks are in the [business Korean check report](evals/reports/2026-11-07-business-korean/business-review.md).
 
 ## License
 

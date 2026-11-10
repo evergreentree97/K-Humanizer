@@ -20,8 +20,6 @@ K-Humanizer는 한국 고객에게 보낼 메시지를 자연스러운 한국어
 | **일반적인 AI 번역** | 다음 주 귀하의 이용 가능한 시간을 저희에게 보내주실 수 있으신가요? |
 | **다듬은 문장** | 다음 주 가능한 시간을 알려주실 수 있을까요? |
 
-> 위 예시는 이해를 돕기 위한 것이며, 실제 모델 출력은 환경에 따라 다를 수 있습니다.
-
 ---
 
 ## 사용 방법
@@ -67,23 +65,9 @@ npx skills add evergreentree97/K-Humanizer --skill k-humanizer --full-depth
 npx skills add evergreentree97/K-Humanizer --skill k-humanizer-resume --full-depth
 ```
 
-웹 채팅이나 API에서 쓸 때는 링크만 알려 주면 모델이 파일을 읽지 못할 수 있으므로, [SKILL.md](skills/k-humanizer/SKILL.md)와 필요한 참고 파일([비즈니스 한국어](skills/k-humanizer/references/business-korean.md)와 [한국어 글쓰기 사례](skills/k-humanizer/references/native-writing.md) 등)의 텍스트를 직접 붙여 넣어 주세요. 결과는 사용하는 모델과 설정에 따라 다를 수 있습니다.
+웹 채팅이나 API에서 쓸 때는 링크만 알려 주면 모델이 파일을 읽지 못할 수 있으므로, [SKILL.md](skills/k-humanizer/SKILL.md)와 필요한 참고 파일([비즈니스 한국어](skills/k-humanizer/references/business-korean.md)와 [한국어 글쓰기 사례](skills/k-humanizer/references/native-writing.md) 등)의 텍스트를 직접 붙여 넣어 주세요.
 
 ---
-
-## 버전 기록
-
-| 버전 | 날짜 | 주요 변경 |
-| :--- | :--- | :--- |
-| **0.6.0** | 2026-11-10 | Claude Code와 Codex에 플러그인으로 설치합니다. 이력서와 지원서는 별도 스킬 `k-humanizer-resume`으로 나눴습니다 |
-| 0.5.0 | 2026-11-07 | 한국 고객용 비즈니스 한국어 지원. 영업 메일, 광고, 제품 페이지, 고객 지원, 앱 문구를 번역하고 영어 원문과 대조합니다 |
-| 0.4.0 | 2026-11-06 | 글자 수 기준 대신 문맥과 의미 보존을 기준으로 편집합니다 |
-| 0.3.1 | 2026-09-14 | 연결어와 문장 흐름을 살리도록 고쳤습니다 |
-| 0.3.0 | 2026-08-25 | 지원 동기와 공개 게시글 지침, 220건 모델 기준선을 추가했습니다 |
-| 0.2.0 | 2026-08-17 | 이력서 지침과 공개 검증 도구를 추가했습니다 |
-| 0.1.0 | 2026-07-04 | 첫 공개 |
-
-영어로 요청하면 설명과 질문도 영어로 답하라는 지시는 이미 들어 있지만, 기본 상태로 점검한 3건은 모두 한국어로 답했습니다. 지금은 설명을 영어로 받고 싶다고 요청에 함께 적어 주세요. 다음 버전에서는 이 부분을 고치고, 한국어를 읽지 못하는 사용자가 결과를 확인할 수 있게 역번역과 말투 설명을 붙일 계획입니다. 전체 변경 내역은 [CHANGELOG](CHANGELOG.md)에 있습니다.
 
 ## 평가
 
@@ -95,8 +79,6 @@ npx skills add evergreentree97/K-Humanizer --skill k-humanizer-resume --full-dep
 | 요구 사항을 빠뜨림 | 6건 | 0건 |
 | 이미 자연스러운 글을 그대로 둠 (7건 중) | 2건 | 6건 |
 | 요청한 대로 처리함 | 25건 | 29건 |
-
-스킬 없이 맡기면 점검 안내문에 원문에 없던 "더욱 안정적인 서비스로 보답하겠습니다"를 넣거나, 이미 자연스러운 메일의 표현을 바꿨습니다. 스킬을 쓰면 원문에 없는 말을 넣지 않았고, 고칠 필요가 없는 글은 그대로 돌려줬습니다.
 
 결과와 원본 출력은 [비교 보고서](evals/reports/2026-11-10-skill-vs-baseline/README.md)에, 이전 점검 기록은 [비즈니스 한국어 점검 보고서](evals/reports/2026-11-07-business-korean/business-review.md)에 있습니다.
 
